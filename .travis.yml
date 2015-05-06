@@ -1,6 +1,12 @@
 language: csharp
 solution: xdelta.sln
 
+mono:
+  - latest
+  - 3.8.0
+  - 3.2.8
+  - 2.10.8
+
 install:
   - nuget restore xdelta.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
