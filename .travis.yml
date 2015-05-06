@@ -1,0 +1,10 @@
+language: csharp
+solution: xdelta.sln
+
+install:
+  - nuget restore xdelta.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+
+script:
+  - xbuild /p:Configuration=Release xdelta.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./xdelta.UnitTests/bin/Release/xdelta.UnitTests.dll
