@@ -1,0 +1,6 @@
+# Compile result
+bin/
+obj/
+
+# Project files
+*.userprefs
