@@ -92,6 +92,30 @@ namespace Xdelta.UnitTests
 				() => decoder.Run(),
 				"unrecognized header indicator bits set");
 		}
+
+		[Test]
+		public void HasSecondaryCompressor()
+		{
+			patchWriter.Write(0x00C4C3D6);
+			patchWriter.Write(0x01);
+			patch.Position = 0;
+
+			Assert.Throws<NotSupportedException>(
+				() => decoder.Run(),
+				"unavailable secondary compressor");
+		}
+
+		[Test]
+		public void HasCodeTable()
+		{
+			patchWriter.Write(0x00C4C3D6);
+			patchWriter.Write(0x02);
+			patch.Position = 0;
+
+			Assert.Throws<NotSupportedException>(
+				() => decoder.Run(),
+				"compressed code table not implemented");
+		}
 	}
 }
 

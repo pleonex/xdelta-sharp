@@ -84,6 +84,11 @@ namespace Xdelta
 			if (header.Contains(VcdHeader.NotSupported))
 				throw new FormatException("unrecognized header indicator bit set");
 
+			if (header.Contains(VcdHeader.SecondaryCompression))
+				throw new NotSupportedException("unavailable secondary compressor");
+
+			if (header.Contains(VcdHeader.CodeTable))
+				throw new NotSupportedException("compressed code table not implemented");
 		}
 	}
 }
