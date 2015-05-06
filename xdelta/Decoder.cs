@@ -28,6 +28,9 @@ namespace Xdelta
 		private const uint MagicStamp = 0xC4C3D6;
 		private const byte SupportedVersion = 0x00;
 
+		// Only the first three bits are used
+		private const byte InvalidHeader = 0xF8;
+
 		private BinaryReader inputReader;
 		private BinaryReader patchReader;
 		private BinaryWriter outputWriter;
@@ -62,17 +65,28 @@ namespace Xdelta
 
 			// Checks the first four bytes of the patch
 			CheckStamp();
+
+			// Now let's go to the header
+			ReadHeader();
 		}
 
 		private void CheckStamp()
 		{
-			uint header = patchReader.ReadUInt32();
+			uint stamp = patchReader.ReadUInt32();
 
-			if ((header & 0xFFFFFF) != MagicStamp)
+			if ((stamp & 0xFFFFFF) != MagicStamp)
 				throw new FormatException("not a VCDIFF input");
 
-			if ((header >> 24) > SupportedVersion)
+			if ((stamp >> 24) > SupportedVersion)
 				throw new FormatException("VCDIFF input version > 0 is not supported");
+		}
+
+		private void ReadHeader()
+		{
+			byte header = patchReader.ReadByte();
+			if ((header & InvalidHeader) != 0)
+				throw new FormatException("unrecognized header indicator bit set");
+
 		}
 	}
 }

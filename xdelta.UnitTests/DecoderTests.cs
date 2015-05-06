@@ -80,6 +80,18 @@ namespace Xdelta.UnitTests
 				() => decoder.Run(),
 				"VCDIFF input version > 0 is not supported");
 		}
+
+		[Test]
+		public void InvalidHeaderIndicator()
+		{
+			patchWriter.Write(0x00C4C3D6);
+			patchWriter.Write(0xF8);
+			patch.Position = 0;
+
+			Assert.Throws<FormatException>(
+				() => decoder.Run(),
+				"unrecognized header indicator bits set");
+		}
 	}
 }
 
