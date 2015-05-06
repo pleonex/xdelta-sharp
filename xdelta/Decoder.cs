@@ -28,9 +28,6 @@ namespace Xdelta
 		private const uint MagicStamp = 0xC4C3D6;
 		private const byte SupportedVersion = 0x00;
 
-		// Only the first three bits are used
-		private const byte InvalidHeader = 0xF8;
-
 		private BinaryReader inputReader;
 		private BinaryReader patchReader;
 		private BinaryWriter outputWriter;
@@ -83,8 +80,8 @@ namespace Xdelta
 
 		private void ReadHeader()
 		{
-			byte header = patchReader.ReadByte();
-			if ((header & InvalidHeader) != 0)
+			VcdHeader header = (VcdHeader)patchReader.ReadByte();
+			if (header.Contains(VcdHeader.NotSupported))
 				throw new FormatException("unrecognized header indicator bit set");
 
 		}
