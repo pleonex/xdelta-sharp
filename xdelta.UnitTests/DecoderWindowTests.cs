@@ -90,6 +90,19 @@ namespace Xdelta.UnitTests
                 () => decoder.Run(),
                 "unrecognized window indicator bits set");
         }
+
+        [Test]
+        public void WindowCopyOverflow()
+        {
+            patchWriter.Write((byte)0x00);
+            patchWriter.Write((byte)0x0);
+            patchWriter.Write(UInt32.MaxValue - 0x10);
+            patch.Position -= 9;
+
+            Assert.Throws<FormatException>(
+                () => decoder.Run(),
+                "decoder copy window overflows a file offset");
+        }
     }
 }
 
