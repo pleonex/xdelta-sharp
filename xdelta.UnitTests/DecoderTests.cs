@@ -68,6 +68,24 @@ namespace Xdelta.UnitTests
             Assert.AreSame(patch, decoder.Patch);
             Assert.AreSame(output, decoder.Output);
         }
+
+        #if DEBUG
+        [Test]
+        [Ignore]
+        public void NinokuniPatch()
+        {
+            string gamePath = "/store/Juegos/NDS/Ninokuni [CLEAN].nds";
+            string patchPath = "/home/benito/parche.xdelta";
+            patch  = new FileStream(patchPath, FileMode.Open);
+            input  = new FileStream(gamePath, FileMode.Open);
+            output = new MemoryStream();
+
+            Assert.DoesNotThrow(() => {
+                decoder = new Decoder(input, patch, output);
+                decoder.Run();
+            });
+        }
+        #endif
     }
 }
 

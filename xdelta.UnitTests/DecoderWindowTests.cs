@@ -69,12 +69,16 @@ namespace Xdelta.UnitTests
             patchWriter.Write((byte)0x00);
         }
 
+        private void WriteBytes(params byte[] data)
+        {
+            patch.Write(data, 0, data.Length);
+            patch.Position = 0;
+        }
+
         [Test]
         public void WindowIndicatorWithAllBitS()
         {
-            patchWriter.Write((byte)0xFF);
-            patch.Position -= 1;
-
+            WriteBytes(0xFF);
             Assert.Throws<FormatException>(
                 () => decoder.Run(),
                 "unrecognized window indicator bits set");
@@ -83,9 +87,7 @@ namespace Xdelta.UnitTests
         [Test]
         public void WindowIndicatorWithInvalidBit()
         {
-            patchWriter.Write((byte)0x08);
-            patch.Position -= 1;
-
+            WriteBytes(0x08);
             Assert.Throws<FormatException>(
                 () => decoder.Run(),
                 "unrecognized window indicator bits set");
@@ -94,14 +96,19 @@ namespace Xdelta.UnitTests
         [Test]
         public void WindowCopyOverflow()
         {
-            patchWriter.Write((byte)0x00);
-            patchWriter.Write((byte)0x0);
-            patchWriter.Write(UInt32.MaxValue - 0x10);
-            patch.Position -= 9;
-
+            WriteBytes(0x00, 0x10, 0x8F, 0xFF, 0xFF, 0xFF, 0xF0);
             Assert.Throws<FormatException>(
                 () => decoder.Run(),
                 "decoder copy window overflows a file offset");
+        }
+
+        [Test]
+        public void WindowCopyWindowOverflow()
+        {
+            WriteBytes(0x01, 0x10, 0x04);
+            Assert.Throws<FormatException>(
+                () => decoder.Run(),
+                "VCD_TARGET window out of bounds");
         }
     }
 }
