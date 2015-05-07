@@ -14,4 +14,4 @@ install:
 
 script:
   - xbuild /p:Configuration=Release xdelta.sln
-  - mono --runtime=v2.0 ./NUnit-2.6.4/bin/nunit-console.exe ./xdelta.UnitTests/bin/Release/xdelta.UnitTests.dll
+  - mono ./NUnit-2.6.4/bin/nunit-console.exe --framework=v2.0.50727 ./xdelta.UnitTests/bin/Release/xdelta.UnitTests.dll
