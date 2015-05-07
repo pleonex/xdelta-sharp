@@ -32,6 +32,15 @@ namespace Xdelta
         private BinaryReader patchReader;
         private BinaryWriter outputWriter;
 
+        uint currentWindow = 0;
+        uint windowCount   = 0;
+        uint windowOffset  = 0;
+        uint windowLength  = 0;
+
+        uint copyLength = 0;
+        uint copyOffset = 0;
+        uint checksumOffset = 0;
+
         public DecoderWindow(Stream input, Stream patch, Stream output)
         {
             this.input  = input;
@@ -45,12 +54,33 @@ namespace Xdelta
 
         public void NextWindow()
         {
+            InitiazeWindow();
+        }
+
+        private void InitiazeWindow()
+        {
+            currentWindow = windowCount;
+            if (CheckOffsetOverflow(windowOffset, windowLength))
+                throw new FormatException("decoder file offset overflow");
+
+            // Updated at the initialization to avoid throwing an overflow error
+            // decoding exactly 4 GB files.
+            windowOffset += windowLength;
+
             // Get window indicator
             VcdWindow indicator = (VcdWindow)patchReader.ReadByte();
             if ((indicator & VcdWindow.NotSupported) != 0)
                 throw new FormatException("unrecognized window indicator bits set");
+        
+            // Reset window variables
+            copyLength = 0;
+            copyOffset = 0;
+            checksumOffset = 0;
+        }
 
-
+        private bool CheckOffsetOverflow(uint address, uint length)
+        {
+            return length > (UInt32.MaxValue - address);
         }
     }
 }
