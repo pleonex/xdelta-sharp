@@ -25,21 +25,17 @@ namespace Xdelta
 {
 	public class Decoder
 	{
-		private const uint MagicStamp = 0xC4C3D6;
-		private const byte SupportedVersion = 0x00;
-
-        private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
-		private BinaryReader patchReader;
-
 		public Decoder(Stream input, Stream patch, Stream output)
 		{
 			Input  = input;
 			Patch  = patch;
 			Output = output;
 
-            AnalyseHeader();
+            DecoderHeader headerDecoder = new DecoderHeader(patch);
+            headerDecoder.Run();
+            ApplicationData = headerDecoder.ApplicationData;
 		}
-
+        
 		public Stream Input {
 			get;
 			private set;
@@ -68,49 +64,5 @@ namespace Xdelta
             while (Patch.Position < Patch.Length)
                 winDecoder.NextWindow();
         }
-
-		private void AnalyseHeader()
-		{
-			patchReader  = new BinaryReader(Patch);
-
-			// Checks the first four bytes of the patch
-			CheckStamp();
-
-			// Now let's go to the header
-			ReadHeader();
-		}
-
-		private void CheckStamp()
-		{
-			uint stamp = patchReader.ReadUInt32();
-			if ((stamp & 0xFFFFFF) != MagicStamp)
-				throw new FormatException("not a VCDIFF input");
-
-			if ((stamp >> 24) > SupportedVersion)
-				throw new FormatException("VCDIFF input version > 0 is not supported");
-		}
-
-		private void ReadHeader()
-		{
-			VcdHeader header = (VcdHeader)patchReader.ReadByte();
-			if (header.Contains(VcdHeader.NotSupported))
-				throw new FormatException("unrecognized header indicator bit set");
-
-			if (header.Contains(VcdHeader.SecondaryCompression))
-				throw new NotSupportedException("unavailable secondary compressor");
-
-			if (header.Contains(VcdHeader.CodeTable))
-				throw new NotSupportedException("compressed code table not implemented");
-
-            if (header.Contains(VcdHeader.ApplicationData))
-                ReadApplicationData();
-		}
-
-        private void ReadApplicationData()
-        {
-            int length = patchReader.ReadInt32();
-            ApplicationData = Encoding.GetString(patchReader.ReadBytes(length));
-        }
 	}
 }
-
