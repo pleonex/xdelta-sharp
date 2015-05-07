@@ -87,6 +87,18 @@ namespace Xdelta.UnitTests
 				"unrecognized header indicator bits set");
 		}
 
+        [Test]
+        public void InvalidHeaderIndicator2()
+        {
+            patchWriter.Write(0x00C4C3D6);
+            patchWriter.Write((byte)0x48);
+            patch.Position = 0;
+
+            Assert.Throws<FormatException>(
+                () => new Decoder(input, patch, output),
+                "unrecognized header indicator bits set");
+        }
+
 		[Test]
 		public void HasSecondaryCompressor()
 		{

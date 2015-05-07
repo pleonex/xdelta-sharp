@@ -54,7 +54,7 @@ namespace Xdelta
             ulong actualValue = Convert.ToUInt64(actual);
             ulong expectedValue = Convert.ToUInt64(expected);
 
-            return (actualValue & expectedValue) == expectedValue;
+            return (actualValue & expectedValue) != 0;
         }
     }
 }
