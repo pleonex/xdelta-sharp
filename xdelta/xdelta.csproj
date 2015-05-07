@@ -37,6 +37,8 @@
     <Compile Include="Decoder.cs" />
     <Compile Include="VcdHeader.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="DecoderWindow.cs" />
+    <Compile Include="VcdWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

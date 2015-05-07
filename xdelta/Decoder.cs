@@ -29,9 +29,7 @@ namespace Xdelta
 		private const byte SupportedVersion = 0x00;
 
         private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
-		private BinaryReader inputReader;
 		private BinaryReader patchReader;
-		private BinaryWriter outputWriter;
 
 		public Decoder(Stream input, Stream patch, Stream output)
 		{
@@ -62,11 +60,18 @@ namespace Xdelta
             private set;
         }
 
+        public void Run()
+        {
+            DecoderWindow winDecoder = new DecoderWindow(Input, Patch, Output);
+
+            // Decode windows until there are no more bytes to process
+            while (Patch.Position < Patch.Length)
+                winDecoder.NextWindow();
+        }
+
 		private void AnalyseHeader()
 		{
-			inputReader  = new BinaryReader(Input);
 			patchReader  = new BinaryReader(Patch);
-			outputWriter = new BinaryWriter(Output);
 
 			// Checks the first four bytes of the patch
 			CheckStamp();
@@ -78,7 +83,6 @@ namespace Xdelta
 		private void CheckStamp()
 		{
 			uint stamp = patchReader.ReadUInt32();
-
 			if ((stamp & 0xFFFFFF) != MagicStamp)
 				throw new FormatException("not a VCDIFF input");
 
