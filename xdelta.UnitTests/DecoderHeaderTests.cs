@@ -27,7 +27,6 @@ namespace Xdelta.UnitTests
 	[TestFixture]
 	public class DecoderHeaderTests
 	{
-		private Decoder decoder;
         private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
 
 		private MemoryStream input;
@@ -48,16 +47,6 @@ namespace Xdelta.UnitTests
 			inputWriter = new BinaryWriter(input);
 			patchWriter = new BinaryWriter(patch);
 			outputReader = new BinaryReader(output);
-
-			decoder = new Decoder(input, patch, output);
-		}
-
-		[Test]
-		public void Getters()
-		{
-			Assert.AreSame(input, decoder.Input);
-			Assert.AreSame(patch, decoder.Patch);
-			Assert.AreSame(output, decoder.Output);
 		}
 
 		[Test]
@@ -67,7 +56,7 @@ namespace Xdelta.UnitTests
 			patch.Position = 0;
 
 			Assert.Throws<FormatException>(
-				() => decoder.Run(),
+                () => new Decoder(input, patch, output),
 				"not a VCDIFF input");
 		}
 
@@ -78,7 +67,7 @@ namespace Xdelta.UnitTests
 			patch.Position = 0;
 
 			Assert.Throws<FormatException>(
-				() => decoder.Run(),
+                () => new Decoder(input, patch, output),
 				"VCDIFF input version > 0 is not supported");
 		}
 
@@ -90,7 +79,7 @@ namespace Xdelta.UnitTests
 			patch.Position = 0;
 
 			Assert.Throws<FormatException>(
-				() => decoder.Run(),
+                () => new Decoder(input, patch, output),
 				"unrecognized header indicator bits set");
 		}
 
@@ -102,7 +91,7 @@ namespace Xdelta.UnitTests
 			patch.Position = 0;
 
 			Assert.Throws<NotSupportedException>(
-				() => decoder.Run(),
+                () => new Decoder(input, patch, output),
 				"unavailable secondary compressor");
 		}
 
@@ -114,7 +103,7 @@ namespace Xdelta.UnitTests
 			patch.Position = 0;
 
 			Assert.Throws<NotSupportedException>(
-				() => decoder.Run(),
+                () => new Decoder(input, patch, output),
 				"compressed code table not implemented");
 		}
 
@@ -125,7 +114,7 @@ namespace Xdelta.UnitTests
             patchWriter.Write((byte)0x00);
             patch.Position = 0;
 
-            Assert.DoesNotThrow(() => decoder.Run());
+            Assert.DoesNotThrow(() => new Decoder(input, patch, output));
         }
 
         [Test]
@@ -137,7 +126,7 @@ namespace Xdelta.UnitTests
             patchWriter.Write(Encoding.GetBytes("pleonex"));
             patch.Position = 0;
 
-            decoder.Run();
+            Decoder decoder = new Decoder(input, patch, output);
             Assert.AreEqual("pleonex", decoder.ApplicationData);
         }
 	}

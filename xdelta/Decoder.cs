@@ -38,6 +38,8 @@ namespace Xdelta
 			Input  = input;
 			Patch  = patch;
 			Output = output;
+
+            AnalyseHeader();
 		}
 
 		public Stream Input {
@@ -60,7 +62,7 @@ namespace Xdelta
             private set;
         }
 
-		public void Run()
+		private void AnalyseHeader()
 		{
 			inputReader  = new BinaryReader(Input);
 			patchReader  = new BinaryReader(Patch);
