@@ -39,6 +39,7 @@
     <Compile Include="DecoderHeaderTests.cs" />
     <Compile Include="DecoderWindowTests.cs" />
     <Compile Include="DecoderTests.cs" />
+    <Compile Include="VcdReaderTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

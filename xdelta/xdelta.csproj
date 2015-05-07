@@ -40,6 +40,7 @@
     <Compile Include="DecoderWindow.cs" />
     <Compile Include="VcdWindow.cs" />
     <Compile Include="DecoderHeader.cs" />
+    <Compile Include="VcdReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
