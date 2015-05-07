@@ -57,5 +57,13 @@ namespace Xdelta
             return (actualValue & expectedValue) != 0;
         }
     }
+
+    internal static class UInt32Extensions
+    {
+        public static bool CheckOverflow(this uint address, uint length)
+        {
+            return length > (UInt32.MaxValue - address);
+        }
+    }
 }
 

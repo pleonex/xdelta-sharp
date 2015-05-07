@@ -60,7 +60,7 @@ namespace Xdelta
         private void InitiazeWindow()
         {
             currentWindow = windowCount;
-            if (CheckOffsetOverflow(windowOffset, windowLength))
+            if (windowOffset.CheckOverflow(windowLength))
                 throw new FormatException("decoder file offset overflow");
 
             // Updated at the initialization to avoid throwing an overflow error
@@ -76,11 +76,6 @@ namespace Xdelta
             copyLength = 0;
             copyOffset = 0;
             checksumOffset = 0;
-        }
-
-        private bool CheckOffsetOverflow(uint address, uint length)
-        {
-            return length > (UInt32.MaxValue - address);
         }
     }
 }
