@@ -28,7 +28,7 @@ namespace Xdelta
         private const uint HardMaxWindowSize = 1u << 24;
 
         private BinaryReader inputReader;
-        private BinaryReader patchReader;
+        private VcdReader patchReader;
         private BinaryWriter outputWriter;
 
         uint currentWindow = 0;
@@ -49,7 +49,7 @@ namespace Xdelta
         public DecoderWindow(Stream input, Stream patch, Stream output)
         {
             inputReader  = new BinaryReader(input);
-            patchReader  = new BinaryReader(patch);
+            patchReader  = new VcdReader(patch);
             outputWriter = new BinaryWriter(output);
         }
 

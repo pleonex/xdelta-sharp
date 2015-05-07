@@ -138,7 +138,7 @@ namespace Xdelta.UnitTests
         {
             patchWriter.Write(0x00C4C3D6);
             patchWriter.Write((byte)0x04);
-            patchWriter.Write(0x07);
+            patchWriter.Write((byte)0x07);
             patchWriter.Write(Encoding.GetBytes("pleonex"));
             patch.Position = 0;
 

@@ -29,11 +29,11 @@ namespace Xdelta
         private const byte SupportedVersion = 0x00;
         private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
 
-        private BinaryReader patchReader;
+        private VcdReader patchReader;
 
         public DecoderHeader(Stream patch)
         {
-            patchReader = new BinaryReader(patch);
+            patchReader = new VcdReader(patch);
         }
 
         public string ApplicationData {
@@ -52,7 +52,9 @@ namespace Xdelta
 
         private void CheckStamp()
         {
-            uint stamp = patchReader.ReadUInt32();
+            // Can't read as uint32 directly since a intenger format is non-encoded
+            // in a standard format.
+            uint stamp = BitConverter.ToUInt32(patchReader.ReadBytes(4), 0);
             if ((stamp & 0xFFFFFF) != MagicStamp)
                 throw new FormatException("not a VCDIFF input");
 
