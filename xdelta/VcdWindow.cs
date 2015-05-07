@@ -23,7 +23,7 @@ using System;
 namespace Xdelta
 {
     [FlagsAttribute]
-    public enum VcdWindow : byte {
+    internal enum VcdWindow : byte {
         NotSupported = 0xF8,
 
         Source  = 1 << 0,   // Copy window in source file

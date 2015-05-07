@@ -25,14 +25,14 @@ namespace System.Runtime.CompilerServices
 {
     [AttributeUsageAttribute(AttributeTargets.Assembly | AttributeTargets.Class |
         AttributeTargets.Method)]
-    public class ExtensionAttribute : Attribute
+    internal class ExtensionAttribute : Attribute
     {
     }
 }
 
 namespace Xdelta
 {
-    public static class EnumExtensions
+    internal static class EnumExtensions
     {
         /// <summary>
         /// Determines if actual contains a expected value.

@@ -23,7 +23,7 @@ using System.IO;
 
 namespace Xdelta
 {
-    public class DecoderHeader
+    internal class DecoderHeader
     {
         private const uint MagicStamp = 0xC4C3D6;
         private const byte SupportedVersion = 0x00;

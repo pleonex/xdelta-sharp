@@ -23,7 +23,7 @@ using System;
 namespace Xdelta
 {
 	[FlagsAttribute]
-	public enum VcdHeader : byte {
+	internal enum VcdHeader : byte {
 		NotSupported = 0xF8,
 
 		SecondaryCompression = 1 << 0, 	// Uses secondary compressor
