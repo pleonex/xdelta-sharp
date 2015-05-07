@@ -30,24 +30,28 @@ namespace Xdelta.UnitTests
         private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
 
 		private MemoryStream input;
+        private MemoryStream output;
+
 		private MemoryStream patch;
-		private MemoryStream output;
-
-		private BinaryWriter inputWriter;
-		private BinaryWriter patchWriter;
-		private BinaryReader outputReader;
-
+        private BinaryWriter patchWriter;
+              
 		[SetUp]
 		public void SetUp()
 		{
-			input  = new MemoryStream();
-			patch  = new MemoryStream();
-			output = new MemoryStream();
+            input = new MemoryStream();
+            output = new MemoryStream();
 
-			inputWriter = new BinaryWriter(input);
+            patch = new MemoryStream();
 			patchWriter = new BinaryWriter(patch);
-			outputReader = new BinaryReader(output);
 		}
+
+        [TearDown]
+        public void TearDown()
+        {
+            patch.Dispose();
+            input.Dispose();
+            output.Dispose();
+        }
 
 		[Test]
 		public void InvalidStamp()
