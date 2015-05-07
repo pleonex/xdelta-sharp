@@ -3,12 +3,15 @@ solution: xdelta.sln
 
 mono:
   - latest
+  - 3.8.0
   - 3.2.8
   - 2.10.8
 
 install:
-  - sudo apt-get install nunit-console
+  # sudo apt-get install nunit-console # It does not work in some mono version since it can't find nunit-agent
+  - wget http://github.com/nunit/nunitv2/releases/download/2.6.4/NUnit-2.6.4.zip
+  - unzip NUnit-2.6.4.zip
 
 script:
   - xbuild /p:Configuration=Release xdelta.sln
-  - nunit-console ./xdelta.UnitTests/bin/Release/xdelta.UnitTests.dll
+  - mono ./NUnit-2.6.4/bin/nunit-console.exe ./xdelta.UnitTests/bin/Release/xdelta.UnitTests.dll

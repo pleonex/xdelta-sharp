@@ -7,3 +7,6 @@ obj/
 
 # NuGet
 packages/
+
+# NUnit output
+TestResult.xml
