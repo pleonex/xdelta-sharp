@@ -25,7 +25,7 @@ using System.IO;
 namespace Xdelta.UnitTests
 {
 	[TestFixture]
-	public class DecoderTests
+	public class DecoderHeaderTests
 	{
 		private Decoder decoder;
         private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
