@@ -28,6 +28,7 @@ namespace Xdelta
 		private const uint MagicStamp = 0xC4C3D6;
 		private const byte SupportedVersion = 0x00;
 
+        private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
 		private BinaryReader inputReader;
 		private BinaryReader patchReader;
 		private BinaryWriter outputWriter;
@@ -53,6 +54,11 @@ namespace Xdelta
 			get;
 			private set;
 		}
+
+        public string ApplicationData {
+            get;
+            private set;
+        }
 
 		public void Run()
 		{
@@ -89,7 +95,16 @@ namespace Xdelta
 
 			if (header.Contains(VcdHeader.CodeTable))
 				throw new NotSupportedException("compressed code table not implemented");
+
+            if (header.Contains(VcdHeader.ApplicationData))
+                ReadApplicationData();
 		}
+
+        private void ReadApplicationData()
+        {
+            int length = patchReader.ReadInt32();
+            ApplicationData = Encoding.GetString(patchReader.ReadBytes(length));
+        }
 	}
 }
 

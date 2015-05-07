@@ -28,6 +28,7 @@ namespace Xdelta.UnitTests
 	public class DecoderTests
 	{
 		private Decoder decoder;
+        private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
 
 		private MemoryStream input;
 		private MemoryStream patch;
@@ -85,7 +86,7 @@ namespace Xdelta.UnitTests
 		public void InvalidHeaderIndicator()
 		{
 			patchWriter.Write(0x00C4C3D6);
-			patchWriter.Write(0xF8);
+            patchWriter.Write((byte)0xF8);
 			patch.Position = 0;
 
 			Assert.Throws<FormatException>(
@@ -97,7 +98,7 @@ namespace Xdelta.UnitTests
 		public void HasSecondaryCompressor()
 		{
 			patchWriter.Write(0x00C4C3D6);
-			patchWriter.Write(0x01);
+            patchWriter.Write((byte)0x01);
 			patch.Position = 0;
 
 			Assert.Throws<NotSupportedException>(
@@ -109,13 +110,36 @@ namespace Xdelta.UnitTests
 		public void HasCodeTable()
 		{
 			patchWriter.Write(0x00C4C3D6);
-			patchWriter.Write(0x02);
+            patchWriter.Write((byte)0x02);
 			patch.Position = 0;
 
 			Assert.Throws<NotSupportedException>(
 				() => decoder.Run(),
 				"compressed code table not implemented");
 		}
+
+        [Test]
+        public void DoesNotThrowExceptionIfNotHeader()
+        {
+            patchWriter.Write(0x00C4C3D6);
+            patchWriter.Write((byte)0x00);
+            patch.Position = 0;
+
+            Assert.DoesNotThrow(() => decoder.Run());
+        }
+
+        [Test]
+        public void ReadCorrectlyApplicationData()
+        {
+            patchWriter.Write(0x00C4C3D6);
+            patchWriter.Write((byte)0x04);
+            patchWriter.Write(0x07);
+            patchWriter.Write(Encoding.GetBytes("pleonex"));
+            patch.Position = 0;
+
+            decoder.Run();
+            Assert.AreEqual("pleonex", decoder.ApplicationData);
+        }
 	}
 }
 
