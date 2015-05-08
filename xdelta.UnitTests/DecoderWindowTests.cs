@@ -36,7 +36,6 @@ namespace Xdelta.UnitTests
         private BinaryReader outputReader;
 
         private MemoryStream patch;
-        private BinaryWriter patchWriter;
 
         [SetUp]
         public void SetUp()
@@ -48,10 +47,8 @@ namespace Xdelta.UnitTests
             outputReader = new BinaryReader(output);
 
             patch = new MemoryStream();
-            patchWriter = new BinaryWriter(patch);
 
             WriteGenericHeader();
-            patch.Position = 0;
             decoder = new Decoder(input, patch, output);
         }
 
@@ -65,50 +62,48 @@ namespace Xdelta.UnitTests
 
         private void WriteGenericHeader()
         {
-            patchWriter.Write(0x00C4C3D6);
-            patchWriter.Write((byte)0x00);
+            WriteBytes(0xD6, 0xC3, 0xC4, 0x00, 0x00);
         }
 
         private void WriteBytes(params byte[] data)
         {
             patch.Write(data, 0, data.Length);
-            patch.Position = 0;
+			patch.Position -= data.Length;
         }
+
+		private void TestThrows<T>(string message)
+			where T : SystemException
+		{
+			T exception = Assert.Throws<T>(() => decoder.Run());
+			Assert.AreEqual(message, exception.Message);
+		}
 
         [Test]
         public void WindowIndicatorWithAllBitS()
         {
-            WriteBytes(0xFF);
-            Assert.Throws<FormatException>(
-                () => decoder.Run(),
-                "unrecognized window indicator bits set");
+            WriteBytes(0x81, 0x7F);
+			TestThrows<FormatException>("unrecognized window indicator bits set");
         }
 
         [Test]
         public void WindowIndicatorWithInvalidBit()
         {
             WriteBytes(0x08);
-            Assert.Throws<FormatException>(
-                () => decoder.Run(),
-                "unrecognized window indicator bits set");
+			TestThrows<FormatException>("unrecognized window indicator bits set");
         }
 
         [Test]
         public void WindowCopyOverflow()
         {
-            WriteBytes(0x00, 0x10, 0x8F, 0xFF, 0xFF, 0xFF, 0xF0);
-            Assert.Throws<FormatException>(
-                () => decoder.Run(),
-                "decoder copy window overflows a file offset");
+            WriteBytes(0x01, 0x10, 0x8F, 0xFF, 0xFF, 0xFF, 0x70);
+            TestThrows<FormatException>("decoder copy window overflows a file offset");
         }
 
         [Test]
         public void WindowCopyWindowOverflow()
         {
-            WriteBytes(0x01, 0x10, 0x04);
-            Assert.Throws<FormatException>(
-                () => decoder.Run(),
-                "VCD_TARGET window out of bounds");
+            WriteBytes(0x02, 0x10, 0x04);
+            TestThrows<FormatException>("VCD_TARGET window out of bounds");
         }
     }
 }
