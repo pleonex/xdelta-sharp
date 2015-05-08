@@ -66,7 +66,7 @@ namespace Xdelta
         {
             VcdHeader header = (VcdHeader)patchReader.ReadByte();
             if (header.Contains(VcdHeader.NotSupported))
-                throw new FormatException("unrecognized header indicator bit set");
+                throw new FormatException("unrecognized header indicator bits set");
 
             if (header.Contains(VcdHeader.SecondaryCompression))
                 throw new NotSupportedException("unavailable secondary compressor");
