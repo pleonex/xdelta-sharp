@@ -109,19 +109,15 @@ namespace Xdelta.UnitTests
         [Test]
         public void WindowOverflow()
         {
-            WriteBytes(0x00, 0x8F, 0xFF, 0xFF, 0xFF, 0xF0, 0x01, 0x00, 0x10);
-            Assert.Throws<FormatException>(
-                () => decoder.Run(),
-                "decoder target window overflows a UInt32");
+            WriteBytes(0x01, 0x8F, 0xFF, 0xFF, 0xFF, 0x70, 0x00, 0x00, 0x10);
+            TestThrows<FormatException>("decoder target window overflows a UInt32");
         }
 
         [Test]
         public void WindowHardMaximumSize()
         {
-            WriteBytes(0x00, 0x05, 0x01, 0x00, 0x8F, 0xFF, 0xFF, 0xFF, 0xF0);
-            Assert.Throws<FormatException>(
-                () => decoder.Run(),
-                "Hard window size exceeded");
+            WriteBytes(0x01, 0x04, 0x00, 0x00, 0x8F, 0xFF, 0xFF, 0xFF, 0x70);
+            TestThrows<FormatException>("Hard window size exceeded");
         }
     }
 }
