@@ -60,7 +60,7 @@ namespace Xdelta.UnitTests
         public void ReadByteWithExactSize()
         {
             WriteBytes(0x10);
-            byte actual = reader.ReadUInt8();
+            byte actual = reader.ReadByte();
             Assert.AreEqual(0x10, actual);
         }
 
@@ -68,7 +68,7 @@ namespace Xdelta.UnitTests
         public void ReadByteWithMoreBytes()
         {
             WriteBytes(0x81, 0x1E);
-            byte actual = reader.ReadUInt8();
+            byte actual = reader.ReadByte();
             Assert.AreEqual(0x9E, actual);
             Assert.AreEqual(2, stream.Position);
         }
@@ -78,7 +78,7 @@ namespace Xdelta.UnitTests
         {
             WriteBytes(0x80, 0x81);
             TestThrows<FormatException>(
-                () => reader.ReadUInt8(),
+                () => reader.ReadByte(),
                 "overflow in decode_integer");
         }
 
@@ -87,7 +87,7 @@ namespace Xdelta.UnitTests
         {
             WriteBytes(0x83, 0x01);
             TestThrows<FormatException>(
-                () => reader.ReadUInt8(),
+                () => reader.ReadByte(),
                 "overflow in decode_integer");
         }
 
@@ -95,7 +95,7 @@ namespace Xdelta.UnitTests
         public void ReadSByteWithExactSize()
         {
             WriteBytes(0x7F);
-            sbyte actual = reader.ReadInt8();
+            sbyte actual = reader.ReadSByte();
             Assert.AreEqual(0x7F, actual);
         }
 
@@ -103,7 +103,7 @@ namespace Xdelta.UnitTests
         public void ReadSByteWithMoreBytes()
         {
             WriteBytes(0x81, 0x00);
-            sbyte actual = reader.ReadInt8();
+			sbyte actual = reader.ReadSByte();
             Assert.AreEqual(-128, actual);
             Assert.AreEqual(2, stream.Position);
         }
@@ -113,7 +113,7 @@ namespace Xdelta.UnitTests
         {
             WriteBytes(0x80, 0x81);
             TestThrows<FormatException>(
-                () => reader.ReadInt8(),
+				() => reader.ReadSByte(),
                 "overflow in decode_integer");
         }
 
@@ -122,7 +122,7 @@ namespace Xdelta.UnitTests
         {
             WriteBytes(0x83, 0x1);
             TestThrows<FormatException>(
-                () => reader.ReadInt8(),
+				() => reader.ReadSByte(),
                 "overflow in decode_integer");
         }
 

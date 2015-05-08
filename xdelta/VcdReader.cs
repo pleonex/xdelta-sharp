@@ -30,13 +30,22 @@ namespace Xdelta
         {
         }
 
-        public sbyte ReadInt8()
+		public override string ReadString()
+		{
+			// Explicity non-supported since internally it is being used ReadByte that has been overwritten
+			throw new NotSupportedException("VCDIFF Standard does not support strings");
+		}
+
+		public override sbyte ReadSByte()
         {
             return (sbyte)DecodeInteger(1); 
         }
 
-        public byte ReadUInt8()
+        public override byte ReadByte()
         {
+			// I have checked that internally in BinaryReader it is not used this method.
+			// It's used only for Internal7BitEncodedInt, but this other one is only used
+			// for strings that are not allowed.
             return (byte)DecodeInteger(1);
         }
 
@@ -94,7 +103,7 @@ namespace Xdelta
                 if (bitsRead > maxBytes * 8)
                     throw new FormatException("overflow in decode_integer");
 
-                data = ReadByte();
+                data = base.ReadByte();
 
                 bitsRead += 7;  // Bits of data read
                 value = (value << 7) | (data & 0x7Fu);  // Data only in the first 7 bits

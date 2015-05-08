@@ -79,7 +79,7 @@ namespace Xdelta.UnitTests
 		}
 
         [Test]
-        public void WindowIndicatorWithAllBitS()
+        public void WindowIndicatorWithAllBits()
         {
             WriteBytes(0x81, 0x7F);
 			TestThrows<FormatException>("unrecognized window indicator bits set");
