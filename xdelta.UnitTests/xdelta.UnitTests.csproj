@@ -36,8 +36,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DecoderHeaderTests.cs" />
-    <Compile Include="DecoderWindowTests.cs" />
+    <Compile Include="HeaderReaderTests.cs" />
+    <Compile Include="WindowReaderTests.cs" />
     <Compile Include="DecoderTests.cs" />
     <Compile Include="VcdReaderTests.cs" />
   </ItemGroup>

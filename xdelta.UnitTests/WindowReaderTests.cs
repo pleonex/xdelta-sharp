@@ -25,7 +25,7 @@ using NUnit.Framework;
 namespace Xdelta.UnitTests
 {
     [TestFixture]
-    public class DecoderWindowTests
+    public class WindowReaderTests
     {
         private Decoder decoder;
 
