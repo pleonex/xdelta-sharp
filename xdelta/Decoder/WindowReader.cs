@@ -79,8 +79,7 @@ namespace Xdelta
                window.CopyOffset + window.CopyLength > lastWindowOffset)
                 throw new FormatException("VCD_TARGET window out of bounds");
 
-            // Set encoded data address and length
-            window.CompressedPosition = window.CopyLength;
+            // Get compressed data length
             window.CompressedLength   = vcdReader.ReadUInt32();  // Length of the delta encoding
 
             // Get the length of target window
@@ -104,7 +103,7 @@ namespace Xdelta
 
             // Compressed fields is only used with secondary compression
             if (window.CompressedFields != WindowCompressedFields.None &&
-                header.SecondaryCompressor != SecondaryCompressor.None)
+                header.SecondaryCompressor == SecondaryCompressor.None)
                 throw new FormatException("invalid delta indicator bits set");
 
             // Read section lengths

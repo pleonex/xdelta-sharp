@@ -37,7 +37,6 @@ namespace Xdelta
         public uint Checksum   { get; set; }
 
         public WindowCompressedFields CompressedFields { get; set; }
-        public uint CompressedPosition { get; set; }
         public uint CompressedLength   { get; set; }
 
         public uint MaxPosition {

@@ -71,45 +71,92 @@ namespace Xdelta.UnitTests
 		}
 
         [Test]
-        public void WindowIndicatorWithAllBits()
+        public void ThrowsIfWindowIndicatorWithAllBits()
         {
             WriteBytes(0x81, 0x7F);
 			TestThrows<FormatException>("unrecognized window indicator bits set");
         }
 
         [Test]
-        public void WindowIndicatorWithInvalidBit()
+        public void ThrowsIfWindowIndicatorWithInvalidBit()
         {
             WriteBytes(0x08);
 			TestThrows<FormatException>("unrecognized window indicator bits set");
         }
 
         [Test]
-        public void WindowCopyOverflow()
+        public void ThrowsIfWindowCopyOverflow()
         {
             WriteBytes(0x01, 0x10, 0x8F, 0xFF, 0xFF, 0xFF, 0x70);
             TestThrows<FormatException>("decoder copy window overflows a file offset");
         }
 
         [Test]
-        public void WindowCopyWindowOverflow()
+        public void ThrowsIfWindowCopyWindowOverflow()
         {
             WriteBytes(0x02, 0x10, 0x04);
             TestThrows<FormatException>("VCD_TARGET window out of bounds");
         }
 
         [Test]
-        public void WindowOverflow()
+        public void ThrowsIfWindowOverflow()
         {
             WriteBytes(0x01, 0x8F, 0xFF, 0xFF, 0xFF, 0x70, 0x00, 0x00, 0x10);
             TestThrows<FormatException>("decoder target window overflows a UInt32");
         }
 
         [Test]
-        public void WindowHardMaximumSize()
+        public void ThrowsIfWindowHardMaximumSize()
         {
             WriteBytes(0x01, 0x04, 0x00, 0x00, 0x8F, 0xFF, 0xFF, 0xFF, 0x70);
             TestThrows<FormatException>("Hard window size exceeded");
+        }
+
+        [Test]
+        public void ThrowsIfAllFieldsCompressed()
+        {
+            WriteBytes(0x00, 0x00, 0x00, 0xFF);
+            TestThrows<FormatException>("unrecognized delta indicator bits set");
+        }
+
+        [Test]
+        public void ThrowsExceptionIfInvalidFieldCompressed()
+        {
+            WriteBytes(0x00, 0x00, 0x00, 0xF8);
+            TestThrows<FormatException>("unrecognized delta indicator bits set");
+        }
+
+        [Test]
+        public void ThrowsExceptionIfCompressedActivate()
+        {
+            WriteBytes(0x00, 0x00, 0x00, 0x01);
+            TestThrows<FormatException>("invalid delta indicator bits set");
+        }
+
+        [Test]
+        public void TestValidWindowFields()
+        {
+            WriteBytes(0x05, 0x10, 0x81, 0x00, 0x00, 0x82, 0x00, 0x00,
+                0x04, 0x1, 0x02, 0x01, 0x10, 0xAB, 0xCD,
+                0x0A, 0x0B, 0x0C, 0x0D, 0x0F, 0xCA, 0xFE);
+
+            Assert.DoesNotThrow(() => decoder.Run());
+            Assert.AreEqual(patch.Length, patch.Position);
+            Window window = decoder.LastWindow;
+
+            Assert.AreEqual(WindowFields.Source | WindowFields.Adler32, window.Fields);
+            Assert.AreEqual(0x10, window.CopyLength);
+            Assert.AreEqual(0x80, window.CopyOffset);
+            Assert.AreEqual(0x00, window.CompressedLength);
+            Assert.AreEqual(0x100, window.Length);
+            Assert.AreEqual(WindowCompressedFields.None, window.CompressedFields);
+            Assert.AreEqual(0x04, window.DataSection.Length);
+            Assert.AreEqual(0x01, window.InstructionsSection.Length);
+            Assert.AreEqual(0x02, window.AddressesSection.Length);
+            Assert.AreEqual(0x0110ABCD, window.Checksum);
+            Assert.AreEqual(new byte[] { 0xA, 0xB, 0xC, 0xD }, window.DataSection.ToArray());
+            Assert.AreEqual(new byte[] { 0x0F }, window.InstructionsSection.ToArray());
+            Assert.AreEqual(new byte[] { 0xCA, 0xFE }, window.AddressesSection.ToArray());
         }
     }
 }
