@@ -23,38 +23,30 @@ using System.IO;
 
 namespace Xdelta
 {
-    internal class DecoderHeader
+    internal class HeaderReader
     {
         private const uint MagicStamp = 0xC4C3D6;
         private const byte SupportedVersion = 0x00;
         private static readonly System.Text.Encoding Encoding = System.Text.Encoding.ASCII;
 
-        private VcdReader patchReader;
+        private VcdReader vcdReader;
 
-        public DecoderHeader(Stream patch)
+        public VcdHeader Read(Stream patch)
         {
-            patchReader = new VcdReader(patch);
-        }
+            vcdReader = new VcdReader(patch);
 
-        public string ApplicationData {
-            get;
-            private set;
-        }
-
-        public void Run()
-        {
             // Checks the first four bytes of the patch
             CheckStamp();
 
             // Now let's go to the header
-            ReadHeader();
+            return ReadHeader();
         }
 
         private void CheckStamp()
         {
-            // Can't read as uint32 directly since a intenger format is non-encoded
+            // Can't read as uint32 directly since a integer format is non-encoded
             // in a standard format.
-            uint stamp = BitConverter.ToUInt32(patchReader.ReadBytes(4), 0);
+            uint stamp = BitConverter.ToUInt32(vcdReader.ReadBytes(4), 0);
             if ((stamp & 0xFFFFFF) != MagicStamp)
                 throw new FormatException("not a VCDIFF input");
 
@@ -62,26 +54,31 @@ namespace Xdelta
                 throw new FormatException("VCDIFF input version > 0 is not supported");
         }
 
-        private void ReadHeader()
+        private VcdHeader ReadHeader()
         {
-            VcdHeaderFields header = (VcdHeaderFields)patchReader.ReadByte();
-            if (header.Contains(VcdHeaderFields.NotSupported))
+            VcdHeader header = new VcdHeader();
+
+            VcdHeaderFields fields = (VcdHeaderFields)vcdReader.ReadByte();
+            if (fields.Contains(VcdHeaderFields.NotSupported))
                 throw new FormatException("unrecognized header indicator bits set");
 
-            if (header.Contains(VcdHeaderFields.SecondaryCompression))
+            header.SecondaryCompressor = VcdSecondaryCompressor.None;
+            if (fields.Contains(VcdHeaderFields.SecondaryCompression))
                 throw new NotSupportedException("unavailable secondary compressor");
 
-            if (header.Contains(VcdHeaderFields.CodeTable))
+            if (fields.Contains(VcdHeaderFields.CodeTable))
                 throw new NotSupportedException("compressed code table not implemented");
 
-            if (header.Contains(VcdHeaderFields.ApplicationData))
-                ReadApplicationData();
+            if (fields.Contains(VcdHeaderFields.ApplicationData))
+                header.ApplicationData = ReadApplicationData();
+
+            return header;
         }
 
-        private void ReadApplicationData()
+        private string ReadApplicationData()
         {
-            int length = patchReader.ReadInt32();
-            ApplicationData = Encoding.GetString(patchReader.ReadBytes(length));
+            int length = vcdReader.ReadInt32();
+            return Encoding.GetString(vcdReader.ReadBytes(length));
         }
     }
 }

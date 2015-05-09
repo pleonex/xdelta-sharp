@@ -34,13 +34,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Decoder/Decoder.cs" />
     <Compile Include="VcdHeaderFields.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="Decoder/DecoderWindow.cs" />
     <Compile Include="VcdWindowFields.cs" />
-    <Compile Include="Decoder/DecoderHeader.cs" />
     <Compile Include="VcdReader.cs" />
+    <Compile Include="Decoder\Decoder.cs" />
+    <Compile Include="Decoder\DecoderWindow.cs" />
+    <Compile Include="Decoder\HeaderReader.cs" />
+    <Compile Include="VcdHeader.cs" />
+    <Compile Include="VcdSecondaryCompressor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -125,7 +125,7 @@ namespace Xdelta.UnitTests
             patch.Position = 0;
 
             Decoder decoder = new Decoder(input, patch, output);
-            Assert.AreEqual("pleonex", decoder.ApplicationData);
+            Assert.AreEqual("pleonex", decoder.Header.ApplicationData);
         }
 	}
 }

@@ -1,5 +1,5 @@
 ﻿//
-//  Decoder.cs
+//  VcdHeader.cs
 //
 //  Author:
 //       Benito Palacios Sánchez <benito356@gmail.com>
@@ -19,49 +19,20 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using System.IO;
 
 namespace Xdelta
 {
-	public class Decoder
-	{
-		public Decoder(Stream input, Stream patch, Stream output)
-		{
-			Input  = input;
-			Patch  = patch;
-			Output = output;
-
-            HeaderReader headerReader = new HeaderReader();
-            Header = headerReader.Read(patch);
-		}
-        
-		public Stream Input {
-			get;
-			private set;
-		}
-
-		public Stream Patch {
-			get;
-			private set;
-		}
-
-		public Stream Output {
-			get;
-			private set;
-		}
-
-        public VcdHeader Header {
+    public class VcdHeader
+    {
+        public VcdSecondaryCompressor SecondaryCompressor {
             get;
-            private set;
+            set;
         }
 
-        public void Run()
-        {
-            DecoderWindow winDecoder = new DecoderWindow(Input, Patch, Output);
-
-            // Decode windows until there are no more bytes to process
-            while (Patch.Position < Patch.Length)
-                winDecoder.NextWindow();
+        public string ApplicationData {
+            get;
+            set;
         }
-	}
+    }
 }
+
