@@ -64,17 +64,17 @@ namespace Xdelta
 
         private void ReadHeader()
         {
-            VcdHeader header = (VcdHeader)patchReader.ReadByte();
-            if (header.Contains(VcdHeader.NotSupported))
+            VcdHeaderFields header = (VcdHeaderFields)patchReader.ReadByte();
+            if (header.Contains(VcdHeaderFields.NotSupported))
                 throw new FormatException("unrecognized header indicator bits set");
 
-            if (header.Contains(VcdHeader.SecondaryCompression))
+            if (header.Contains(VcdHeaderFields.SecondaryCompression))
                 throw new NotSupportedException("unavailable secondary compressor");
 
-            if (header.Contains(VcdHeader.CodeTable))
+            if (header.Contains(VcdHeaderFields.CodeTable))
                 throw new NotSupportedException("compressed code table not implemented");
 
-            if (header.Contains(VcdHeader.ApplicationData))
+            if (header.Contains(VcdHeaderFields.ApplicationData))
                 ReadApplicationData();
         }
 
