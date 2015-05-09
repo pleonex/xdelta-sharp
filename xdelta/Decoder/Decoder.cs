@@ -57,11 +57,12 @@ namespace Xdelta
 
         public void Run()
         {
-            DecoderWindow winDecoder = new DecoderWindow(Input, Patch, Output);
+            WindowReader windowReader = new WindowReader(Patch);
 
             // Decode windows until there are no more bytes to process
-            while (Patch.Position < Patch.Length)
-                winDecoder.NextWindow();
+            while (Patch.Position < Patch.Length) {
+                Window window = windowReader.Read();
+            }
         }
 	}
 }

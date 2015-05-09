@@ -23,96 +23,79 @@ using System.IO;
 
 namespace Xdelta
 {
-    internal class DecoderWindow
+    internal class WindowReader
     {
         private const uint HardMaxWindowSize = 1u << 24;
 
-        private BinaryReader inputReader;
         private VcdReader patchReader;
-        private BinaryWriter outputWriter;
+        private uint lastWindowOffset;
+        private uint lastWindowLength;
 
-        uint currentWindow = 0;
-        uint windowCount   = 0;
-
-        uint windowOffset  = 0;
-        uint windowLength  = 0;
-        uint windowMaxPosition;
-
-        WindowFields indicator;
-        uint copyLength = 0;
-        uint copyOffset = 0;
-        uint checksumOffset = 0;
-
-        uint encodedPosition;
-        uint encodedLength;
-
-        public DecoderWindow(Stream input, Stream patch, Stream output)
+        public WindowReader(Stream patch)
         {
-            inputReader  = new BinaryReader(input);
             patchReader  = new VcdReader(patch);
-            outputWriter = new BinaryWriter(output);
+            lastWindowLength = 0;
+            lastWindowOffset = 0;
         }
 
-        public void NextWindow()
+        public Window Read()
         {
-            InitiazeWindow();
-            ReadWindowData();
+            CheckReadOverflow();
+            return ReadWindow();
         }
 
-        private void InitiazeWindow()
+        private void CheckReadOverflow()
         {
-            currentWindow = windowCount;
-            if (windowOffset.CheckOverflow(windowLength))
+            if (lastWindowOffset.CheckOverflow(lastWindowLength))
                 throw new FormatException("decoder file offset overflow");
 
             // Updated at the initialization to avoid throwing an overflow error
             // decoding exactly 4 GB files.
-            windowOffset += windowLength;
-                   
-            // Reset window variables
-            copyLength = 0;
-            copyOffset = 0;
-            checksumOffset = 0;
+            lastWindowOffset += lastWindowLength;
         }
 
-        private void ReadWindowData()
+        private Window ReadWindow()
         {
+            Window window = new Window();
+
             // Get window indicator
-            indicator = (WindowFields)patchReader.ReadByte();
-            if ((indicator & WindowFields.NotSupported) != 0)
+            window.Fields = (WindowFields)patchReader.ReadByte();
+            if ((window.Fields & WindowFields.NotSupported) != 0)
                 throw new FormatException("unrecognized window indicator bits set");
 
-            if ((indicator & (WindowFields.Source | WindowFields.Target)) != 0) {
-                copyLength = patchReader.ReadUInt32();  // Copy window length
-                copyOffset = patchReader.ReadUInt32();  // Copy window offset
+            if ((window.Fields & (WindowFields.Source | WindowFields.Target)) != 0) {
+                window.CopyLength = patchReader.ReadUInt32();  // Copy window length
+                window.CopyOffset = patchReader.ReadUInt32();  // Copy window offset
             }
 
             // Copy offset and copy length may not overflow
-            if (copyOffset.CheckOverflow(copyLength))
+            if (window.CopyOffset.CheckOverflow(window.CopyLength))
                 throw new FormatException("decoder copy window overflows a file offset");
        
             // Check copy window bounds
-            if ((indicator & WindowFields.Target) != 0 &&
-               copyOffset + copyLength > windowOffset)
+            if ((window.Fields & WindowFields.Target) != 0 &&
+               window.CopyOffset + window.CopyLength > lastWindowOffset)
                 throw new FormatException("VCD_TARGET window out of bounds");
 
             // Set encoded data address and length
-            encodedPosition = copyLength;
-            encodedLength   = patchReader.ReadUInt32();  // Length of the delta encoding
+            window.EncodedPosition = window.CopyLength;
+            window.EncodedLength   = patchReader.ReadUInt32();  // Length of the delta encoding
 
             // Get the length of target window
-            windowLength = patchReader.ReadUInt32();
-            windowMaxPosition = copyLength + windowLength;
+            window.Length = patchReader.ReadUInt32();
+            lastWindowLength = window.Length;
 
             // Set the maximum decoder position, beyond which we should not
             // decode any data.  This is the maximum value for dec_position.
             //  This may not exceed the size of a UInt32
-            if (copyLength.CheckOverflow(windowLength))
+            if (window.CopyLength.CheckOverflow(window.Length))
                 throw new FormatException("decoder target window overflows a UInt32");
 
             // Check for malicious files
-            if (windowLength > HardMaxWindowSize)
+            if (window.Length > HardMaxWindowSize)
                 throw new FormatException("Hard window size exceeded");
+
+            return window;
         }
     }
 }

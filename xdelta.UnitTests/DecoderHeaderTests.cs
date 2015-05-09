@@ -31,18 +31,14 @@ namespace Xdelta.UnitTests
 
 		private MemoryStream input;
         private MemoryStream output;
-
 		private MemoryStream patch;
-        private BinaryWriter patchWriter;
               
 		[SetUp]
 		public void SetUp()
 		{
-            input = new MemoryStream();
+            input  = new MemoryStream();
             output = new MemoryStream();
-
-            patch = new MemoryStream();
-			patchWriter = new BinaryWriter(patch);
+            patch  = new MemoryStream();
 		}
 
         [TearDown]

@@ -30,23 +30,15 @@ namespace Xdelta.UnitTests
         private Decoder decoder;
 
         private MemoryStream input;
-        private BinaryWriter inputWriter;
-
         private MemoryStream output;
-        private BinaryReader outputReader;
-
         private MemoryStream patch;
 
         [SetUp]
         public void SetUp()
         {
-            input = new MemoryStream();
-            inputWriter = new BinaryWriter(input);
-
+            input  = new MemoryStream();
             output = new MemoryStream();
-            outputReader = new BinaryReader(output);
-
-            patch = new MemoryStream();
+            patch  = new MemoryStream();
 
             WriteGenericHeader();
             decoder = new Decoder(input, patch, output);

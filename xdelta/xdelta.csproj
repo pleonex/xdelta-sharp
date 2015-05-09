@@ -39,10 +39,11 @@
     <Compile Include="Vcdiff\WindowFields.cs" />
     <Compile Include="VcdReader.cs" />
     <Compile Include="Decoder\Decoder.cs" />
-    <Compile Include="Decoder\DecoderWindow.cs" />
     <Compile Include="Decoder\HeaderReader.cs" />
     <Compile Include="Vcdiff\Header.cs" />
     <Compile Include="Vcdiff\SecondaryCompressor.cs" />
+    <Compile Include="Decoder\WindowReader.cs" />
+    <Compile Include="Vcdiff\Window.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
