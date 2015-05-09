@@ -44,25 +44,23 @@ namespace Xdelta
             return binReader.ReadBytes(count);
         }
 
-        #if USE_32_BITS_INTEGERS
-        public int ReadInteger()
+        public byte[] ReadBytes(uint count)
         {
-            return (int)DecodeInteger(4);
+            if (count > Int32.MaxValue)
+                throw new FormatException("Trying to read more than UInt32.MaxValue bytes");
+
+            return binReader.ReadBytes((int)count);
         }
 
-        public uint ReadUInteger()
+        #if USE_32_BITS_INTEGERS
+        public uint ReadInteger()
         {
             return (uint)DecodeInteger(4);
         }
         #else
-        public long ReadInteger()
+        public ulong ReadInteger()
         {
-            return (long)DecodeInteger(8);
-        }
-
-        public ulong ReadUInteger()
-        {
-            return DecodeInteger(8);
+            return (ulong)DecodeInteger(8);
         }
         #endif
 

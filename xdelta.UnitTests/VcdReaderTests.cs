@@ -75,47 +75,21 @@ namespace Xdelta.UnitTests
             Assert.AreEqual(1, stream.Position);
         }
 
+        [Test]
+        public void ReadBytes()
+        {
+            byte[] expected = new byte[] { 0xCA, 0xFE, 0xBE, 0xBE, 0xBE };
+            WriteBytes(expected);
+            byte[] actual = reader.ReadBytes(5);
+            Assert.AreEqual(expected, actual);
+        }
+
         #if USE_32_BITS_INTEGERS
-        [Test]
-        public void ReadUIntegerWithExactSize()
-        {
-            WriteBytes(0xBA, 0xEF, 0x9A, 0x15);
-            uint actual = reader.ReadUInteger();
-            Assert.AreEqual(123456789, actual);
-        }
-
-        [Test]
-        public void ReadUIntegerWithMoreBytes()
-        {
-            WriteBytes(0x88, 0x80, 0x80, 0x80, 0x00);
-            uint actual = reader.ReadUInteger();
-            Assert.AreEqual(0x80000000, actual);
-            Assert.AreEqual(5, stream.Position);
-        }
-
-        [Test]
-        public void ReadUIntegerWithOverflowBits()
-        {
-            WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80);
-            TestThrows<FormatException>(
-                () => reader.ReadUInteger(),
-                "overflow in decode_integer");
-        }
-
-        [Test]
-        public void ReadUIntegerWithOverflowValue()
-        {
-            WriteBytes(0x90, 0x80, 0x80, 0x80, 0x80);
-            TestThrows<FormatException>(
-                () => reader.ReadUInteger(),
-                "overflow in decode_integer");
-        }
-
         [Test]
         public void ReadIntegerWithExactSize()
         {
             WriteBytes(0xBA, 0xEF, 0x9A, 0x15);
-            int actual = reader.ReadInteger();
+            uint actual = reader.ReadInteger();
             Assert.AreEqual(123456789, actual);
         }
 
@@ -123,8 +97,8 @@ namespace Xdelta.UnitTests
         public void ReadIntegerWithMoreBytes()
         {
             WriteBytes(0x88, 0x80, 0x80, 0x80, 0x00);
-            int actual = reader.ReadInteger();
-            Assert.AreEqual(Int32.MinValue, actual);
+            uint actual = reader.ReadInteger();
+            Assert.AreEqual(0x80000000, actual);
             Assert.AreEqual(5, stream.Position);
         }
 
@@ -144,6 +118,14 @@ namespace Xdelta.UnitTests
             TestThrows<FormatException>(
                 () => reader.ReadInteger(),
                 "overflow in decode_integer");
+        }
+
+        [Test]
+        public void ReadMoreThanAllowedBytes()
+        {
+            TestThrows<FormatException>(
+                () => reader.ReadBytes(0x80000010),
+                "Trying to read more than UInt32.MaxValue bytes");
         }
         #else
         [Test]
