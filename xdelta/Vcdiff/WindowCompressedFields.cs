@@ -1,5 +1,5 @@
 ﻿//
-//  Window.cs
+//  WindowCompressedFields.cs
 //
 //  Author:
 //       Benito Palacios Sánchez <benito356@gmail.com>
@@ -19,34 +19,16 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using System.IO;
 
 namespace Xdelta
 {
-    public class Window
-    {
-        internal Window()
-        {
-        }
-
-        public WindowFields Fields { get; set; }
-        public uint Length { get; set; }
-
-        public uint CopyLength { get; set; }
-        public uint CopyOffset { get; set; }
-        public uint Checksum   { get; set; }
-
-        public WindowCompressedFields CompressedFields { get; set; }
-        public uint CompressedPosition { get; set; }
-        public uint CompressedLength   { get; set; }
-
-        public uint MaxPosition {
-            get { return Length + CopyLength; }
-        }
-
-        public MemoryStream DataSection { get; set; }
-        public MemoryStream InstructionsSection { get; set; }
-        public MemoryStream AddressesSection { get; set; }
+    [Flags]
+    public enum WindowCompressedFields : byte {
+        None         = 0,
+        Data         = 1 << 0,
+        Instructions = 1 << 1,
+        Addresses    = 1 << 2,
+        Invalid      = 0xF8
     }
 }
 

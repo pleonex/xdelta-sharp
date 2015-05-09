@@ -23,7 +23,7 @@ using System;
 namespace Xdelta
 {
     [FlagsAttribute]
-    internal enum WindowFields : byte {
+    public enum WindowFields : byte {
         NotSupported = 0xF8,
 
         Source  = 1 << 0,   // Copy window in source file

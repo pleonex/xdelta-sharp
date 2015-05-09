@@ -44,6 +44,7 @@
     <Compile Include="Vcdiff\SecondaryCompressor.cs" />
     <Compile Include="Decoder\WindowReader.cs" />
     <Compile Include="Vcdiff\Window.cs" />
+    <Compile Include="Vcdiff\WindowCompressedFields.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

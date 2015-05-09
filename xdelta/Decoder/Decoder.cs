@@ -55,13 +55,19 @@ namespace Xdelta
             private set;
         }
 
+        public Window LastWindow {
+            get;
+            private set;
+        }
+
         public void Run()
         {
-            WindowReader windowReader = new WindowReader(Patch);
+            WindowReader windowReader = new WindowReader(Patch, Header);
 
             // Decode windows until there are no more bytes to process
             while (Patch.Position < Patch.Length) {
                 Window window = windowReader.Read();
+                LastWindow = window;
             }
         }
 	}
