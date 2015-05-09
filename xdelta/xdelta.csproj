@@ -38,7 +38,7 @@
     <Compile Include="VcdHeaderFields.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Decoder/DecoderWindow.cs" />
-    <Compile Include="VcdWindow.cs" />
+    <Compile Include="VcdWindowFields.cs" />
     <Compile Include="Decoder/DecoderHeader.cs" />
     <Compile Include="VcdReader.cs" />
   </ItemGroup>

@@ -38,7 +38,7 @@ namespace Xdelta
         uint windowLength  = 0;
         uint windowMaxPosition;
 
-        VcdWindow indicator;
+        VcdWindowFields indicator;
         uint copyLength = 0;
         uint copyOffset = 0;
         uint checksumOffset = 0;
@@ -78,11 +78,11 @@ namespace Xdelta
         private void ReadWindowData()
         {
             // Get window indicator
-            indicator = (VcdWindow)patchReader.ReadByte();
-            if ((indicator & VcdWindow.NotSupported) != 0)
+            indicator = (VcdWindowFields)patchReader.ReadByte();
+            if ((indicator & VcdWindowFields.NotSupported) != 0)
                 throw new FormatException("unrecognized window indicator bits set");
 
-            if ((indicator & (VcdWindow.Source | VcdWindow.Target)) != 0) {
+            if ((indicator & (VcdWindowFields.Source | VcdWindowFields.Target)) != 0) {
                 copyLength = patchReader.ReadUInt32();  // Copy window length
                 copyOffset = patchReader.ReadUInt32();  // Copy window offset
             }
@@ -92,7 +92,7 @@ namespace Xdelta
                 throw new FormatException("decoder copy window overflows a file offset");
        
             // Check copy window bounds
-            if ((indicator & VcdWindow.Target) != 0 &&
+            if ((indicator & VcdWindowFields.Target) != 0 &&
                copyOffset + copyLength > windowOffset)
                 throw new FormatException("VCD_TARGET window out of bounds");
 
