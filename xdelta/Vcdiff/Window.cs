@@ -29,20 +29,14 @@ namespace Xdelta
         {
         }
 
-        public WindowFields Fields { get; set; }
-        public uint Length { get; set; }
+        public WindowFields Source      { get; set; }
+        public uint SourceSegmentLength { get; set; }
+        public uint SourceSegmentOffset { get; set; }
+        public uint Checksum { get; set; }
 
-        public uint CopyLength { get; set; }
-        public uint CopyOffset { get; set; }
-        public uint Checksum   { get; set; }
+        public uint TargetWindowLength { get; set; }
 
         public WindowCompressedFields CompressedFields { get; set; }
-        public uint CompressedLength   { get; set; }
-
-        public uint MaxPosition {
-            get { return Length + CopyLength; }
-        }
-
         public MemoryStream DataSection { get; set; }
         public MemoryStream InstructionsSection { get; set; }
         public MemoryStream AddressesSection { get; set; }

@@ -61,44 +61,43 @@ namespace Xdelta
             Window window = new Window();
 
             // Get window indicator
-            window.Fields = (WindowFields)vcdReader.ReadByte();
-            if ((window.Fields & WindowFields.NotSupported) != 0)
+            window.Source = (WindowFields)vcdReader.ReadByte();
+            if (window.Source.Contains(WindowFields.NotSupported))
                 throw new FormatException("unrecognized window indicator bits set");
 
-            if ((window.Fields & (WindowFields.Source | WindowFields.Target)) != 0) {
-                window.CopyLength = vcdReader.ReadUInteger();  // Copy window length
-                window.CopyOffset = vcdReader.ReadUInteger();  // Copy window offset
+            if (window.Source.Contains(WindowFields.Source | WindowFields.Target)) {
+                window.SourceSegmentLength = vcdReader.ReadUInteger();
+                window.SourceSegmentOffset = vcdReader.ReadUInteger();
             }
 
             // Copy offset and copy length may not overflow
-            if (window.CopyOffset.CheckOverflow(window.CopyLength))
+            if (window.SourceSegmentOffset.CheckOverflow(window.SourceSegmentLength))
                 throw new FormatException("decoder copy window overflows a file offset");
        
             // Check copy window bounds
-            if ((window.Fields & WindowFields.Target) != 0 &&
-               window.CopyOffset + window.CopyLength > lastWindowOffset)
+            if (window.Source.Contains(WindowFields.Target) &&
+               window.SourceSegmentOffset + window.SourceSegmentLength > lastWindowOffset)
                 throw new FormatException("VCD_TARGET window out of bounds");
 
-            // Get compressed data length
-            window.CompressedLength   = vcdReader.ReadUInteger();  // Length of the delta encoding
+            // Start of Delta Encoding Data
+            vcdReader.ReadUInteger();  // Length of the delta encoding (following data)
 
             // Get the length of target window
-            window.Length = vcdReader.ReadUInteger();
-            lastWindowLength = window.Length;
+            window.TargetWindowLength = vcdReader.ReadUInteger();
+            lastWindowLength = window.TargetWindowLength;
 
             // Set the maximum decoder position, beyond which we should not
-            // decode any data.  This is the maximum value for dec_position.
-            //  This may not exceed the size of a UInt32
-            if (window.CopyLength.CheckOverflow(window.Length))
+            // decode any data. This may not exceed the size of a UInt32.
+            if (window.SourceSegmentLength.CheckOverflow(window.TargetWindowLength))
                 throw new FormatException("decoder target window overflows a UInt32");
 
             // Check for malicious files
-            if (window.Length > HardMaxWindowSize)
+            if (window.TargetWindowLength > HardMaxWindowSize)
                 throw new FormatException("Hard window size exceeded");
                 
             // Get compressed / delta fields
             window.CompressedFields = (WindowCompressedFields)vcdReader.ReadByte();
-            if ((window.CompressedFields & WindowCompressedFields.Invalid) != 0)
+            if (window.CompressedFields.Contains(WindowCompressedFields.Invalid))
                 throw new FormatException("unrecognized delta indicator bits set");
 
             // Compressed fields is only used with secondary compression
@@ -112,7 +111,7 @@ namespace Xdelta
             int addressesLength    = vcdReader.ReadInteger();
 
             // Read checksum if so (it's in big-endian-non-integer)
-            if ((window.Fields & WindowFields.Adler32) != 0) {
+            if (window.Source.Contains(WindowFields.Adler32)) {
                 byte[] data = vcdReader.ReadBytes(4);
                 window.Checksum = (uint)((data[0] << 24) | (data[1] << 16) |
                     (data[2] << 8) | data[3]);

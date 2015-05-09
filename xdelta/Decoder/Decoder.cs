@@ -23,7 +23,7 @@ using System.IO;
 
 namespace Xdelta
 {
-	public class Decoder
+    public class Decoder : IDisposable
 	{
 		public Decoder(Stream input, Stream patch, Stream output)
 		{
@@ -34,6 +34,11 @@ namespace Xdelta
             HeaderReader headerReader = new HeaderReader();
             Header = headerReader.Read(patch);
 		}
+
+        ~Decoder()
+        {
+            Dispose(false);
+        }
         
 		public Stream Input {
 			get;
@@ -67,9 +72,45 @@ namespace Xdelta
 
             // Decode windows until there are no more bytes to process
             while (Patch.Position < Patch.Length) {
+                DisposeLastWindow();
+
                 Window window = windowReader.Read();
-                windowDecoder.Decode(window);
                 LastWindow = window;
+
+                windowDecoder.Decode(window);
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (disposing) {
+                DisposeLastWindow();
+                Input  = null;
+                Output = null;
+                Patch  = null;
+                Header = null;
+            }
+        }
+
+        private void DisposeLastWindow()
+        {
+            if (LastWindow != null) {
+                LastWindow.DataSection.Dispose();
+                LastWindow.DataSection = null;
+
+                LastWindow.InstructionsSection.Dispose();
+                LastWindow.InstructionsSection = null;
+
+                LastWindow.AddressesSection.Dispose();
+                LastWindow.AddressesSection = null;
+
+                LastWindow = null;
             }
         }
 	}

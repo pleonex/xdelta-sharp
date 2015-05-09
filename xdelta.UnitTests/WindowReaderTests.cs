@@ -144,11 +144,10 @@ namespace Xdelta.UnitTests
             Assert.AreEqual(patch.Length, patch.Position);
             Window window = decoder.LastWindow;
 
-            Assert.AreEqual(WindowFields.Source | WindowFields.Adler32, window.Fields);
-            Assert.AreEqual(0x10, window.CopyLength);
-            Assert.AreEqual(0x80, window.CopyOffset);
-            Assert.AreEqual(0x00, window.CompressedLength);
-            Assert.AreEqual(0x100, window.Length);
+            Assert.AreEqual(WindowFields.Source | WindowFields.Adler32, window.Source);
+            Assert.AreEqual(0x10, window.SourceSegmentLength);
+            Assert.AreEqual(0x80, window.SourceSegmentOffset);
+            Assert.AreEqual(0x100, window.TargetWindowLength);
             Assert.AreEqual(WindowCompressedFields.None, window.CompressedFields);
             Assert.AreEqual(0x04, window.DataSection.Length);
             Assert.AreEqual(0x01, window.InstructionsSection.Length);

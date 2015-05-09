@@ -56,8 +56,8 @@ namespace Xdelta
 
         public void Decode(Window window)
         {
-            numBlocks   = window.CopyOffset >> blockShift;
-            blockOffset = window.CopyOffset & blockMask;
+            numBlocks   = window.SourceSegmentOffset >> blockShift;
+            blockOffset = window.SourceSegmentOffset & blockMask;
 
             // TODO: While there are instructions to read
             // ... TODO: Parse it
