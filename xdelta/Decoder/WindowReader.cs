@@ -66,8 +66,8 @@ namespace Xdelta
                 throw new FormatException("unrecognized window indicator bits set");
 
             if ((window.Fields & (WindowFields.Source | WindowFields.Target)) != 0) {
-                window.CopyLength = vcdReader.ReadUInt32();  // Copy window length
-                window.CopyOffset = vcdReader.ReadUInt32();  // Copy window offset
+                window.CopyLength = vcdReader.ReadUInteger();  // Copy window length
+                window.CopyOffset = vcdReader.ReadUInteger();  // Copy window offset
             }
 
             // Copy offset and copy length may not overflow
@@ -80,10 +80,10 @@ namespace Xdelta
                 throw new FormatException("VCD_TARGET window out of bounds");
 
             // Get compressed data length
-            window.CompressedLength   = vcdReader.ReadUInt32();  // Length of the delta encoding
+            window.CompressedLength   = vcdReader.ReadUInteger();  // Length of the delta encoding
 
             // Get the length of target window
-            window.Length = vcdReader.ReadUInt32();
+            window.Length = vcdReader.ReadUInteger();
             lastWindowLength = window.Length;
 
             // Set the maximum decoder position, beyond which we should not
@@ -107,9 +107,9 @@ namespace Xdelta
                 throw new FormatException("invalid delta indicator bits set");
 
             // Read section lengths
-            int dataLength         = vcdReader.ReadInt32();
-            int instructionsLength = vcdReader.ReadInt32();
-            int addressesLength    = vcdReader.ReadInt32();
+            int dataLength         = vcdReader.ReadInteger();
+            int instructionsLength = vcdReader.ReadInteger();
+            int addressesLength    = vcdReader.ReadInteger();
 
             // Read checksum if so (it's in big-endian-non-integer)
             if ((window.Fields & WindowFields.Adler32) != 0) {

@@ -77,7 +77,7 @@ namespace Xdelta
 
         private string ReadApplicationData()
         {
-            int length = vcdReader.ReadInt32();
+            int length = vcdReader.ReadInteger();
             return Encoding.GetString(vcdReader.ReadBytes(length));
         }
     }

@@ -18,6 +18,8 @@
 //
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#define USE_32_BITS_INTEGERS
+
 using System;
 using System.IO;
 using NUnit.Framework;
@@ -73,135 +75,118 @@ namespace Xdelta.UnitTests
             Assert.AreEqual(1, stream.Position);
         }
 
+        #if USE_32_BITS_INTEGERS
         [Test]
-        public void ReadSByteWithExactSize()
-        {
-            WriteBytes(0x7F);
-            sbyte actual = reader.ReadSByte();
-            Assert.AreEqual(0x7F, actual);
-        }
-
-        [Test]
-        public void ReadSByteWithMoreBytes()
-        {
-            WriteBytes(0x80);
-			sbyte actual = reader.ReadSByte();
-            Assert.AreEqual(-128, actual);
-            Assert.AreEqual(1, stream.Position);
-        }
-
-        [Test]
-        public void ReadUInt32WithExactSize()
+        public void ReadUIntegerWithExactSize()
         {
             WriteBytes(0xBA, 0xEF, 0x9A, 0x15);
-            uint actual = reader.ReadUInt32();
+            uint actual = reader.ReadUInteger();
             Assert.AreEqual(123456789, actual);
         }
 
         [Test]
-        public void ReadUInt32WithMoreBytes()
+        public void ReadUIntegerWithMoreBytes()
         {
             WriteBytes(0x88, 0x80, 0x80, 0x80, 0x00);
-            uint actual = reader.ReadUInt32();
+            uint actual = reader.ReadUInteger();
             Assert.AreEqual(0x80000000, actual);
             Assert.AreEqual(5, stream.Position);
         }
 
         [Test]
-        public void ReadUInt32WithOverflowBits()
+        public void ReadUIntegerWithOverflowBits()
         {
             WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80);
             TestThrows<FormatException>(
-                () => reader.ReadUInt32(),
+                () => reader.ReadUInteger(),
                 "overflow in decode_integer");
         }
 
         [Test]
-        public void ReadUInt32WithOverflowValue()
+        public void ReadUIntegerWithOverflowValue()
         {
             WriteBytes(0x90, 0x80, 0x80, 0x80, 0x80);
             TestThrows<FormatException>(
-                () => reader.ReadUInt32(),
+                () => reader.ReadUInteger(),
                 "overflow in decode_integer");
         }
 
         [Test]
-        public void ReadInt32WithExactSize()
+        public void ReadIntegerWithExactSize()
         {
             WriteBytes(0xBA, 0xEF, 0x9A, 0x15);
-            int actual = reader.ReadInt32();
+            int actual = reader.ReadInteger();
             Assert.AreEqual(123456789, actual);
         }
 
         [Test]
-        public void ReadInt32WithMoreBytes()
+        public void ReadIntegerWithMoreBytes()
         {
             WriteBytes(0x88, 0x80, 0x80, 0x80, 0x00);
-            int actual = reader.ReadInt32();
+            int actual = reader.ReadInteger();
             Assert.AreEqual(Int32.MinValue, actual);
             Assert.AreEqual(5, stream.Position);
         }
 
         [Test]
-        public void ReadInt32WithOverflowBits()
+        public void ReadIntegerWithOverflowBits()
         {
             WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80);
             TestThrows<FormatException>(
-                () => reader.ReadInt32(),
+                () => reader.ReadInteger(),
                 "overflow in decode_integer");
         }
 
         [Test]
-        public void ReadInt32WithOverflowValue()
+        public void ReadIntegerWithOverflowValue()
         {
             WriteBytes(0x90, 0x80, 0x80, 0x80, 0x80);
             TestThrows<FormatException>(
-                () => reader.ReadInt32(),
+                () => reader.ReadInteger(),
                 "overflow in decode_integer");
         }
-
-
+        #else
         [Test]
-        public void ReadUInt64WithExactSize()
+        public void ReadUIntegerWithExactSize()
         {
             WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            ulong actual = reader.ReadUInt64();
+            ulong actual = reader.ReadUInteger();
             Assert.AreEqual(0x01, actual);
         }
 
         [Test]
-        public void ReadUInt64WithMoreBytes1()
+        public void ReadUIntegerWithMoreBytes1()
         {
             WriteBytes(0xC0, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            ulong actual = reader.ReadUInt64();
+            ulong actual = reader.ReadUInteger();
             Assert.AreEqual(0x4000000000000001, actual);
             Assert.AreEqual(9, stream.Position);
         }
 
         [Test]
-        public void ReadUInt64WithMoreBytes2()
+        public void ReadUIntegerWithMoreBytes2()
         {
             WriteBytes(0x81, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            ulong actual = reader.ReadUInt64();
+            ulong actual = reader.ReadUInteger();
             Assert.AreEqual(0x8000000000000001, actual);
             Assert.AreEqual(10, stream.Position);
         }
 
         [Test]
-        public void ReadUInt64WithOverflowBits()
+        public void ReadUIntegerWithOverflowBits()
         {
             WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
             TestThrows<FormatException>(
-                () => reader.ReadUInt64(),
+                () => reader.ReadUInteger(),
                 "overflow in decode_integer");
             Assert.AreEqual(10, stream.Position);
         }
 
         [Test]
-        public void ReadUInt64WithOverflowValue()
+        public void ReadUIntegerWithOverflowValue()
         {
             WriteBytes(0x82, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            ulong actual = reader.ReadUInt64();
+            ulong actual = reader.ReadUInteger();
             Assert.AreEqual(0x00, actual);
         }
 
@@ -209,45 +194,46 @@ namespace Xdelta.UnitTests
         public void ReadInt64WithExactSize()
         {
             WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            long actual = reader.ReadInt64();
+            long actual = reader.ReadInteger();
             Assert.AreEqual(0x01, actual);
         }
 
         [Test]
-        public void ReadInt64WithMoreBytes1()
+        public void ReadIntegerWithMoreBytes1()
         {
             WriteBytes(0xC0, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            long actual = reader.ReadInt64();
+            long actual = reader.ReadInteger();
             Assert.AreEqual(0x4000000000000001, actual);
             Assert.AreEqual(9, stream.Position);
         }
 
         [Test]
-        public void ReadInt64WithMoreBytes2()
+        public void ReadIntegerWithMoreBytes2()
         {
             WriteBytes(0x81, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            long actual = reader.ReadInt64();
+            long actual = reader.ReadInteger();
             Assert.AreEqual(Int64.MinValue, actual);
             Assert.AreEqual(10, stream.Position);
         }
 
         [Test]
-        public void ReadInt64WithOverflowBits()
+        public void ReadIntegerWithOverflowBits()
         {
             WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
             TestThrows<FormatException>(
-                () => reader.ReadInt64(),
+                () => reader.ReadInteger(),
                 "overflow in decode_integer");
             Assert.AreEqual(10, stream.Position);
         }
 
         [Test]
-        public void ReadInt64WithOverflowValue()
+        public void ReadIntegerWithOverflowValue()
         {
             WriteBytes(0x82, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            long actual = reader.ReadInt64();
+            long actual = reader.ReadInteger();
             Assert.AreEqual(0x00, actual);
         }
+        #endif
     }
 }
 

@@ -18,37 +18,53 @@
 //
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#define USE_32_BITS_INTEGERS
+
 using System;
 using System.IO;
 
 namespace Xdelta
 {
-    public class VcdReader : BinaryReader
+    public class VcdReader
     {
+        private BinaryReader binReader;
+
         public VcdReader(Stream stream)
-            : base(stream)
         {
+            binReader = new BinaryReader(stream);
         }
 
-        public override int ReadInt32()
+        public byte ReadByte()
+        {
+            return binReader.ReadByte();
+        }
+
+        public byte[] ReadBytes(int count)
+        {
+            return binReader.ReadBytes(count);
+        }
+
+        #if USE_32_BITS_INTEGERS
+        public int ReadInteger()
         {
             return (int)DecodeInteger(4);
         }
 
-        public override long ReadInt64()
+        public uint ReadUInteger()
+        {
+            return (uint)DecodeInteger(4);
+        }
+        #else
+        public long ReadInteger()
         {
             return (long)DecodeInteger(8);
         }
 
-        public override uint ReadUInt32()
-        {
-            return (uint)DecodeInteger(4);
-        }
-
-        public override ulong ReadUInt64()
+        public ulong ReadUInteger()
         {
             return DecodeInteger(8);
         }
+        #endif
 
         /// <summary>
         /// Decodes an integer of variable length.
@@ -74,7 +90,7 @@ namespace Xdelta
                 if (bitsRead > maxBytes * 8)
                     throw new FormatException("overflow in decode_integer");
 
-                data = base.ReadByte();
+                data = binReader.ReadByte();
 
                 bitsRead += 7;  // Bits of data read
                 value = (value << 7) | (data & 0x7Fu);  // Data only in the first 7 bits
