@@ -50,7 +50,7 @@ namespace Xdelta
 			private set;
 		}
 
-        public VcdHeader Header {
+        public Header Header {
             get;
             private set;
         }

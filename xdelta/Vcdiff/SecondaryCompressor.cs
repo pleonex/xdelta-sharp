@@ -1,5 +1,5 @@
 ﻿//
-//  VcdHeader.cs
+//  VcdSecondaryCompressor.cs
 //
 //  Author:
 //       Benito Palacios Sánchez <benito356@gmail.com>
@@ -22,17 +22,11 @@ using System;
 
 namespace Xdelta
 {
-    public class VcdHeader
-    {
-        public VcdSecondaryCompressor SecondaryCompressor {
-            get;
-            set;
-        }
-
-        public string ApplicationData {
-            get;
-            set;
-        }
+    public enum SecondaryCompressor : byte {
+        None,
+        Djw  = 1,   // Static Huffman
+        Lzma = 2,   // LZMA
+        Fgk  = 16,  // FGK Adaptive Huffman
     }
 }
 

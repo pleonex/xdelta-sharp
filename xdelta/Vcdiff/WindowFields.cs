@@ -1,5 +1,5 @@
 ﻿//
-//  VcdHeader.cs
+//  VcdWindow.cs
 //
 //  Author:
 //       Benito Palacios Sánchez <benito356@gmail.com>
@@ -22,13 +22,13 @@ using System;
 
 namespace Xdelta
 {
-	[FlagsAttribute]
-	internal enum VcdHeaderFields : byte {
-		NotSupported = 0xF8,
+    [FlagsAttribute]
+    internal enum WindowFields : byte {
+        NotSupported = 0xF8,
 
-		SecondaryCompression = 1 << 0, 	// Uses secondary compressor
-		CodeTable            = 1 << 1, 	// Contains code table data
-		ApplicationData      = 1 << 2,	// Contains application data
-	}
+        Source  = 1 << 0,   // Copy window in source file
+        Target  = 1 << 1,   // Copy window in target file
+        Adler32 = 1 << 2,   // Has adler32 checksum
+    }
 }
 

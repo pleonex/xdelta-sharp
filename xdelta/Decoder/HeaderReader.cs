@@ -31,7 +31,7 @@ namespace Xdelta
 
         private VcdReader vcdReader;
 
-        public VcdHeader Read(Stream patch)
+        public Header Read(Stream patch)
         {
             vcdReader = new VcdReader(patch);
 
@@ -54,22 +54,22 @@ namespace Xdelta
                 throw new FormatException("VCDIFF input version > 0 is not supported");
         }
 
-        private VcdHeader ReadHeader()
+        private Header ReadHeader()
         {
-            VcdHeader header = new VcdHeader();
+            Header header = new Header();
 
-            VcdHeaderFields fields = (VcdHeaderFields)vcdReader.ReadByte();
-            if (fields.Contains(VcdHeaderFields.NotSupported))
+            HeaderFields fields = (HeaderFields)vcdReader.ReadByte();
+            if (fields.Contains(HeaderFields.NotSupported))
                 throw new FormatException("unrecognized header indicator bits set");
 
-            header.SecondaryCompressor = VcdSecondaryCompressor.None;
-            if (fields.Contains(VcdHeaderFields.SecondaryCompression))
+            header.SecondaryCompressor = SecondaryCompressor.None;
+            if (fields.Contains(HeaderFields.SecondaryCompression))
                 throw new NotSupportedException("unavailable secondary compressor");
 
-            if (fields.Contains(VcdHeaderFields.CodeTable))
+            if (fields.Contains(HeaderFields.CodeTable))
                 throw new NotSupportedException("compressed code table not implemented");
 
-            if (fields.Contains(VcdHeaderFields.ApplicationData))
+            if (fields.Contains(HeaderFields.ApplicationData))
                 header.ApplicationData = ReadApplicationData();
 
             return header;
