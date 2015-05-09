@@ -79,7 +79,7 @@ namespace Xdelta.UnitTests
 		[Test]
 		public void InvalidHeaderIndicator()
 		{
-			WriteBytes(0xD6, 0xC3, 0xC4, 0x00, 0x81, 0x78);
+			WriteBytes(0xD6, 0xC3, 0xC4, 0x00, 0xF8);
 			TestThrows<FormatException>("unrecognized header indicator bits set");
 		}
 

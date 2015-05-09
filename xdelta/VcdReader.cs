@@ -30,35 +30,6 @@ namespace Xdelta
         {
         }
 
-		public override string ReadString()
-		{
-			// Explicity non-supported since internally it is being used ReadByte that has been overwritten
-			throw new NotSupportedException("VCDIFF Standard does not support strings");
-		}
-
-		public override sbyte ReadSByte()
-        {
-            return (sbyte)DecodeInteger(1); 
-        }
-
-        public override byte ReadByte()
-        {
-			// I have checked that internally in BinaryReader it is not used this method.
-			// It's used only for Internal7BitEncodedInt, but this other one is only used
-			// for strings that are not allowed.
-            return (byte)DecodeInteger(1);
-        }
-
-        public override short ReadInt16()
-        {
-            return (short)DecodeInteger(2);
-        }
-
-        public override ushort ReadUInt16()
-        {
-            return (ushort)DecodeInteger(2);
-        }
-
         public override int ReadInt32()
         {
             return (int)DecodeInteger(4);

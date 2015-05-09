@@ -67,28 +67,10 @@ namespace Xdelta.UnitTests
         [Test]
         public void ReadByteWithMoreBytes()
         {
-            WriteBytes(0x81, 0x1E);
+            WriteBytes(0x9E);
             byte actual = reader.ReadByte();
             Assert.AreEqual(0x9E, actual);
-            Assert.AreEqual(2, stream.Position);
-        }
-
-        [Test]
-        public void ReadByteWithOverflowBits()
-        {
-            WriteBytes(0x80, 0x81);
-            TestThrows<FormatException>(
-                () => reader.ReadByte(),
-                "overflow in decode_integer");
-        }
-
-        [Test]
-        public void ReadByteWithOverflowValue()
-        {
-            WriteBytes(0x83, 0x01);
-            TestThrows<FormatException>(
-                () => reader.ReadByte(),
-                "overflow in decode_integer");
+            Assert.AreEqual(1, stream.Position);
         }
 
         [Test]
@@ -102,98 +84,10 @@ namespace Xdelta.UnitTests
         [Test]
         public void ReadSByteWithMoreBytes()
         {
-            WriteBytes(0x81, 0x00);
+            WriteBytes(0x80);
 			sbyte actual = reader.ReadSByte();
             Assert.AreEqual(-128, actual);
-            Assert.AreEqual(2, stream.Position);
-        }
-
-        [Test]
-        public void ReadSByteWithOverflowBits()
-        {
-            WriteBytes(0x80, 0x81);
-            TestThrows<FormatException>(
-				() => reader.ReadSByte(),
-                "overflow in decode_integer");
-        }
-
-        [Test]
-        public void ReadSByteWithOverflowValue()
-        {
-            WriteBytes(0x83, 0x1);
-            TestThrows<FormatException>(
-				() => reader.ReadSByte(),
-                "overflow in decode_integer");
-        }
-
-        [Test]
-        public void ReadUInt16WithExactSize()
-        {
-            WriteBytes(0x84, 0x00);
-            ushort actual = reader.ReadUInt16();
-            Assert.AreEqual(0x200, actual);
-        }
-
-        [Test]
-        public void ReadUInt16WithMoreBytes()
-        {
-            WriteBytes(0x82, 0x81, 0x40);
-            ushort actual = reader.ReadUInt16();
-            Assert.AreEqual(0x80C0, actual);
-            Assert.AreEqual(3, stream.Position);
-        }
-
-        [Test]
-        public void ReadUInt16WithOverflowBits()
-        {
-            WriteBytes(0x80, 0x81, 0x80);
-            TestThrows<FormatException>(
-                () => reader.ReadUInt16(),
-                "overflow in decode_integer");
-        }
-
-        [Test]
-        public void ReadUInt16WithOverflowValue()
-        {
-            WriteBytes(0x84, 0x81, 0x00);
-            TestThrows<FormatException>(
-                () => reader.ReadUInt16(),
-                "overflow in decode_integer");
-        }
-
-        [Test]
-        public void ReadInt16WithExactSize()
-        {
-            WriteBytes(0x84, 0x00);
-            short actual = reader.ReadInt16();
-            Assert.AreEqual(0x200, actual);
-        }
-
-        [Test]
-        public void ReadInt16WithMoreBytes()
-        {
-            WriteBytes(0x82, 0x80, 0x00);
-            short actual = reader.ReadInt16();
-            Assert.AreEqual(-32768, actual);
-            Assert.AreEqual(3, stream.Position);
-        }
-
-        [Test]
-        public void ReadInt16WithOverflowBits()
-        {
-            WriteBytes(0x80, 0x81, 0x80);
-            TestThrows<FormatException>(
-                () => reader.ReadInt16(),
-                "overflow in decode_integer");
-        }
-
-        [Test]
-        public void ReadInt16WithOverflowValue()
-        {
-            WriteBytes(0x84, 0x81, 0x00);
-            TestThrows<FormatException>(
-                () => reader.ReadInt16(),
-                "overflow in decode_integer");
+            Assert.AreEqual(1, stream.Position);
         }
 
         [Test]
