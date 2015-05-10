@@ -27,6 +27,13 @@ namespace Xdelta
 {
     public class VcdReader
     {
+		#if USE_32_BITS_INTEGERS
+		private const int BytesInInteger = 4;
+		#else
+		private const int BytesInInteger = 8;
+		#endif
+		private const ulong Mask = ~((1ul << (BytesInInteger * 8)) - 1u);
+
         public VcdReader(Stream stream)
         {
             BaseStream = stream;
@@ -68,12 +75,12 @@ namespace Xdelta
         #if USE_32_BITS_INTEGERS
         public uint ReadInteger()
         {
-            return (uint)DecodeInteger(4);
+            return (uint)DecodeInteger();
         }
         #else
         public ulong ReadInteger()
         {
-            return (ulong)DecodeInteger(8);
+            return (ulong)DecodeInteger();
         }
         #endif
 
@@ -84,21 +91,19 @@ namespace Xdelta
         /// more bytes to decode.
         /// </summary>
         /// <returns>The integer.</returns>
-        /// <param name="maxBytes">Max bytes of the output format.</param>
-        private ulong DecodeInteger(int maxBytes)
+        private ulong DecodeInteger()
         {
             // There is no way to constraint the generic to a number so I am
             // using the biggest value possible and a casting at the end.
             // http://stackoverflow.com/questions/32664/is-there-a-constraint-that-restricts-my-generic-method-to-numeric-types
             ulong value = 0;
-            ulong mask = ~((1ul << (maxBytes * 8)) - 1u);
             int bitsRead = 0;
 
             int data;
             do {
                 // If it had already the opportinuty to read the maximum value
                 // This prevent read past the end of the stream
-                if (bitsRead > maxBytes * 8)
+				if (bitsRead > BytesInInteger * 8)
                     throw new FormatException("overflow in decode_integer");
 
 				data = BaseStream.ReadByte();
@@ -109,7 +114,7 @@ namespace Xdelta
 				value = (value << 7) | ((byte)data & 0x7Fu);  // Data only in the first 7 bits
 
                 // Check the maximum value expected (expect for long)
-                if (maxBytes != 8 && (value & mask) != 0)
+				if (BytesInInteger != 8 && (value & Mask) != 0)
                     throw new FormatException("overflow in decode_integer");
             } while (data >> 7 == 1);   // Continue bit in the last bit
 
