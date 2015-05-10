@@ -20,12 +20,28 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
 
-namespace Xdelta
+namespace Xdelta.Instructions
 {
-    public class Copy
+    public class Copy : Instruction
     {
-        public Copy()
+        public Copy(byte sizeInTable, byte mode, Cache cache)
+            : base(sizeInTable, mode, InstructionType.Copy)
         {
+        }
+
+        protected override void ReadDataAndAddress(Window window)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Decode(System.IO.Stream input, System.IO.Stream output)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return string.Format("[Copy]");
         }
     }
 }

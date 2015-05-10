@@ -22,11 +22,11 @@ using System;
 
 namespace Xdelta.Instructions
 {
-    public enum InstructionType {
-        Noop,
-        Run,
-        Add,
-        Copy
+    public enum InstructionType : byte {
+        Noop = 0,
+        Add  = 1,
+        Run  = 2,
+        Copy = 3
     }
 }
 

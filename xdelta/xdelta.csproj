@@ -52,6 +52,7 @@
     <Compile Include="Vcdiff\Instructions\Copy.cs" />
     <Compile Include="Cache.cs" />
     <Compile Include="AddressMode.cs" />
+    <Compile Include="CodeTable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

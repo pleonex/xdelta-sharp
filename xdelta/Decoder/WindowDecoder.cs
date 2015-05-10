@@ -26,39 +26,18 @@ namespace Xdelta
     public class WindowDecoder
     {
         private Stream input;
-        private BinaryReader inputReader;
         private Stream output;
-        private BinaryWriter outputWriter;
 
-        long inputSize;
-        int blockShift;
-        uint blockMask;
-
-        uint numBlocks;
-        uint blockOffset;
 
         public WindowDecoder(Stream input, Stream output)
         {
             this.input = input;
-            this.inputReader = new BinaryReader(input);
             this.output = output;
-            this.outputWriter = new BinaryWriter(output);
-
-            Initialize();
         }
 
-        private void Initialize()
-        {
-            inputSize  = input.Length.IsPowerOfTwo() ? input.Length : input.Length.RoundUpPowerOfTwo();
-            blockShift = inputSize.Log2OfPowerOfTwo();
-            blockMask  = (1u << blockShift) - 1;
-        }
 
         public void Decode(Window window)
         {
-            numBlocks   = window.SourceSegmentOffset >> blockShift;
-            blockOffset = window.SourceSegmentOffset & blockMask;
-
             // TODO: While there are instructions to read
             // ... TODO: Parse it
             // ... TODO: Process it
