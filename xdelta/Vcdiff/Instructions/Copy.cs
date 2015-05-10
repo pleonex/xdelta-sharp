@@ -27,8 +27,6 @@ namespace Xdelta.Instructions
     {
         private Cache cache;
         private byte binaryMode;
-
-        private uint bytesRead;
         private uint hereAddress;
 
         public Copy(byte sizeInTable, byte mode, Cache cache)
@@ -47,57 +45,86 @@ namespace Xdelta.Instructions
         {
             hereAddress = window.SourceSegmentLength + ((uint)output.Position - window.TargetWindowOffset);
             Address = cache.GetAddress(hereAddress, binaryMode, window.Addresses);
-            bytesRead = 0;
 
             if (!window.Source.Contains(WindowFields.Source | WindowFields.Target))
                 throw new Exception("Trying to copy from unknown source");
 
-            for (int i = 0; i < Size; i++) {
-                byte data = ReadFromSource(window, input, output);
-                output.WriteByte(data);
+            CopyFromSourceWindow(window, input, output);
+            CopyFromTargetWindow(window, output); // Not always
+        }
+
+        private void CopyFromSourceWindow(Window window, Stream input, Stream output)
+        {
+            // Check if there are some byte to copy from here
+            if (Address >= window.SourceSegmentLength)
+                return;
+                
+            // Decide the source
+            Stream stream = window.Source.Contains(WindowFields.Target) ? output : input;
+
+            // Get the length
+            uint length = Size;
+            if (Address + Size > window.SourceSegmentLength)
+                length = window.SourceSegmentLength - Address;
+
+            // Get the address
+            uint address = Address + window.SourceSegmentOffset;
+
+            // And copy
+            DirectCopy(stream, output, address, (int)length);
+        }
+
+        private void CopyFromTargetWindow(Window window, Stream output)
+        {
+            // If there is no data from target window, just return
+            if (Address + Size < window.SourceSegmentLength)
+                return;
+
+            // Get length, that is Size except if we have read something from SourceWindow
+            uint length = Size;
+            if (Address < window.SourceSegmentLength)
+                length -= window.SourceSegmentLength - Address;
+
+            // Get address
+            uint address = window.TargetWindowOffset;        // Absolute to target window
+            address += Address - window.SourceSegmentLength; // Relative to TargetWindow
+
+            // Determine if some bytes can't be read still
+            bool overlap = address + length >= output.Position;
+
+            // If there is no overlap, the typical read and write, else copy one by one
+            if (!overlap)
+                DirectCopy(output, output, address, (int)length);
+            else
+                SlowCopy(output, address, (int)length);
+        }
+
+        private void DirectCopy(Stream input, Stream output, uint address, int length)
+        {
+            byte[] data = new byte[length];
+
+            // Seek and read. Need to keep the position if we are reading from output
+            long oldAddress = input.Position;
+            input.Position = address;
+            input.Read(data, 0, length);
+            input.Position = oldAddress;
+
+            // Write
+            output.Write(data, 0, length);
+        }
+
+        private void SlowCopy(Stream stream, uint address, int length)
+        {
+            long startOutputPosition = stream.Position;
+            for (int i = 0; i < length; i++) {
+                stream.Position = address + i;
+                int data = stream.ReadByte();
+                if (data == -1)
+                    throw new EndOfStreamException();
+
+                stream.Position = startOutputPosition + i;
+                stream.WriteByte((byte)data);
             }
-        }
-
-        private byte ReadFromSource(Window window, Stream input, Stream output)
-        {
-            bool copyingFromTargetWindow = Address >= window.SourceSegmentLength;
-            bool isTarget = window.Source.Contains(WindowFields.Target);
-            Stream stream = (isTarget || copyingFromTargetWindow) ? output : input;
-
-            uint address = GetStreamAddress(window);
-            return PeekByte(stream, address);
-        }
-
-        private uint GetStreamAddress(Window window)
-        {
-            uint currentAddress = Address + bytesRead;
-
-            // If we are copy from source window
-            if (currentAddress < window.SourceSegmentLength)
-                currentAddress += window.SourceSegmentOffset;
-			else if (currentAddress < hereAddress + bytesRead) {
-                // We are copying from current target window
-                currentAddress -= window.SourceSegmentLength; // Relative
-                currentAddress += window.TargetWindowOffset;
-            } else
-                throw new FormatException("Invalid copy address");
-
-            return currentAddress;
-        }
-
-        private byte PeekByte(Stream stream, uint address)
-        {
-            long oldPosition = stream.Position;
-            stream.Seek(address, SeekOrigin.Begin);
-
-            int result = stream.ReadByte();
-            stream.Seek(oldPosition, SeekOrigin.Begin);
-
-            if (result == -1)
-                throw new EndOfStreamException("In copy");
-
-            bytesRead++;
-            return (byte)result;
         }
 
         public override string ToString()
