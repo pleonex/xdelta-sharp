@@ -20,6 +20,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
 using System.IO;
+using Xdelta.Instructions;
 
 namespace Xdelta
 {
@@ -27,20 +28,27 @@ namespace Xdelta
     {
         private Stream input;
         private Stream output;
-
+        private CodeTable codeTable;
 
         public WindowDecoder(Stream input, Stream output)
         {
-            this.input = input;
+            this.input  = input;
             this.output = output;
+            this.codeTable = CodeTable.Default;
         }
-
 
         public void Decode(Window window)
         {
-            // TODO: While there are instructions to read
-            // ... TODO: Parse it
-            // ... TODO: Process it
+            while (!window.Instructions.Eof) {
+                byte codeIndex = window.Instructions.ReadByte();
+                Instruction[] instructions = codeTable.GetInstructions(codeIndex);
+
+                instructions[0].Read(window);
+                instructions[0].Decode(input, output);
+
+                instructions[1].Read(window);
+                instructions[1].Decode(input, output);
+            }
 
             // TODO: Perfom checksum
         }

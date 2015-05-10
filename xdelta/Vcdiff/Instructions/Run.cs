@@ -26,7 +26,7 @@ namespace Xdelta.Instructions
     public class Run : Instruction
     {
         public Run(byte sizeInTable)
-            : base(sizeInTable, 0, InstructionType.Run)
+            : base(sizeInTable, InstructionType.Run)
         {
         }
 

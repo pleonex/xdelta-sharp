@@ -26,12 +26,11 @@ namespace Xdelta.Instructions
 {
     public abstract class Instruction
     {
-        public Instruction(byte sizeInTable, byte mode, InstructionType type)
+        public Instruction(byte sizeInTable, InstructionType type)
         {
             Type = type;
             SizeInTable = sizeInTable;
             Size = sizeInTable;
-            Mode = mode;
         }
 
         public InstructionType Type {
@@ -39,12 +38,7 @@ namespace Xdelta.Instructions
             private set;
         }
 
-        public byte SizeInTable {
-            get;
-            private set;
-        }
-
-        public byte Mode {
+        protected byte SizeInTable {
             get;
             private set;
         }

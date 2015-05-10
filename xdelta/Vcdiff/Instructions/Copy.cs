@@ -19,29 +19,40 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using System.IO;
 
 namespace Xdelta.Instructions
 {
     public class Copy : Instruction
     {
+        private Cache cache;
+        private byte binaryMode;
+
         public Copy(byte sizeInTable, byte mode, Cache cache)
-            : base(sizeInTable, mode, InstructionType.Copy)
+            : base(sizeInTable, InstructionType.Copy)
         {
+            this.cache = cache;
+            this.binaryMode = mode;
+        }
+
+        public uint Address {
+            get;
+            private set;
         }
 
         protected override void ReadDataAndAddress(Window window)
         {
-            throw new NotImplementedException();
+            Address = cache.GetAddress(0, binaryMode, window.Addresses);
         }
 
-        public override void Decode(System.IO.Stream input, System.IO.Stream output)
+        public override void Decode(Stream input, Stream output)
         {
             throw new NotImplementedException();
         }
 
         public override string ToString()
         {
-            return string.Format("[Copy]");
+            return string.Format("COPY {0:X4}, {1:X4}", Size, Address);
         }
     }
 }

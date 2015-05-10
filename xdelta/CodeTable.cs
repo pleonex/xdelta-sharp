@@ -42,6 +42,11 @@ namespace Xdelta
             get { return new CodeTable(DefaultTable, DefaultNearSlots, DefaultSameSlots); }
         }
 
+        public Instruction[] GetInstructions(byte index)
+        {
+            return new Instruction[] { instructions[index, 0], instructions[index, 1] };
+        }
+
         private void Initialize(byte[] table)
         {
             if (table.Length != 256 * 6)

@@ -40,6 +40,10 @@ namespace Xdelta
             private set;
         }
 
+        public bool Eof {
+            get { return BaseStream.Position >= BaseStream.Length; }
+        }
+
         public byte ReadByte()
         {
             return binReader.ReadByte();
