@@ -51,7 +51,12 @@ namespace Xdelta
             if (output.Position - window.TargetWindowOffset != window.TargetWindowLength)
                 throw new Exception("Target window not fully decoded");
 
-            // TODO: Perfom checksum
+			if (window.Source.Contains(WindowFields.Adler32)) {
+				output.Position = window.TargetWindowOffset;
+				uint newAdler = Adler32.Run(1, output, window.TargetWindowLength);
+				if (newAdler != window.Checksum)
+					throw new Exception("Invalid checksum");
+			}
         }
     }
 }
