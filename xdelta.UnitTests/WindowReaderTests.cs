@@ -136,9 +136,9 @@ namespace Xdelta.UnitTests
         [Test]
         public void TestValidWindowFields()
         {
-            WriteBytes(0x05, 0x10, 0x81, 0x00, 0x00, 0x82, 0x00, 0x00,
-                0x04, 0x1, 0x02, 0x01, 0x10, 0xAB, 0xCD,
-                0x0A, 0x0B, 0x0C, 0x0D, 0x0F, 0xCA, 0xFE);
+            WriteBytes(0x05, 0x10, 0x81, 0x00, 0x04, 0x00, 0x00,
+                0x04, 0x0, 0x02, 0x01, 0x10, 0xAB, 0xCD,
+                0x0A, 0x0B, 0x0C, 0x0D, 0xCA, 0xFE);
 
             Assert.DoesNotThrow(() => decoder.Run());
             Assert.AreEqual(patch.Length, patch.Position);
@@ -147,14 +147,14 @@ namespace Xdelta.UnitTests
             Assert.AreEqual(WindowFields.Source | WindowFields.Adler32, window.Source);
             Assert.AreEqual(0x10, window.SourceSegmentLength);
             Assert.AreEqual(0x80, window.SourceSegmentOffset);
-            Assert.AreEqual(0x100, window.TargetWindowLength);
+            Assert.AreEqual(0x00, window.TargetWindowLength);
             Assert.AreEqual(WindowCompressedFields.None, window.CompressedFields);
             Assert.AreEqual(0x04, window.Data.BaseStream.Length);
-            Assert.AreEqual(0x01, window.Instructions.BaseStream.Length);
+            Assert.AreEqual(0x00, window.Instructions.BaseStream.Length);
             Assert.AreEqual(0x02, window.Addresses.BaseStream.Length);
             Assert.AreEqual(0x0110ABCD, window.Checksum);
             Assert.AreEqual(new byte[] { 0xA, 0xB, 0xC, 0xD }, window.Data.ReadBytes(4));
-            Assert.AreEqual(new byte[] { 0x0F }, window.Instructions.ReadBytes(1));
+            //Assert.AreEqual(new byte[] { 0x0F }, window.Instructions.ReadBytes(1)); // No instruction to process
             Assert.AreEqual(new byte[] { 0xCA, 0xFE }, window.Addresses.ReadBytes(2));
         }
     }
