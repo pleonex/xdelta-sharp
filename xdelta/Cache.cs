@@ -32,6 +32,7 @@ namespace Xdelta
         {
             NearSlots = nearSlots;
             SameSlots = sameSlots;
+            Initialize();
         }
 
         public byte NearSlots {
