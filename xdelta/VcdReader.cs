@@ -27,12 +27,9 @@ namespace Xdelta
 {
     public class VcdReader
     {
-        private BinaryReader binReader;
-
         public VcdReader(Stream stream)
         {
             BaseStream = stream;
-            binReader = new BinaryReader(stream);
         }
 
         public Stream BaseStream {
@@ -46,12 +43,18 @@ namespace Xdelta
 
         public byte ReadByte()
         {
-            return binReader.ReadByte();
+			int data = BaseStream.ReadByte();
+			if (data == -1)
+				throw new EndOfStreamException();
+			
+			return (byte)data;
         }
 
         public byte[] ReadBytes(int count)
         {
-            return binReader.ReadBytes(count);
+			byte[] data = new byte[count];
+			BaseStream.Read(data, 0, data.Length);
+			return data;
         }
 
         public byte[] ReadBytes(uint count)
@@ -59,7 +62,7 @@ namespace Xdelta
             if (count > Int32.MaxValue)
                 throw new FormatException("Trying to read more than UInt32.MaxValue bytes");
 
-            return binReader.ReadBytes((int)count);
+            return ReadBytes((int)count);
         }
 
         #if USE_32_BITS_INTEGERS
@@ -91,17 +94,19 @@ namespace Xdelta
             ulong mask = ~((1ul << (maxBytes * 8)) - 1u);
             int bitsRead = 0;
 
-            byte data;
+            int data;
             do {
                 // If it had already the opportinuty to read the maximum value
                 // This prevent read past the end of the stream
                 if (bitsRead > maxBytes * 8)
                     throw new FormatException("overflow in decode_integer");
 
-                data = binReader.ReadByte();
+				data = BaseStream.ReadByte();
+				if (data == -1)
+					throw new EndOfStreamException();
 
                 bitsRead += 7;  // Bits of data read
-                value = (value << 7) | (data & 0x7Fu);  // Data only in the first 7 bits
+				value = (value << 7) | ((byte)data & 0x7Fu);  // Data only in the first 7 bits
 
                 // Check the maximum value expected (expect for long)
                 if (maxBytes != 8 && (value & mask) != 0)
