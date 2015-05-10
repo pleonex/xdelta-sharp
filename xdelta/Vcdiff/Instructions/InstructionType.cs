@@ -1,5 +1,5 @@
 ﻿//
-//  Run.cs
+//  InstructionType.cs
 //
 //  Author:
 //       Benito Palacios Sánchez <benito356@gmail.com>
@@ -19,37 +19,14 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using System.IO;
 
 namespace Xdelta.Instructions
 {
-    public class Run : Instruction
-    {
-        public Run(byte sizeInTable, byte mode)
-            : base(sizeInTable, mode, InstructionType.Run)
-        {
-        }
-
-        public byte Data {
-            get;
-            private set;
-        }
-
-        protected override void ReadDataAndAddress(Window window)
-        {
-            Data = (byte)window.DataSection.ReadByte();
-        }
-
-        public override void Decode(Stream input, Stream output)
-        {
-            for (int i = 0; i < Size; i++)
-                output.WriteByte(Data);
-        }
-
-        public override string ToString()
-        {
-            return string.Format("RUN {0:X8}, 0x{1:X2}", Size, Data);
-        }
+    public enum InstructionType {
+        Noop,
+        Run,
+        Add,
+        Copy
     }
 }
 

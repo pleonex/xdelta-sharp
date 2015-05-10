@@ -26,12 +26,30 @@ namespace Xdelta.Instructions
 {
     public abstract class Instruction
     {
-        public uint Size {
+        public Instruction(byte sizeInTable, byte mode, InstructionType type)
+        {
+            Type = type;
+            SizeInTable = sizeInTable;
+            Size = sizeInTable;
+            Mode = mode;
+        }
+
+        public InstructionType Type {
             get;
             private set;
         }
 
-        public uint Mode {
+        public byte SizeInTable {
+            get;
+            private set;
+        }
+
+        public byte Mode {
+            get;
+            private set;
+        }
+
+        public uint Size {
             get;
             private set;
         }
@@ -41,7 +59,9 @@ namespace Xdelta.Instructions
 
         public void Read(Window window)
         {
-            // TODO: Depending on the entry, read size and mode
+            if (Type != InstructionType.Noop && SizeInTable == 0)
+                Size = new VcdReader(window.InstructionsSection).ReadInteger();
+
             ReadDataAndAddress(window);
         }
     }

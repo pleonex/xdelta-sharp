@@ -48,6 +48,7 @@
     <Compile Include="Decoder\WindowDecoder.cs" />
     <Compile Include="Vcdiff\Instructions\Instruction.cs" />
     <Compile Include="Vcdiff\Instructions\Run.cs" />
+    <Compile Include="Vcdiff\Instructions\InstructionType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
