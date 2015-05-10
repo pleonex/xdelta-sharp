@@ -75,7 +75,7 @@ namespace Xdelta.Instructions
             // If we are copy from source window
             if (currentAddress < window.SourceSegmentLength)
                 currentAddress += window.SourceSegmentOffset;
-            else if (currentAddress < hereAddress) {
+			else if (currentAddress < hereAddress + bytesRead) {
                 // We are copying from current target window
                 currentAddress -= window.SourceSegmentLength; // Relative
                 currentAddress += window.TargetWindowOffset;
