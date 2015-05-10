@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xdelta", "xdelta\xdelta.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xdelta.UnitTests", "xdelta.UnitTests\xdelta.UnitTests.csproj", "{7573F420-394E-4C8D-8396-8DDDBE7CAA8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xdelta.Cli", "xdelta.Cli\xdelta.Cli.csproj", "{26693AAE-EE12-466B-9139-A419E9AFE191}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23F866F4-F22F-4162-8295-ED729ECC11F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23F866F4-F22F-4162-8295-ED729ECC11F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23F866F4-F22F-4162-8295-ED729ECC11F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26693AAE-EE12-466B-9139-A419E9AFE191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26693AAE-EE12-466B-9139-A419E9AFE191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26693AAE-EE12-466B-9139-A419E9AFE191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26693AAE-EE12-466B-9139-A419E9AFE191}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7573F420-394E-4C8D-8396-8DDDBE7CAA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7573F420-394E-4C8D-8396-8DDDBE7CAA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7573F420-394E-4C8D-8396-8DDDBE7CAA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
