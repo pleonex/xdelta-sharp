@@ -28,6 +28,7 @@ namespace Xdelta.Instructions
         public Add(byte sizeInTable)
             : base(sizeInTable, InstructionType.Add)
         {
+			Data = new byte[0];
         }
 
         public byte[] Data {
