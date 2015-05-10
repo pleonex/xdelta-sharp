@@ -29,10 +29,12 @@ namespace Xdelta
     {
 		#if USE_32_BITS_INTEGERS
 		private const int BytesInInteger = 4;
+		private const int MaxBytesInInteger = 5;
 		#else
 		private const int BytesInInteger = 8;
+		private const int MaxBytesInInteger = 10;
 		#endif
-		private const ulong Mask = ~((1ul << (BytesInInteger * 8)) - 1u);
+		private const int MaxBitsInInteger = BytesInInteger * 8;
 
         public VcdReader(Stream stream)
         {
@@ -75,7 +77,7 @@ namespace Xdelta
         #if USE_32_BITS_INTEGERS
         public uint ReadInteger()
         {
-            return (uint)DecodeInteger();
+            return DecodeInteger();
         }
         #else
         public ulong ReadInteger()
@@ -91,34 +93,30 @@ namespace Xdelta
         /// more bytes to decode.
         /// </summary>
         /// <returns>The integer.</returns>
-        private ulong DecodeInteger()
+        private uint DecodeInteger()
         {
-            // There is no way to constraint the generic to a number so I am
-            // using the biggest value possible and a casting at the end.
-            // http://stackoverflow.com/questions/32664/is-there-a-constraint-that-restricts-my-generic-method-to-numeric-types
-            ulong value = 0;
-            int bitsRead = 0;
+            #if !USE_32_BITS_INTEGERS
+			throw new NotImplementedException("Not implemented 64-bits integer reading");
+			#endif
+			uint value = 0;
+			byte bytesRead = 0;
+			int data;
 
-            int data;
-            do {
-                // If it had already the opportinuty to read the maximum value
-                // This prevent read past the end of the stream
-				if (bitsRead > BytesInInteger * 8)
-                    throw new FormatException("overflow in decode_integer");
-
+			do {
 				data = BaseStream.ReadByte();
 				if (data == -1)
 					throw new EndOfStreamException();
 
-                bitsRead += 7;  // Bits of data read
-				value = (value << 7) | ((byte)data & 0x7Fu);  // Data only in the first 7 bits
+				// Before set the last bits, check that there is no invalid bits set in the first iteration
+				// or trying to read more bytes than expected
+				if (++bytesRead == MaxBytesInInteger &&
+					((value >> (MaxBitsInInteger - 7) != 0) || ((data & 0x80) != 0)))
+					throw new FormatException("overflow in decode_integer");
 
-                // Check the maximum value expected (expect for long)
-				if (BytesInInteger != 8 && (value & Mask) != 0)
-                    throw new FormatException("overflow in decode_integer");
-            } while (data >> 7 == 1);   // Continue bit in the last bit
+				value = (value << 7) | ((byte)data & 0x7Fu);
+			} while ((data & 0x80) != 0 && bytesRead < MaxBytesInInteger);
 
-            return value;
+			return value;
         }
     }
 }
