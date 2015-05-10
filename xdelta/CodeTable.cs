@@ -63,7 +63,7 @@ namespace Xdelta
         {
             switch ((InstructionType)type) {
             case InstructionType.Noop:
-                return null;    // TODO
+                return new Noop();
 
             case InstructionType.Run:
                 return new Run(size);

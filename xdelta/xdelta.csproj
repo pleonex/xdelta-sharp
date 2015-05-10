@@ -53,6 +53,7 @@
     <Compile Include="Cache.cs" />
     <Compile Include="AddressMode.cs" />
     <Compile Include="CodeTable.cs" />
+    <Compile Include="Vcdiff\Instructions\Noop.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
