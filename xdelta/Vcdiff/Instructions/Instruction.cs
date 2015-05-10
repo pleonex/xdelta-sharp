@@ -60,7 +60,7 @@ namespace Xdelta.Instructions
         public void Read(Window window)
         {
             if (Type != InstructionType.Noop && SizeInTable == 0)
-                Size = new VcdReader(window.InstructionsSection).ReadInteger();
+                Size = window.Instructions.ReadInteger();
 
             ReadDataAndAddress(window);
         }

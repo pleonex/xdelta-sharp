@@ -112,15 +112,18 @@ namespace Xdelta
 
             // Read checksum if so (it's in big-endian-non-integer)
             if (window.Source.Contains(WindowFields.Adler32)) {
-                byte[] data = vcdReader.ReadBytes(4);
-                window.Checksum = (uint)((data[0] << 24) | (data[1] << 16) |
-                    (data[2] << 8) | data[3]);
+                byte[] checksum = vcdReader.ReadBytes(4);
+                window.Checksum = (uint)((checksum[0] << 24) | (checksum[1] << 16) |
+                    (checksum[2] << 8) | checksum[3]);
             }
 
             // Read sections
-            window.DataSection = new MemoryStream(vcdReader.ReadBytes(dataLength));
-            window.InstructionsSection = new MemoryStream(vcdReader.ReadBytes(instructionsLength));
-            window.AddressesSection = new MemoryStream(vcdReader.ReadBytes(addressesLength));
+            MemoryStream data = new MemoryStream(vcdReader.ReadBytes(dataLength));
+            MemoryStream instructions = new MemoryStream(vcdReader.ReadBytes(instructionsLength));
+            MemoryStream addresses = new MemoryStream(vcdReader.ReadBytes(addressesLength));
+            window.Data = new VcdReader(data);
+            window.Instructions = new VcdReader(instructions);
+            window.Addresses = new VcdReader(addresses);
 
             return window;
         }

@@ -149,13 +149,13 @@ namespace Xdelta.UnitTests
             Assert.AreEqual(0x80, window.SourceSegmentOffset);
             Assert.AreEqual(0x100, window.TargetWindowLength);
             Assert.AreEqual(WindowCompressedFields.None, window.CompressedFields);
-            Assert.AreEqual(0x04, window.DataSection.Length);
-            Assert.AreEqual(0x01, window.InstructionsSection.Length);
-            Assert.AreEqual(0x02, window.AddressesSection.Length);
+            Assert.AreEqual(0x04, window.Data.BaseStream.Length);
+            Assert.AreEqual(0x01, window.Instructions.BaseStream.Length);
+            Assert.AreEqual(0x02, window.Addresses.BaseStream.Length);
             Assert.AreEqual(0x0110ABCD, window.Checksum);
-            Assert.AreEqual(new byte[] { 0xA, 0xB, 0xC, 0xD }, window.DataSection.ToArray());
-            Assert.AreEqual(new byte[] { 0x0F }, window.InstructionsSection.ToArray());
-            Assert.AreEqual(new byte[] { 0xCA, 0xFE }, window.AddressesSection.ToArray());
+            Assert.AreEqual(new byte[] { 0xA, 0xB, 0xC, 0xD }, window.Data.ReadBytes(4));
+            Assert.AreEqual(new byte[] { 0x0F }, window.Instructions.ReadBytes(1));
+            Assert.AreEqual(new byte[] { 0xCA, 0xFE }, window.Addresses.ReadBytes(2));
         }
     }
 }

@@ -31,7 +31,13 @@ namespace Xdelta
 
         public VcdReader(Stream stream)
         {
+            BaseStream = stream;
             binReader = new BinaryReader(stream);
+        }
+
+        public Stream BaseStream {
+            get;
+            private set;
         }
 
         public byte ReadByte()

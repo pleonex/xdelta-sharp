@@ -101,14 +101,14 @@ namespace Xdelta
         private void DisposeLastWindow()
         {
             if (LastWindow != null) {
-                LastWindow.DataSection.Dispose();
-                LastWindow.DataSection = null;
+                LastWindow.Data.BaseStream.Dispose();
+                LastWindow.Data = null;
 
-                LastWindow.InstructionsSection.Dispose();
-                LastWindow.InstructionsSection = null;
+                LastWindow.Instructions.BaseStream.Dispose();
+                LastWindow.Instructions = null;
 
-                LastWindow.AddressesSection.Dispose();
-                LastWindow.AddressesSection = null;
+                LastWindow.Addresses.BaseStream.Dispose();
+                LastWindow.Addresses = null;
 
                 LastWindow = null;
             }

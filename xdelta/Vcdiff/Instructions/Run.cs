@@ -25,8 +25,8 @@ namespace Xdelta.Instructions
 {
     public class Run : Instruction
     {
-        public Run(byte sizeInTable, byte mode)
-            : base(sizeInTable, mode, InstructionType.Run)
+        public Run(byte sizeInTable)
+            : base(sizeInTable, 0, InstructionType.Run)
         {
         }
 
@@ -37,7 +37,7 @@ namespace Xdelta.Instructions
 
         protected override void ReadDataAndAddress(Window window)
         {
-            Data = (byte)window.DataSection.ReadByte();
+            Data = window.Data.ReadByte();
         }
 
         public override void Decode(Stream input, Stream output)

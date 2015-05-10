@@ -37,9 +37,9 @@ namespace Xdelta
         public uint TargetWindowLength { get; set; }
 
         public WindowCompressedFields CompressedFields { get; set; }
-        public MemoryStream DataSection { get; set; }
-        public MemoryStream InstructionsSection { get; set; }
-        public MemoryStream AddressesSection { get; set; }
+        public VcdReader Data { get; set; }
+        public VcdReader Instructions { get; set; }
+        public VcdReader Addresses { get; set; }
     }
 }
 
