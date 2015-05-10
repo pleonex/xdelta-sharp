@@ -30,11 +30,12 @@ namespace Xdelta
         }
 
         public WindowFields Source      { get; set; }
-        public uint SourceSegmentLength { get; set; }
+        public uint TargetWindowOffset { get; set; }
         public uint SourceSegmentOffset { get; set; }
-        public uint Checksum { get; set; }
+        public uint TargetWindowLength  { get; set; }
+        public uint SourceSegmentLength { get; set; }
 
-        public uint TargetWindowLength { get; set; }
+        public uint Checksum { get; set; }
 
         public WindowCompressedFields CompressedFields { get; set; }
         public VcdReader Data { get; set; }

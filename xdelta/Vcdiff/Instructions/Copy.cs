@@ -27,7 +27,9 @@ namespace Xdelta.Instructions
     {
         private Cache cache;
         private byte binaryMode;
-        private uint currentAddress;
+
+        private uint bytesRead;
+        private uint hereAddress;
 
         public Copy(byte sizeInTable, byte mode, Cache cache)
             : base(sizeInTable, InstructionType.Copy)
@@ -43,32 +45,59 @@ namespace Xdelta.Instructions
 
         public override void DecodeInstruction(Window window, Stream input, Stream output)
         {
-            Address = cache.GetAddress((uint)output.Position, binaryMode, window.Addresses);
-            currentAddress = window.SourceSegmentOffset + Address;
-            if (Address + Size > window.SourceSegmentLength)
-                throw new FormatException("Trying to read outsie the window");
+            hereAddress = window.SourceSegmentLength + ((uint)output.Position - window.TargetWindowOffset);
+            Address = cache.GetAddress(hereAddress, binaryMode, window.Addresses);
+            bytesRead = 0;
 
             if (!window.Source.Contains(WindowFields.Source | WindowFields.Target))
-                throw new FormatException("Trying to copy without source");
+                throw new Exception("Trying to copy from unknown source");
 
             for (int i = 0; i < Size; i++) {
-                byte data = ReadFromSource(window.Source, input, output);
+                byte data = ReadFromSource(window, input, output);
                 output.WriteByte(data);
             }
         }
 
-        private byte ReadFromSource(WindowFields source, Stream input, Stream output)
+        private byte ReadFromSource(Window window, Stream input, Stream output)
         {
-            byte data;
-            Stream stream = source.Contains(WindowFields.Source) ? input : output;
+            bool copyingFromTargetWindow = Address >= window.SourceSegmentLength;
+            bool isTarget = window.Source.Contains(WindowFields.Target);
+            Stream stream = (isTarget || copyingFromTargetWindow) ? output : input;
 
+            uint address = GetStreamAddress(window);
+            return PeekByte(stream, address);
+        }
+
+        private uint GetStreamAddress(Window window)
+        {
+            uint currentAddress = Address + bytesRead;
+
+            // If we are copy from source window
+            if (currentAddress < window.SourceSegmentLength)
+                currentAddress += window.SourceSegmentOffset;
+            else if (currentAddress < hereAddress) {
+                // We are copying from current target window
+                currentAddress -= window.SourceSegmentLength; // Relative
+                currentAddress += window.TargetWindowOffset;
+            } else
+                throw new FormatException("Invalid copy address");
+
+            return currentAddress;
+        }
+
+        private byte PeekByte(Stream stream, uint address)
+        {
             long oldPosition = stream.Position;
-            stream.Seek(currentAddress, SeekOrigin.Begin);
-            data = (byte)stream.ReadByte();
+            stream.Seek(address, SeekOrigin.Begin);
+
+            int result = stream.ReadByte();
             stream.Seek(oldPosition, SeekOrigin.Begin);
 
-            currentAddress++;
-            return data;
+            if (result == -1)
+                throw new EndOfStreamException("In copy");
+
+            bytesRead++;
+            return (byte)result;
         }
 
         public override string ToString()
