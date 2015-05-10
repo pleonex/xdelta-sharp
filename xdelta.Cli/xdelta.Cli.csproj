@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -6,7 +6,7 @@
     <ProjectGuid>{26693AAE-EE12-466B-9139-A419E9AFE191}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Xdelta.Cli</RootNamespace>
-    <AssemblyName>xdelta</AssemblyName>
+    <AssemblyName>xdelta.cli</AssemblyName>
     <StartupObject>Xdelta.Cli.MainClass</StartupObject>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
   </PropertyGroup>
