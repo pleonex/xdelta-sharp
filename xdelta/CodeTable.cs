@@ -69,7 +69,7 @@ namespace Xdelta
                 return new Run(size);
 
             case InstructionType.Add:
-                return null;    // TODO
+                return new Add(size);
 
             case InstructionType.Copy:
                 return new Copy(size, mode, Cache);
