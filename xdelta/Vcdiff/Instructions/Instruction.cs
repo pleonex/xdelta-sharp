@@ -48,15 +48,14 @@ namespace Xdelta.Instructions
             private set;
         }
 
-        protected abstract void ReadDataAndAddress(Window window);
-        public abstract void Decode(Stream input, Stream output);
+        public abstract void DecodeInstruction(Window window, Stream input, Stream output);
 
-        public void Read(Window window)
+        public void Decode(Window window, Stream input, Stream output)
         {
             if (Type != InstructionType.Noop && SizeInTable == 0)
                 Size = window.Instructions.ReadInteger();
 
-            ReadDataAndAddress(window);
+            DecodeInstruction(window, input, output);
         }
     }
 }

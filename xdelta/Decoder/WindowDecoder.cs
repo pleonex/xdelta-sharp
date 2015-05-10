@@ -39,16 +39,17 @@ namespace Xdelta
 
         public void Decode(Window window)
         {
+            long startPosition = output.Position;
             while (!window.Instructions.Eof) {
                 byte codeIndex = window.Instructions.ReadByte();
                 Instruction[] instructions = codeTable.GetInstructions(codeIndex);
 
-                instructions[0].Read(window);
-                instructions[0].Decode(input, output);
-
-                instructions[1].Read(window);
-                instructions[1].Decode(input, output);
+                instructions[0].Decode(window, input, output);
+                instructions[1].Decode(window, input, output);
             }
+
+            if (output.Position - startPosition != window.TargetWindowLength)
+                throw new Exception("Target window not fully decoded");
 
             // TODO: Perfom checksum
         }

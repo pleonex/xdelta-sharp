@@ -35,13 +35,10 @@ namespace Xdelta.Instructions
             private set;
         }
 
-        protected override void ReadDataAndAddress(Window window)
+        public override void DecodeInstruction(Window window, Stream input, Stream output)
         {
             Data = window.Data.ReadByte();
-        }
 
-        public override void Decode(Stream input, Stream output)
-        {
             for (int i = 0; i < Size; i++)
                 output.WriteByte(Data);
         }

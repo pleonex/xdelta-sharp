@@ -27,6 +27,7 @@ namespace Xdelta.Instructions
     {
         private Cache cache;
         private byte binaryMode;
+        private uint currentAddress;
 
         public Copy(byte sizeInTable, byte mode, Cache cache)
             : base(sizeInTable, InstructionType.Copy)
@@ -40,14 +41,34 @@ namespace Xdelta.Instructions
             private set;
         }
 
-        protected override void ReadDataAndAddress(Window window)
+        public override void DecodeInstruction(Window window, Stream input, Stream output)
         {
-            Address = cache.GetAddress(0, binaryMode, window.Addresses);
+            Address = cache.GetAddress((uint)output.Position, binaryMode, window.Addresses);
+            currentAddress = window.SourceSegmentOffset + Address;
+            if (Address + Size > window.SourceSegmentLength)
+                throw new FormatException("Trying to read outsie the window");
+
+            if (!window.Source.Contains(WindowFields.Source | WindowFields.Target))
+                throw new FormatException("Trying to copy without source");
+
+            for (int i = 0; i < Size; i++) {
+                byte data = ReadFromSource(window.Source, input, output);
+                output.WriteByte(data);
+            }
         }
 
-        public override void Decode(Stream input, Stream output)
+        private byte ReadFromSource(WindowFields source, Stream input, Stream output)
         {
-            throw new NotImplementedException();
+            byte data;
+            Stream stream = source.Contains(WindowFields.Source) ? input : output;
+
+            long oldPosition = stream.Position;
+            stream.Seek(currentAddress, SeekOrigin.Begin);
+            data = (byte)stream.ReadByte();
+            stream.Seek(oldPosition, SeekOrigin.Begin);
+
+            currentAddress++;
+            return data;
         }
 
         public override string ToString()
