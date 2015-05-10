@@ -26,7 +26,8 @@ namespace Xdelta
         Self,
         Here,
         Near,
-        Same
+        Same,
+        Invalid
     }
 }
 

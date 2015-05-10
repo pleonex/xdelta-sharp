@@ -53,7 +53,7 @@ namespace Xdelta
 
         public uint GetAddress(uint hereAddress, byte mode, VcdReader addressSection)
         {
-            uint address;
+            uint address = 0;
             switch (GetMode(mode)) {
             case AddressMode.Self:
                 address = addressSection.ReadInteger();
@@ -79,7 +79,7 @@ namespace Xdelta
 
         private AddressMode GetMode(byte mode)
         {
-            AddressMode addressMode;
+            AddressMode addressMode = AddressMode.Invalid;
             if (mode == 0)
                 addressMode = AddressMode.Self;
             else if (mode == 1)
