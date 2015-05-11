@@ -64,28 +64,6 @@ namespace Xdelta
         {
             return length > (UInt32.MaxValue - address);
         }
-
-        public static bool IsPowerOfTwo(this long x)
-        {
-            return (x != 0) && ((x & (x - 1)) == 0);
-        }
-
-        public static long RoundUpPowerOfTwo(this long x)
-        {
-            long i = 1;
-            while (x > i)
-                i <<= 1;
-            return i;
-        }
-
-        public static int Log2OfPowerOfTwo(this long value)
-        {
-            for (int log = 0, x = 1; x != 0; log++, x <<= 1)
-                if (x == value)
-                    return log;
-
-            return -1;
-        }
     }
 }
 
