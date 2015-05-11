@@ -39,7 +39,13 @@ namespace Xdelta
 
         public void Decode(Window window)
         {
+            // Clear cache
+            codeTable.Cache.Initialize();
+
+            // Set the target window offset
             window.TargetWindowOffset = (uint)output.Position;
+
+            // For each instruction
             while (!window.Instructions.Eof) {
                 byte codeIndex = window.Instructions.ReadByte();
                 Instruction[] instructions = codeTable.GetInstructions(codeIndex);
@@ -48,9 +54,11 @@ namespace Xdelta
                 instructions[1].Decode(window, input, output);
             }
 
+            // Check all data has been decoded
             if (output.Position - window.TargetWindowOffset != window.TargetWindowLength)
                 throw new Exception("Target window not fully decoded");
 
+            // Check checksum
 			if (window.Source.Contains(WindowFields.Adler32)) {
 				output.Position = window.TargetWindowOffset;
 				uint newAdler = Adler32.Run(1, output, window.TargetWindowLength);

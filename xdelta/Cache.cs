@@ -32,7 +32,8 @@ namespace Xdelta
         {
             NearSlots = nearSlots;
             SameSlots = sameSlots;
-            Initialize();
+            near = new uint[NearSlots];
+            same = new uint[SameSlots * 256];
         }
 
         public byte NearSlots {
@@ -45,11 +46,11 @@ namespace Xdelta
             private set;
         }
 
-        private void Initialize()
+        public void Initialize()
         {
             nextSlot = 0;
-            near = new uint[NearSlots];
-            same = new uint[SameSlots * 256];
+            Array.Clear(near, 0, NearSlots);
+            Array.Clear(same, 0, SameSlots * 256);
         }
 
         public uint GetAddress(uint hereAddress, byte mode, VcdReader addressSection)
