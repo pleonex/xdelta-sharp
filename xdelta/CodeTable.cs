@@ -25,7 +25,8 @@ namespace Xdelta
 {
     public class CodeTable
     {
-        private Instruction[,] instructions;
+        private const int NumEntries = 256;
+        private Instruction[] instructions;
 
         public CodeTable(byte[] table, byte nearSlots, byte sameSlots)
         {
@@ -42,20 +43,21 @@ namespace Xdelta
             get { return new CodeTable(DefaultTable, DefaultNearSlots, DefaultSameSlots); }
         }
 
-        public Instruction[] GetInstructions(byte index)
+        public Instruction[] GetInstructions(int index)
         {
-            return new Instruction[] { instructions[index, 0], instructions[index, 1] };
+            return new Instruction[] { instructions[index*2], instructions[index*2 + 1] };
         }
 
         private void Initialize(byte[] table)
         {
-            if (table.Length != 256 * 6)
+            if (table.Length != NumEntries * 6)
                 throw new FormatException("Invalid code table size");
 
-            instructions = new Instruction[256, 2];
-            for (int i = 0, t = 0; i < 256; i++) {
-                instructions[i, 0] = CreateInstruction(table[t++], table[t++], table[t++]);
-                instructions[i, 1] = CreateInstruction(table[t++], table[t++], table[t++]);
+            instructions = new Instruction[NumEntries*2];
+            for (int i = 0, t = 0; i < NumEntries; i++) {
+                // An entry of the table contains two instructions
+                instructions[i*2]     = CreateInstruction(table[t++], table[t++], table[t++]);
+                instructions[i*2 + 1] = CreateInstruction(table[t++], table[t++], table[t++]);
             }
         }
 
