@@ -20,6 +20,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
 using System.IO;
+using System.Diagnostics;
 
 namespace Xdelta.Cli
 {
@@ -30,10 +31,39 @@ namespace Xdelta.Cli
             if (args.Length != 3)
                 return;
 
-            using (FileStream source = new FileStream(args[0], FileMode.Open))
-            using (FileStream patch  = new FileStream(args[1], FileMode.Open))
-            using (FileStream target = new FileStream(args[2], FileMode.Create))
+            Stopwatch watcher = Stopwatch.StartNew();
+
+            using (FileStream source = OpenForRead(args[0]))
+            using (FileStream patch  = OpenForRead(args[1]))
+            using (FileStream target = CreateForWriteAndRead(args[2]))
                 new Decoder(source, patch, target).Run();
+
+            watcher.Stop();
+            Console.WriteLine("Done in {0}", watcher.Elapsed);
+            Console.WriteLine("Press a key to quit...");
+            Console.ReadKey(true);
+        }
+
+        private static FileStream OpenForRead(string filePath)
+        {
+            return new FileStream(
+                filePath,
+                FileMode.Open,
+                FileAccess.Read,
+                FileShare.Read,
+                4096,   // Default buffer, it seems bigger does not affect time
+                FileOptions.RandomAccess);
+        }
+
+        private static FileStream CreateForWriteAndRead(string filePath)
+        {
+            return new FileStream(
+                filePath,
+                FileMode.Create,
+                FileAccess.ReadWrite,
+                FileShare.Read,
+                4096,   // Default buffer, it seems bigger does not affect time
+                FileOptions.RandomAccess);
         }
     }
 }
