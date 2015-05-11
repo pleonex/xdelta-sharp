@@ -39,8 +39,11 @@ namespace Xdelta.Instructions
         {
             Data = window.Data.ReadByte();
 
+            byte[] dataArray = new byte[Size];
             for (int i = 0; i < Size; i++)
-                output.WriteByte(Data);
+                dataArray[i] = Data;
+
+            output.Write(dataArray, 0, dataArray.Length);
         }
 
         public override string ToString()

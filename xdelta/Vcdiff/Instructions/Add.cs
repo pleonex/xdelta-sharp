@@ -39,7 +39,7 @@ namespace Xdelta.Instructions
         public override void DecodeInstruction(Window window, Stream input, Stream output)
         {
             Data = window.Data.ReadBytes(Size);
-            output.Write(Data, 0, (int)Size);
+            output.Write(Data, 0, Data.Length);
         }
 
         public override string ToString()
