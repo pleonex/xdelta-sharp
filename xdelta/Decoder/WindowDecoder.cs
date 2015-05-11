@@ -46,12 +46,13 @@ namespace Xdelta
             window.TargetWindowOffset = (uint)output.Position;
 
             // For each instruction
+            Instruction firstInstruction, secondInstruction;
             while (!window.Instructions.Eof) {
                 byte codeIndex = window.Instructions.ReadByte();
-                Instruction[] instructions = codeTable.GetInstructions(codeIndex);
+                codeTable.GetInstructions(codeIndex, out firstInstruction, out secondInstruction);
 
-                instructions[0].Decode(window, input, output);
-                instructions[1].Decode(window, input, output);
+                firstInstruction.Decode(window, input, output);
+                secondInstruction.Decode(window, input, output);
             }
 
             // Check all data has been decoded

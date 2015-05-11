@@ -43,9 +43,10 @@ namespace Xdelta
             get { return new CodeTable(DefaultTable, DefaultNearSlots, DefaultSameSlots); }
         }
 
-        public Instruction[] GetInstructions(int index)
+        public void GetInstructions(int index, out Instruction inst1, out Instruction inst2)
         {
-            return new Instruction[] { instructions[index*2], instructions[index*2 + 1] };
+            inst1 = instructions[index * 2];
+            inst2 = instructions[index * 2 + 1];
         }
 
         private void Initialize(byte[] table)
