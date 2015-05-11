@@ -116,14 +116,17 @@ namespace Xdelta.Instructions
         private void SlowCopy(Stream stream, uint address, int length)
         {
             long startOutputPosition = stream.Position;
-            for (int i = 0; i < length; i++) {
+            int availableData = (int)(startOutputPosition - address);
+            byte[] buffer = new byte[availableData];
+
+            for (int i = 0; i < length; i += availableData) {
+                int toCopy = (length - i < availableData) ? length - i : availableData;
+
                 stream.Position = address + i;
-                int data = stream.ReadByte();
-                if (data == -1)
-                    throw new EndOfStreamException();
+                stream.Read(buffer, 0, toCopy);
 
                 stream.Position = startOutputPosition + i;
-                stream.WriteByte((byte)data);
+                stream.Write(buffer, 0, toCopy);
             }
         }
 
