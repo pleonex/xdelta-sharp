@@ -84,6 +84,7 @@
     <Compile Include="Vcdiff\Instructions\Noop.cs" />
     <Compile Include="Vcdiff\Instructions\Add.cs" />
     <Compile Include="Adler32.cs" />
+    <Compile Include="ProgressDelegates.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

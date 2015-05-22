@@ -65,6 +65,9 @@ namespace Xdelta
             private set;
         }
 
+        public event ProgressChangedHandler ProgressChanged;
+        public event FinishedHandler Finished;
+
         public void Run()
         {
             WindowReader windowReader = new WindowReader(Patch, Header);
@@ -78,7 +81,10 @@ namespace Xdelta
                 LastWindow = window;
 
                 windowDecoder.Decode(window);
+                OnProgressChanged(1.0 * Patch.Position / Patch.Length);
             }
+
+            OnFinished();
         }
 
         public void Dispose()
@@ -112,6 +118,18 @@ namespace Xdelta
 
                 LastWindow = null;
             }
+        }
+
+        private void OnProgressChanged(double progress)
+        {
+            if (ProgressChanged != null)
+                ProgressChanged(progress);
+        }
+
+        private void OnFinished()
+        {
+            if (Finished != null)
+                Finished();
         }
 	}
 }
