@@ -71,7 +71,7 @@ namespace Xdelta.UnitTests
 
         #if DEBUG
         [Test]
-        [Ignore]
+        [Ignore("Require the test file.")]
         public void NinokuniPatch()
         {
             string gamePath = "/store/Juegos/NDS/Ninokuni [CLEAN].nds";

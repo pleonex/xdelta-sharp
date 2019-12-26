@@ -1,90 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{23F866F4-F22F-4162-8295-ED729ECC11F3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Xdelta</RootNamespace>
-    <AssemblyName>xdelta</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <NoWin32Manifest>False</NoWin32Manifest>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <NoStdLib>False</NoStdLib>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-    <TargetFrameworkProfile />
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
+    <AssemblyName>Xdelta</AssemblyName>
+    <Product>Xdelta</Product>
+    <Description>Decompressor of VCDIFF patch files (RFC3284).</Description>
+    <Authors>Benito Palacios Sánchez</Authors>
+    <Copyright>Copyright (C) 2015 Benito Palacios Sánchez</Copyright>
+
+    <Version>1.1</Version>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>Full</DebugType>
-    <Optimize>False</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
-    <BaseAddress>4194304</BaseAddress>
-    <RegisterForComInterop>False</RegisterForComInterop>
-    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
-    <FileAlignment>4096</FileAlignment>
-    <PlatformTarget>x86</PlatformTarget>
+
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/pleonex/xdelta-sharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pleonex/xdelta-sharp</RepositoryUrl>
+    <License>GPL-3</License>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageIcon></PackageIcon>
+    <PackageTags>decompress;vcdiff;rfc3284;xdelta</PackageTags>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <BaseAddress>4194304</BaseAddress>
-    <RegisterForComInterop>False</RegisterForComInterop>
-    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
-    <FileAlignment>4096</FileAlignment>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
-    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
-    <BaseAddress>4194304</BaseAddress>
-    <PlatformTarget>x86</PlatformTarget>
-    <RegisterForComInterop>False</RegisterForComInterop>
-    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
-    <FileAlignment>4096</FileAlignment>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vcdiff\HeaderFields.cs" />
-    <Compile Include="Extensions.cs" />
-    <Compile Include="Vcdiff\WindowFields.cs" />
-    <Compile Include="VcdReader.cs" />
-    <Compile Include="Decoder\Decoder.cs" />
-    <Compile Include="Decoder\HeaderReader.cs" />
-    <Compile Include="Vcdiff\Header.cs" />
-    <Compile Include="Vcdiff\SecondaryCompressor.cs" />
-    <Compile Include="Decoder\WindowReader.cs" />
-    <Compile Include="Vcdiff\Window.cs" />
-    <Compile Include="Vcdiff\WindowCompressedFields.cs" />
-    <Compile Include="Decoder\WindowDecoder.cs" />
-    <Compile Include="Vcdiff\Instructions\Instruction.cs" />
-    <Compile Include="Vcdiff\Instructions\Run.cs" />
-    <Compile Include="Vcdiff\Instructions\InstructionType.cs" />
-    <Compile Include="Vcdiff\Instructions\Copy.cs" />
-    <Compile Include="Cache.cs" />
-    <Compile Include="AddressMode.cs" />
-    <Compile Include="CodeTable.cs" />
-    <Compile Include="Vcdiff\Instructions\Noop.cs" />
-    <Compile Include="Vcdiff\Instructions\Add.cs" />
-    <Compile Include="Adler32.cs" />
-    <Compile Include="ProgressDelegates.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

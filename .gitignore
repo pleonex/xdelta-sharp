@@ -4,6 +4,7 @@ obj/
 
 # Project files
 *.userprefs
+.vs/
 
 # NuGet
 packages/
