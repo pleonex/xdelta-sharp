@@ -1,8 +1,10 @@
 language: csharp
 solution: xdelta.sln
 
+dotnet: 3.1.100
 mono:
   - latest
 
 script:
-  - dotnet test
+  - dotnet build -c Release
+  - dotnet test --no-build -c Release
