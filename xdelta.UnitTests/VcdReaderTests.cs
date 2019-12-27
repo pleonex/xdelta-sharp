@@ -1,25 +1,22 @@
-﻿//
-//  VcdiffReaderTests.cs
-//
-//  Author:
-//       Benito Palacios Sánchez <benito356@gmail.com>
-//
-//  Copyright (c) 2015 Benito Palacios Sánchez
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#define USE_32_BITS_INTEGERS
+﻿// Copyright (c) 2019 Benito Palacios Sánchez
 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 using System;
 using System.IO;
 using NUnit.Framework;
@@ -48,15 +45,15 @@ namespace Xdelta.UnitTests
         private void WriteBytes(params byte[] data)
         {
             stream.Write(data, 0, data.Length);
-			stream.Position -= data.Length;
+            stream.Position -= data.Length;
         }
 
-		private void TestThrows<T>(TestDelegate code, string message)
-			where T : SystemException
-		{
-			T exception = Assert.Throws<T>(code);
-			Assert.AreEqual(message, exception.Message);
-		}
+        private void TestThrows<T>(TestDelegate code, string message)
+            where T : SystemException
+        {
+            T exception = Assert.Throws<T>(code);
+            Assert.AreEqual(message, exception.Message);
+        }
 
         [Test]
         public void ReadByteWithExactSize()
@@ -84,7 +81,6 @@ namespace Xdelta.UnitTests
             Assert.AreEqual(expected, actual);
         }
 
-        #if USE_32_BITS_INTEGERS
         [Test]
         public void ReadIntegerWithExactSize()
         {
@@ -127,95 +123,6 @@ namespace Xdelta.UnitTests
                 () => reader.ReadBytes(0x80000010),
                 "Trying to read more than UInt32.MaxValue bytes");
         }
-        #else
-        [Test]
-        public void ReadUIntegerWithExactSize()
-        {
-            WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            ulong actual = reader.ReadUInteger();
-            Assert.AreEqual(0x01, actual);
-        }
-
-        [Test]
-        public void ReadUIntegerWithMoreBytes1()
-        {
-            WriteBytes(0xC0, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            ulong actual = reader.ReadUInteger();
-            Assert.AreEqual(0x4000000000000001, actual);
-            Assert.AreEqual(9, stream.Position);
-        }
-
-        [Test]
-        public void ReadUIntegerWithMoreBytes2()
-        {
-            WriteBytes(0x81, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            ulong actual = reader.ReadUInteger();
-            Assert.AreEqual(0x8000000000000001, actual);
-            Assert.AreEqual(10, stream.Position);
-        }
-
-        [Test]
-        public void ReadUIntegerWithOverflowBits()
-        {
-            WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            TestThrows<FormatException>(
-                () => reader.ReadUInteger(),
-                "overflow in decode_integer");
-            Assert.AreEqual(10, stream.Position);
-        }
-
-        [Test]
-        public void ReadUIntegerWithOverflowValue()
-        {
-            WriteBytes(0x82, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            ulong actual = reader.ReadUInteger();
-            Assert.AreEqual(0x00, actual);
-        }
-
-        [Test]
-        public void ReadInt64WithExactSize()
-        {
-            WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            long actual = reader.ReadInteger();
-            Assert.AreEqual(0x01, actual);
-        }
-
-        [Test]
-        public void ReadIntegerWithMoreBytes1()
-        {
-            WriteBytes(0xC0, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x01);
-            long actual = reader.ReadInteger();
-            Assert.AreEqual(0x4000000000000001, actual);
-            Assert.AreEqual(9, stream.Position);
-        }
-
-        [Test]
-        public void ReadIntegerWithMoreBytes2()
-        {
-            WriteBytes(0x81, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            long actual = reader.ReadInteger();
-            Assert.AreEqual(Int64.MinValue, actual);
-            Assert.AreEqual(10, stream.Position);
-        }
-
-        [Test]
-        public void ReadIntegerWithOverflowBits()
-        {
-            WriteBytes(0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            TestThrows<FormatException>(
-                () => reader.ReadInteger(),
-                "overflow in decode_integer");
-            Assert.AreEqual(10, stream.Position);
-        }
-
-        [Test]
-        public void ReadIntegerWithOverflowValue()
-        {
-            WriteBytes(0x82, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x00);
-            long actual = reader.ReadInteger();
-            Assert.AreEqual(0x00, actual);
-        }
-        #endif
     }
 }
 

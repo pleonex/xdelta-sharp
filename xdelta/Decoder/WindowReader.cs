@@ -1,23 +1,22 @@
-﻿//
-//  DecoderWindow.cs
-//
-//  Author:
-//       Benito Palacios Sánchez <benito356@gmail.com>
-//
-//  Copyright (c) 2015 Benito Palacios Sánchez
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+﻿// Copyright (c) 2019 Benito Palacios Sánchez
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 using System;
 using System.IO;
 
@@ -62,10 +61,10 @@ namespace Xdelta
 
             // Get window indicator
             window.Source = (WindowFields)vcdReader.ReadByte();
-            if (window.Source.Contains(WindowFields.NotSupported))
+            if (window.Source.HasInvalidFlag(WindowFields.Invalid))
                 throw new FormatException("unrecognized window indicator bits set");
 
-            if (window.Source.Contains(WindowFields.Source | WindowFields.Target)) {
+            if (window.Source.HasFlag(WindowFields.Source) || window.Source.HasFlag(WindowFields.Target)) {
                 window.SourceSegmentLength = vcdReader.ReadInteger();
                 window.SourceSegmentOffset = vcdReader.ReadInteger();
             }
@@ -73,9 +72,9 @@ namespace Xdelta
             // Copy offset and copy length may not overflow
             if (window.SourceSegmentOffset.CheckOverflow(window.SourceSegmentLength))
                 throw new FormatException("decoder copy window overflows a file offset");
-       
+
             // Check copy window bounds
-            if (window.Source.Contains(WindowFields.Target) &&
+            if (window.Source.HasFlag(WindowFields.Target) &&
                window.SourceSegmentOffset + window.SourceSegmentLength > lastWindowOffset)
                 throw new FormatException("VCD_TARGET window out of bounds");
 
@@ -94,10 +93,10 @@ namespace Xdelta
             // Check for malicious files
             if (window.TargetWindowLength > HardMaxWindowSize)
                 throw new FormatException("Hard window size exceeded");
-                
+
             // Get compressed / delta fields
             window.CompressedFields = (WindowCompressedFields)vcdReader.ReadByte();
-            if (window.CompressedFields.Contains(WindowCompressedFields.Invalid))
+            if (window.CompressedFields.HasInvalidFlag(WindowCompressedFields.Invalid))
                 throw new FormatException("unrecognized delta indicator bits set");
 
             // Compressed fields is only used with secondary compression
@@ -111,7 +110,7 @@ namespace Xdelta
             uint addressesLength    = vcdReader.ReadInteger();
 
             // Read checksum if so (it's in big-endian-non-integer)
-            if (window.Source.Contains(WindowFields.Adler32)) {
+            if (window.Source.HasFlag(WindowFields.Adler32)) {
                 byte[] checksum = vcdReader.ReadBytes(4);
                 window.Checksum = (uint)((checksum[0] << 24) | (checksum[1] << 16) |
                     (checksum[2] << 8) | checksum[3]);

@@ -17,7 +17,7 @@
   <PropertyGroup>
     <PackageProjectUrl>https://github.com/pleonex/xdelta-sharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/pleonex/xdelta-sharp</RepositoryUrl>
-    <License>GPL-3</License>
+    <License>MIT</License>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageIcon></PackageIcon>
     <PackageTags>decompress;vcdiff;rfc3284;xdelta</PackageTags>
