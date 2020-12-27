@@ -8,7 +8,7 @@
     <Copyright>Copyright (C) 2015 Benito Palacios Sánchez</Copyright>
     <Authors>Benito Palacios Sánchez</Authors>
 
-    <Version>1.1</Version>
+    <Version>1.2</Version>
     <TargetFrameworks>netcoreapp3.1;net48;net5.0</TargetFrameworks>
     <LangVersion>8.0</LangVersion>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>

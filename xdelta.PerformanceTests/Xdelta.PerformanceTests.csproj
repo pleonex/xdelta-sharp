@@ -7,7 +7,7 @@
     <Copyright>Copyright (C) 2015 Benito Palacios Sánchez</Copyright>
     <Authors>Benito Palacios Sánchez</Authors>
 
-    <Version>1.1</Version>
+    <Version>1.2</Version>
     <TargetFramework>net5.0</TargetFramework>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
