@@ -9,7 +9,7 @@
     <Authors>Benito Palacios Sánchez</Authors>
 
     <Version>1.1</Version>
-    <TargetFrameworks>netcoreapp3.1;net472</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net48;net5.0</TargetFrameworks>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
 
