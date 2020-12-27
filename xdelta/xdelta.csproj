@@ -8,7 +8,7 @@
     <Authors>Benito Palacios Sánchez</Authors>
     <Copyright>Copyright (C) 2015 Benito Palacios Sánchez</Copyright>
 
-    <Version>1.1</Version>
+    <Version>1.2</Version>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
@@ -24,6 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Buffers" Version="4.5.1" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

@@ -9,5 +9,9 @@ obj/
 # NuGet
 packages/
 
-# NUnit output
+# Test output
 TestResult.xml
+artifacts/
+coverage/
+tools/
+BenchmarkDotNet.Artifacts/

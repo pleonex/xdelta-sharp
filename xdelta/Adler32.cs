@@ -40,89 +40,66 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System.IO;
-
 namespace Xdelta
 {
+    using System;
+    using System.Buffers;
+    using System.IO;
+
+    /// <summary>
+    /// Adler-32 checksum algorithm.
+    /// </summary>
+    /// <remarks>
+    /// <para>For more information: https://en.wikipedia.org/wiki/Adler-32</para>
+    /// </remarks>
     public static class Adler32
     {
-        private const uint Base = 65521;    // Largest prime smaller than 65536
-        private const uint Nmax = 5552;        // Nmax is the largest n such that 255n(n+1)/2 + (n+1)(Base-1) <= 2^32-1
+        // By definition the algorithm starts with value 1.
+        private const uint StartValue = 1;
 
-        private static void DoTimes(ref uint adler, ref uint sum2, Stream buffer, int times)
+         // Modulo of the sums. Largest prime smaller than 65536
+        private const int SumModulo = 65521;
+
+        // Max number of bytes that requires a maximum one modulo.
+        // Largest n such that 255n(n+1)/2 + (n+1)(Base-1) <= 2^32-1
+        private const int MaxModuleBlock = 5552;
+
+        /// <summary>
+        /// Computes the checksum Adler-32 from a stream.
+        /// </summary>
+        /// <param name="stream">The stream to read data. It starts at the current position.</param>
+        /// <param name="length">The amount of bytes to read from the stream for the checksum.</param>
+        /// <param name="start">The start value of the checksum.</param>
+        /// <returns>The Adler-32 checksum of the data.</returns>
+        public static uint Run(Stream stream, long length, uint start = StartValue)
         {
-            while (times-- > 0) {
-                adler += (byte)buffer.ReadByte();
-                sum2  += adler;
-            }
-        }
+            if (stream == null)
+                throw new ArgumentNullException(nameof(stream));
+            if (length < 0)
+                throw new ArgumentOutOfRangeException(nameof(length), length, "Invalid length");
+            if (stream.Position + length > stream.Length)
+                throw new EndOfStreamException("Not enough bytes to read.");
 
-        public static uint Run(uint adler, Stream buffer, uint length)
-        {
-            uint n;
+            uint sumA = start & 0xFFFF;
+            uint sumB = start >> 16;
 
-            // Split Adler-32 into component sums
-            uint sum2 = (adler >> 16) & 0xFFFF;
-            adler &= 0xFFFF;
+            // Computes the checksum in blocks that requires maximum one modulo
+            byte[] buffer = ArrayPool<byte>.Shared.Rent(MaxModuleBlock);
+            while (length > 0) {
+                int read = stream.Read(buffer, 0, MaxModuleBlock);
+                length -= read;
 
-            // In case user likes doing a byte at a time, keep it fast
-            if (length == 1) {
-                adler += (byte)buffer.ReadByte();
-                if (adler >= Base)
-                    adler -= Base;
-
-                sum2 += adler;
-                if (sum2 >= Base)
-                    sum2 -= Base;
-
-                return adler | (sum2 << 16);
-            }
-
-            // In case short lengths are provided, keep it somewhat fast
-            if (length < 16) {
-                while (length-- > 0) {
-                    adler += (byte)buffer.ReadByte();
-                    sum2  += adler;
+                for (int i = 0; i < read; i++) {
+                    sumA += buffer[i];
+                    sumB += sumA;
                 }
 
-                if (adler >= Base)
-                    adler -= Base;
-
-                sum2 %= Base;
-                return adler | (sum2 << 16);
+                sumA %= SumModulo;
+                sumB %= SumModulo;
             }
 
-            // Do length Nmax blocks -- requires just one module operation
-            while (length >= Nmax) {
-                length -= Nmax;
-                n = Nmax / 16;                            // Nmax is divisible by 16
-                do
-                    DoTimes(ref adler, ref sum2, buffer, 16);    // 16 sums unrolled
-                while (--n > 0);
-
-                adler %= Base;
-                sum2  %= Base;
-            }
-
-            // Do remaining bytes (less than Nmax, still just one module)
-            if (length > 0) {    // avoid modules if none remaining
-                while (length >= 16) {
-                    length -= 16;
-                    DoTimes(ref adler, ref sum2, buffer, 16);
-                }
-
-                while (length-- > 0) {
-                    adler += (byte)buffer.ReadByte();
-                    sum2 += adler;
-                }
-
-                adler %= Base;
-                sum2  %= Base;
-            }
-
-            // return recombined sums
-            return adler | (sum2 << 16);
+            ArrayPool<byte>.Shared.Return(buffer);
+            return sumA | (sumB << 16);
         }
     }
 }
-

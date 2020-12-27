@@ -61,7 +61,7 @@ namespace Xdelta
             // Check checksum
             if (window.Source.HasFlag(WindowFields.Adler32)) {
                 output.Position = window.TargetWindowOffset;
-                uint newAdler = Adler32.Run(1, output, window.TargetWindowLength);
+                uint newAdler = Adler32.Run(output, window.TargetWindowLength);
                 if (newAdler != window.Checksum)
                     throw new Exception("Invalid checksum");
             }

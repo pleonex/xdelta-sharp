@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Product>Xdelta</Product>
+    <Description>Performance tests of the library.</Description>
+    <Copyright>Copyright (C) 2015 Benito Palacios Sánchez</Copyright>
+    <Authors>Benito Palacios Sánchez</Authors>
+
+    <Version>1.2</Version>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\xdelta\xdelta.csproj" />
+
+    <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
+  </ItemGroup>
+
+</Project>
