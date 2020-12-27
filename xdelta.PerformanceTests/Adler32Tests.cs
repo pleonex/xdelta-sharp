@@ -22,6 +22,7 @@ namespace Xdelta.PerformanceTests
     using System.IO;
     using BenchmarkDotNet.Attributes;
 
+    [MemoryDiagnoser]
     public class Adler32Tests
     {
         Stream stream;
@@ -51,7 +52,7 @@ namespace Xdelta.PerformanceTests
         public uint Adler32Run()
         {
             stream.Position = 0;
-            return Adler32.Run(1, stream, Length);
+            return Adler32.Run(stream, Length);
         }
     }
 }

@@ -19,21 +19,33 @@
 // SOFTWARE.
 namespace Xdelta.UnitTests
 {
+    using System;
     using System.IO;
     using NUnit.Framework;
 
     [TestFixture]
     public class Adler32Tests
     {
-        const int InitAdler = 1;
         const int NMax = 5552;
+
+        [Test]
+        public void Guards()
+        {
+            using var stream = new MemoryStream();
+            stream.Write(new byte[] { 1, 2, 3, 4 }, 0, 4);
+            stream.Position = 2;
+
+            Assert.That(() => Adler32.Run(null, 0), Throws.ArgumentNullException);
+            Assert.That(() => Adler32.Run(stream, -2), Throws.InstanceOf<ArgumentOutOfRangeException>());
+            Assert.That(() => Adler32.Run(stream, 3), Throws.InstanceOf<EndOfStreamException>());
+        }
 
         [Test]
         public void EmptyStream()
         {
             using var stream = new MemoryStream();
 
-            uint result = Adler32.Run(InitAdler, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length);
 
             Assert.That(result, Is.EqualTo(1));
         }
@@ -45,7 +57,7 @@ namespace Xdelta.UnitTests
             stream.WriteByte(0xCA);
 
             stream.Position = 0;
-            uint result = Adler32.Run(InitAdler, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length);
 
             Assert.That(result, Is.EqualTo(13304011));
         }
@@ -57,7 +69,7 @@ namespace Xdelta.UnitTests
             stream.WriteByte(0xCA);
 
             stream.Position = 0;
-            uint result = Adler32.Run((65530u << 16) | 65530u, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length, (65530u << 16) | 65530u);
 
             Assert.That(result, Is.EqualTo(14418131));
         }
@@ -69,7 +81,7 @@ namespace Xdelta.UnitTests
             stream.Write(new byte[] { 0xCA, 0xFE, 0xBA, 0xBE, 0xDE, 0xAD, 0xBE, 0xEF, }, 0, 8);
 
             stream.Position = 0;
-            uint result = Adler32.Run(InitAdler, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length);
 
             Assert.That(result, Is.EqualTo(491128441));
         }
@@ -81,7 +93,7 @@ namespace Xdelta.UnitTests
             stream.Write(new byte[] { 0xCA, 0xFE, 0xBA, 0xBE, 0xDE, 0xAD, 0xBE, 0xEF, }, 0, 8);
 
             stream.Position = 0;
-            uint result = Adler32.Run((65530u << 16) | 65530u, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length, (65530u << 16) | 65530u);
 
             Assert.That(result, Is.EqualTo(495912577));
         }
@@ -91,7 +103,7 @@ namespace Xdelta.UnitTests
         {
             using var stream = GetTestStream(NMax - 100);
 
-            uint result = Adler32.Run(InitAdler, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length);
 
             Assert.That(result, Is.EqualTo(3475765439));
         }
@@ -101,7 +113,7 @@ namespace Xdelta.UnitTests
         {
             using var stream = GetTestStream(NMax);
 
-            uint result = Adler32.Run(InitAdler, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length);
 
             Assert.That(result, Is.EqualTo(2367181278));
         }
@@ -111,7 +123,7 @@ namespace Xdelta.UnitTests
         {
             using var stream = GetTestStream(NMax * 4 + 100);
 
-            uint result = Adler32.Run(InitAdler, stream, (uint)stream.Length);
+            uint result = Adler32.Run(stream, stream.Length);
 
             Assert.That(result, Is.EqualTo(2570494100));
         }

@@ -14,4 +14,4 @@ TestResult.xml
 artifacts/
 coverage/
 tools/
-xdelta.PerformanceTests/BenchmarkDotNet.Artifacts/*
+BenchmarkDotNet.Artifacts/
