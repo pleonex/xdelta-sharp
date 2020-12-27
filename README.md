@@ -1,4 +1,4 @@
-# xdelta-sharp ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/pleonex/xdelta-sharp/.NET%20Core) ![GitHub](https://img.shields.io/github/license/pleonex/xdelta-sharp)
+# xdelta-sharp ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/pleonex/xdelta-sharp/build%20and%20test) ![GitHub](https://img.shields.io/github/license/pleonex/xdelta-sharp)
 
 **NOTE: At this stage, this projects can only decompress patch files. It cannot generate / compress.**
 
