@@ -43,6 +43,7 @@
 namespace Xdelta
 {
     using System;
+    using System.Buffers;
     using System.IO;
 
     /// <summary>
@@ -82,9 +83,8 @@ namespace Xdelta
             uint sumA = start & 0xFFFF;
             uint sumB = start >> 16;
 
-            byte[] buffer = new byte[MaxModuleBlock];
-
             // Computes the checksum in blocks that requires maximum one modulo
+            byte[] buffer = ArrayPool<byte>.Shared.Rent(MaxModuleBlock);
             while (length > 0) {
                 int read = stream.Read(buffer, 0, MaxModuleBlock);
                 length -= read;
@@ -98,6 +98,7 @@ namespace Xdelta
                 sumB %= SumModulo;
             }
 
+            ArrayPool<byte>.Shared.Return(buffer);
             return sumA | (sumB << 16);
         }
     }
