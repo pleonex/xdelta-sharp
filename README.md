@@ -32,9 +32,9 @@ The latest version does not support:
 ## Documentation
 
 Feel free to ask any question in the
-[project Discussion site!](https://github.com/SceneGate/Lemon/discussions)
+[project Discussion site!](https://github.com/pleonex/xdelta-sharp/discussions)
 
-Check our on-line [API documentation](https://scenegate.github.io/Lemon/).
+Check our on-line [API documentation](https://pleonex.dev/xdelta-sharp/).
 
 ## Build
 
