@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Description>Performance tests of the library.</Description>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pleosoft.XdeltaSharp\Pleosoft.XdeltaSharp.csproj" />
+
+    <PackageReference Include="BenchmarkDotNet" />
+  </ItemGroup>
+
+</Project>

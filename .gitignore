@@ -1,17 +1,16 @@
-# Compile result
-bin/
+# Build outputs
 obj/
-
-# Project files
-*.userprefs
-.vs/
-
-# NuGet
-packages/
-
-# Test output
-TestResult.xml
+bin/
 artifacts/
-coverage/
+
+# Build system
 tools/
+
+# Test results
+test_results/
 BenchmarkDotNet.Artifacts/
+
+# Documentation output
+docs/_site
+docs/api
+docs/_site_pdf
