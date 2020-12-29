@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Decompressor of VCDIFF patch files (RFC3284).</Description>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <!-- <ItemGroup>
+    <None Include="../../docs/images/logo_128.png" Pack="true" PackagePath="$(PackageIcon)" Visible="false" />
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <PackageReference Include="System.Buffers" />
+  </ItemGroup>
+</Project>

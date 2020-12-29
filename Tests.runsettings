@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
   <RunConfiguration>
     <!-- Put results in root folder rather inside each project-->
-    <ResultsDirectory>./artifacts/test_results</ResultsDirectory>
+    <ResultsDirectory>artifacts/test_results</ResultsDirectory>
   </RunConfiguration>
 
   <DataCollectionRunSettings>
