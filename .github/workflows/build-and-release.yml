@@ -91,11 +91,11 @@ jobs:
       - name: "Build and test"
         run: dotnet cake --target=BuildTest --configuration=Release --verbosity=diagnostic
 
-  # Preview release on push to develop only
+  # Preview release on push to main only
   # Stable release on version tag push only
   push_artifacts:
     name: "Push artifacts"
-    if: github.ref == 'refs/heads/develop' || startsWith(github.ref, 'refs/tags/v')
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
     needs: [ "build_main", "build_sec" ]
     runs-on: ubuntu-latest
     env:
