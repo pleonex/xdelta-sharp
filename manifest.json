@@ -1,0 +1,425 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/xdelta-sharp/xdelta-sharp/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "CONTRIBUTING.html",
+          "hash": "yQiU9d5GkSoB3akK580HWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "u2Ra4foJLjrGRI9Ri2rSOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.AddressMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.AddressMode.html",
+          "hash": "1l9n2/Xg84kn1kQnEX+zrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Adler32.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Adler32.html",
+          "hash": "2MZCLIRcJCVdMBXURDFXUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Cache.html",
+          "hash": "iSazVQqmmj+kxDB8jn/Q5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.CodeTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.CodeTable.html",
+          "hash": "YKsDDW1UVWAjBsFD93J0zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Decoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Decoder.html",
+          "hash": "S7QB6LaKNBtyzB9ZmD2xnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.FinishedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.FinishedHandler.html",
+          "hash": "LmeCyKlWtHb6v3/aoRbV2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Header.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Header.html",
+          "hash": "5i3/hFjaCDw0TzQGoOJ8Qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Instructions.Add.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Instructions.Add.html",
+          "hash": "0x1YBvdXupwvHZ1r5zrYmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Instructions.Copy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Instructions.Copy.html",
+          "hash": "Xcuk5kdtrWdj3IUzV5h8cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Instructions.Instruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Instructions.Instruction.html",
+          "hash": "8E64rQCE07ya2frIhyEiKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Instructions.InstructionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Instructions.InstructionType.html",
+          "hash": "lsolUapY8QvCmurjS098/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Instructions.Noop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Instructions.Noop.html",
+          "hash": "tQBWP5cN+KB9yDApFSnrTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Instructions.Run.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Instructions.Run.html",
+          "hash": "mQUUhiaaHJlO/9qhMppfzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Instructions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Instructions.html",
+          "hash": "Q6IN1KAGY6F/Zoe3ZIhXFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.ProgressChangedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.ProgressChangedHandler.html",
+          "hash": "pdgf4aSGq+yOkIbxUEv6Wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.SecondaryCompressor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.SecondaryCompressor.html",
+          "hash": "65Bdk8Cq/VDQRuzCpl25Tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.VcdReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.VcdReader.html",
+          "hash": "x8DPRd8Fn0iAIRVJKlYbeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.Window.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.Window.html",
+          "hash": "cw68ykIdzCXAHwyYPtrF5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.WindowCompressedFields.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.WindowCompressedFields.html",
+          "hash": "KBOvN8o3unJp8UCpOzsOLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.WindowDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.WindowDecoder.html",
+          "hash": "73QjRagXwGOZU1ISXXF2IQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.WindowFields.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.WindowFields.html",
+          "hash": "vfmNNO76E7Ggj8ARksEN6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Xdelta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xdelta.html",
+          "hash": "8a1iZJARjPYdpZoQ9LH44w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "dev/Changelog.md",
+      "output": {
+        ".html": {
+          "relative_path": "dev/Changelog.html",
+          "hash": "MjDbIX2h0mzmBJ3BqipSJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "dev/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dev/toc.html",
+          "hash": "V4DHkKiGqKcHNPC6fJ+dcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/Contributing.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/Contributing.html",
+          "hash": "T5P0kllSy+ZXVJPaGsfMyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "guides/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "guides/toc.html",
+          "hash": "Gz03qLKyhGDwcGqENx1d0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "DVopK5CFH10ww4fZLg7fRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "jjrMVpvTa0Fn3hT2pvfRFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 22,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

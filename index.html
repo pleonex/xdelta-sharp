@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pleosoft.XdeltaSharp   | Pleosoft.XdeltaSharp - VCDIFF for .NET </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Pleosoft.XdeltaSharp   | Pleosoft.XdeltaSharp - VCDIFF for .NET ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="guides/Contributing.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="dev/Changelog.html" title="API">API</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/pleonex/xdelta-template" title="GitHub">GitHub</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="README">
+<h1 id="pleosoftxdeltasharp-build-and-release-github">Pleosoft.XdeltaSharp <img src="https://github.com/pleonex/xdelta-sharp/workflows/Build%20and%20release/badge.svg" alt="Build and release"> <img src="https://img.shields.io/github/license/pleonex/xdelta-sharp" alt="GitHub"></h1>
+
+<p><strong>NOTE: At this stage, this projects can only decompress patch files. It cannot
+generate / compress.</strong></p>
+<p><strong>xdelta-sharp</strong> is a compression tool to create delta/patch files from binary
+files using the algorithm <code>VCDIFF</code> described in the
+<a href="https://tools.ietf.org/html/rfc3284">RFC 3284</a>.</p>
+<p>This projects offers a library and a console application written in pure C# (no
+calls to C libraries). Making it compatible in every OS that can run a .NET
+runtime that implements .NET Standard 2.0.</p>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>Release</th>
+<th>Package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stable</td>
+<td><a href="https://www.nuget.org/packages/Pleosoft.XdeltaSharp"><img src="https://img.shields.io/nuget/v/Pleosoft.XdeltaSharp?label=nuget.org&amp;logo=nuget" alt="Nuget"></a></td>
+</tr>
+<tr>
+<td>Preview</td>
+<td><a href="https://dev.azure.com/pleonex/Pleosoft/_packaging?_a=feed&amp;feed=Pleosoft-Preview">Azure Artifacts</a></td>
+</tr>
+</tbody>
+</table>
+<p>The project takes the name from <a href="https://github.com/jmacd/xdelta">xdelta</a>.
+Another compression tool in C by Joshua MacDonald that implements the algorithm
+VCDIFF. It started as a port but due to huge difference between C and C#,
+dropped and restarted the development just by reading the specification.</p>
+<h2 id="limitations">Limitations</h2>
+<p>The latest version does not support:</p>
+<ul>
+<li>Generate patch files.</li>
+<li>Patch files with external compression.</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<p>Feel free to ask any question in the
+<a href="https://github.com/pleonex/xdelta-sharp/discussions">project Discussion site!</a></p>
+<p>Check our on-line <a href="https://pleonex.dev/xdelta-sharp/">API documentation</a>.</p>
+<h2 id="build">Build</h2>
+<p>The project requires to build .NET 5.0 SDK, .NET Core 3.1 runtime and .NET
+Framework 4.8 or latest Mono. If you open the project with VS Code and you did
+install the
+<a href="https://code.visualstudio.com/docs/remote/containers">VS Code Remote Containers</a>
+extension, you can have an already pre-configured development environment with
+Docker or Podman.</p>
+<p>To build, test and generate artifacts run:</p>
+<pre><code class="lang-sh"># Only required the first time
+dotnet tool restore
+
+# Default target is Stage-Artifacts
+dotnet cake
+</code></pre>
+<p>To just build and test quickly, run:</p>
+<pre><code class="lang-sh">dotnet cake --target=BuildTest
+</code></pre>
+<h2 id="license">License</h2>
+<p>This software is license under the
+<a href="https://choosealicense.com/licenses/mit/">MIT</a> license.</p>
+<p>Although not used, originally the project was inspired in
+<a href="https://github.com/jmacd/xdelta">xdelta</a> with license
+<a href="https://spdx.org/licenses/Apache-2.0.html">Apache 2.0</a>.</p>
+<p>The algorithm for the ADLER32 checksum was ported from the C version of zlib
+with the following license:</p>
+<pre><code class="lang-plain">Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+    claim that you wrote the original software. If you use this software
+    in a product, an acknowledgment in the product documentation would be
+    appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution.
+
+Jean-loup Gailly        Mark Adler
+jloup@gzip.org          madler@alumni.caltech.edu
+
+The data format used by the zlib library is described by RFCs (Request for
+Comments) 1950 to 1952 in the files http://tools.ietf.org/html/rfc1950
+(zlib format), rfc1951 (deflate format) and rfc1952 (gzip format).
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pleonex/xdelta-csharp/blob/main/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright (c) 2015 Benito Palacios Sánchez
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
