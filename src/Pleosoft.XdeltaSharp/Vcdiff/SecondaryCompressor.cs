@@ -17,13 +17,12 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
     public enum SecondaryCompressor : byte {
         None,
-        Djw  = 1,   // Static Huffman
+        Djw = 1,   // Static Huffman
         Lzma = 2,   // LZMA
-        Fgk  = 16,  // FGK Adaptive Huffman
+        Fgk = 16,  // FGK Adaptive Huffman
     }
 }
-

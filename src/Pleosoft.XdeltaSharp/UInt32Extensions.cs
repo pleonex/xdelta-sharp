@@ -17,26 +17,13 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
-    internal static class EnumExtensions
-    {
-        public static bool HasInvalidFlag(this Enum actual, Enum invalid)
-        {
-            ulong val = Convert.ToUInt64(actual);
-            ulong invalidBits = Convert.ToUInt64(invalid);
-            return (val & invalidBits) != 0;
-        }
-    }
-
     internal static class UInt32Extensions
     {
         public static bool CheckOverflow(this uint address, uint length)
         {
-            return length > (UInt32.MaxValue - address);
+            return length > (uint.MaxValue - address);
         }
     }
 }
-

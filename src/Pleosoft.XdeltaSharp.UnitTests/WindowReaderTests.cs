@@ -17,12 +17,12 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-using NUnit.Framework;
-
-namespace Xdelta.UnitTests
+namespace Pleosoft.XdeltaSharp.UnitTests
 {
+    using System;
+    using System.IO;
+    using NUnit.Framework;
+
     [TestFixture]
     public class WindowReaderTests
     {
@@ -35,9 +35,9 @@ namespace Xdelta.UnitTests
         [SetUp]
         public void SetUp()
         {
-            input  = new MemoryStream();
+            input = new MemoryStream();
             output = new MemoryStream();
-            patch  = new MemoryStream();
+            patch = new MemoryStream();
 
             WriteGenericHeader();
             decoder = new Decoder(input, patch, output);
@@ -51,36 +51,18 @@ namespace Xdelta.UnitTests
             output.Dispose();
         }
 
-        private void WriteGenericHeader()
-        {
-            WriteBytes(0xD6, 0xC3, 0xC4, 0x00, 0x00);
-        }
-
-        private void WriteBytes(params byte[] data)
-        {
-            patch.Write(data, 0, data.Length);
-			patch.Position -= data.Length;
-        }
-
-		private void TestThrows<T>(string message)
-			where T : SystemException
-		{
-			T exception = Assert.Throws<T>(() => decoder.Run());
-			Assert.AreEqual(message, exception.Message);
-		}
-
         [Test]
         public void ThrowsIfWindowIndicatorWithAllBits()
         {
             WriteBytes(0x81, 0x7F);
-			TestThrows<FormatException>("unrecognized window indicator bits set");
+            TestThrows<FormatException>("unrecognized window indicator bits set");
         }
 
         [Test]
         public void ThrowsIfWindowIndicatorWithInvalidBit()
         {
             WriteBytes(0x08);
-			TestThrows<FormatException>("unrecognized window indicator bits set");
+            TestThrows<FormatException>("unrecognized window indicator bits set");
         }
 
         [Test]
@@ -135,9 +117,11 @@ namespace Xdelta.UnitTests
         [Test]
         public void TestValidWindowFields()
         {
-            WriteBytes(0x05, 0x10, 0x81, 0x00, 0x04, 0x00, 0x00,
+            WriteBytes(new byte[] {
+                0x05, 0x10, 0x81, 0x00, 0x04, 0x00, 0x00,
                 0x04, 0x0, 0x02, 0x00, 0x00, 0x00, 0x01,
-                0x0A, 0x0B, 0x0C, 0x0D, 0xCA, 0xFE);
+                0x0A, 0x0B, 0x0C, 0x0D, 0xCA, 0xFE,
+            });
 
             Assert.DoesNotThrow(() => decoder.Run());
             Assert.AreEqual(patch.Length, patch.Position);
@@ -153,9 +137,25 @@ namespace Xdelta.UnitTests
             Assert.AreEqual(0x02, window.Addresses.BaseStream.Length);
             Assert.AreEqual(0x01, window.Checksum);
             Assert.AreEqual(new byte[] { 0xA, 0xB, 0xC, 0xD }, window.Data.ReadBytes(4));
-            //Assert.AreEqual(new byte[] { 0x0F }, window.Instructions.ReadBytes(1)); // No instruction to process
             Assert.AreEqual(new byte[] { 0xCA, 0xFE }, window.Addresses.ReadBytes(2));
+        }
+
+        private void WriteGenericHeader()
+        {
+            WriteBytes(0xD6, 0xC3, 0xC4, 0x00, 0x00);
+        }
+
+        private void WriteBytes(params byte[] data)
+        {
+            patch.Write(data, 0, data.Length);
+            patch.Position -= data.Length;
+        }
+
+        private void TestThrows<T>(string message)
+            where T : SystemException
+        {
+            T exception = Assert.Throws<T>(() => decoder.Run());
+            Assert.AreEqual(message, exception.Message);
         }
     }
 }
-

@@ -17,28 +17,27 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
+    using System;
+    using System.IO;
+
     public class Decoder : IDisposable
     {
         public Decoder(Stream input, Stream patch, Stream output)
         {
-            Input  = input;
-            Patch  = patch;
+            Input = input;
+            Patch = patch;
             Output = output;
 
             HeaderReader headerReader = new HeaderReader();
             Header = headerReader.Read(patch);
         }
 
-        ~Decoder()
-        {
-            Dispose(false);
-        }
-        
+        public event ProgressChangedHandler ProgressChanged;
+
+        public event FinishedHandler Finished;
+
         public Stream Input {
             get;
             private set;
@@ -63,9 +62,6 @@ namespace Xdelta
             get;
             private set;
         }
-
-        public event ProgressChangedHandler ProgressChanged;
-        public event FinishedHandler Finished;
 
         public void Run()
         {
@@ -92,13 +88,13 @@ namespace Xdelta
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
             if (disposing) {
                 DisposeLastWindow();
-                Input  = null;
+                Input = null;
                 Output = null;
-                Patch  = null;
+                Patch = null;
                 Header = null;
             }
         }

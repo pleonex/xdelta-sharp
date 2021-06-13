@@ -17,11 +17,11 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using Xdelta.Instructions;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
+    using System;
+    using Pleosoft.XdeltaSharp.Instructions;
+
     public class CodeTable
     {
         private const int NumEntries = 256;
@@ -33,19 +33,19 @@ namespace Xdelta
             Initialize(table);
         }
 
+        public static CodeTable Default {
+            get { return new CodeTable(DefaultTable, DefaultNearSlots, DefaultSameSlots); }
+        }
+
         public Cache Cache {
             get;
             private set;
         }
 
-        public static CodeTable Default {
-            get { return new CodeTable(DefaultTable, DefaultNearSlots, DefaultSameSlots); }
-        }
-
         public void GetInstructions(int index, out Instruction inst1, out Instruction inst2)
         {
             inst1 = instructions[index * 2];
-            inst2 = instructions[index * 2 + 1];
+            inst2 = instructions[(index * 2) + 1];
         }
 
         private void Initialize(byte[] table)
@@ -53,11 +53,11 @@ namespace Xdelta
             if (table.Length != NumEntries * 6)
                 throw new FormatException("Invalid code table size");
 
-            instructions = new Instruction[NumEntries*2];
+            instructions = new Instruction[NumEntries * 2];
             for (int i = 0, t = 0; i < NumEntries; i++) {
                 // An entry of the table contains two instructions
-                instructions[i*2]     = CreateInstruction(table[t++], table[t++], table[t++]);
-                instructions[i*2 + 1] = CreateInstruction(table[t++], table[t++], table[t++]);
+                instructions[i * 2] = CreateInstruction(table[t++], table[t++], table[t++]);
+                instructions[(i * 2) + 1] = CreateInstruction(table[t++], table[t++], table[t++]);
             }
         }
 
@@ -80,6 +80,9 @@ namespace Xdelta
             return null;
         }
 
+#pragma warning disable SA1201 // A field should not follow a method
+#pragma warning disable SA1203 // Constant fields should appear before non-constant fields
+#pragma warning disable SA1005 // Single line comment should begin with a space
         private const byte DefaultNearSlots = 4;
         private const byte DefaultSameSlots = 3;
         private static readonly byte[] DefaultTable = new byte[1536] {
@@ -341,5 +344,8 @@ namespace Xdelta
             03, 04, 07, 01, 01, 00, // 254
             03, 04, 08, 01, 01, 00, // 255
         };
+#pragma warning restore SA1201 // A field should not follow a method
+#pragma warning restore SA1203 // Constant fields should appear before non-constant fields
+#pragma warning restore SA1005 // Single line comment should begin with a space
     }
 }

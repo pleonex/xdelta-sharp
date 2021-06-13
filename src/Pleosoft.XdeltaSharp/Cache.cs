@@ -17,14 +17,14 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
+    using System;
+
     public class Cache
     {
-        private uint[] near;
-        private uint[] same;
+        private readonly uint[] near;
+        private readonly uint[] same;
         private int nextSlot;
 
         public Cache(byte nearSlots, byte sameSlots)
@@ -70,7 +70,7 @@ namespace Xdelta
 
             case AddressMode.Same:
                 int index = mode - (2 + NearSlots);
-                address = same[index * 256 + addressSection.ReadByte()];
+                address = same[(index * 256) + addressSection.ReadByte()];
                 break;
             }
 
@@ -105,4 +105,3 @@ namespace Xdelta
         }
     }
 }
-

@@ -17,17 +17,17 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-using NUnit.Framework;
-
-namespace Xdelta.UnitTests
+namespace Pleosoft.XdeltaSharp.UnitTests
 {
+    using System;
+    using System.IO;
+    using NUnit.Framework;
+
     [TestFixture]
     public class VcdReaderTests
     {
-        VcdReader reader;
-        Stream stream;
+        private VcdReader reader;
+        private Stream stream;
 
         [SetUp]
         public void SetUp()
@@ -40,19 +40,6 @@ namespace Xdelta.UnitTests
         public void TearDown()
         {
             stream.Dispose();
-        }
-
-        private void WriteBytes(params byte[] data)
-        {
-            stream.Write(data, 0, data.Length);
-            stream.Position -= data.Length;
-        }
-
-        private void TestThrows<T>(TestDelegate code, string message)
-            where T : SystemException
-        {
-            T exception = Assert.Throws<T>(code);
-            Assert.AreEqual(message, exception.Message);
         }
 
         [Test]
@@ -123,6 +110,18 @@ namespace Xdelta.UnitTests
                 () => reader.ReadBytes(0x80000010),
                 "Trying to read more than UInt32.MaxValue bytes");
         }
+
+        private void WriteBytes(params byte[] data)
+        {
+            stream.Write(data, 0, data.Length);
+            stream.Position -= data.Length;
+        }
+
+        private void TestThrows<T>(TestDelegate code, string message)
+            where T : SystemException
+        {
+            T exception = Assert.Throws<T>(code);
+            Assert.AreEqual(message, exception.Message);
+        }
     }
 }
-

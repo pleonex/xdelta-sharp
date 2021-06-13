@@ -17,10 +17,10 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System.IO;
-
-namespace Xdelta.Instructions
+namespace Pleosoft.XdeltaSharp.Instructions
 {
+    using System.IO;
+
     public class Noop : Instruction
     {
         public Noop()
@@ -34,8 +34,7 @@ namespace Xdelta.Instructions
 
         public override string ToString()
         {
-            return string.Format("NOOP");
+            return "NOOP";
         }
     }
 }
-

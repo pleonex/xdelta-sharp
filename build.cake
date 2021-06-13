@@ -14,6 +14,20 @@ Task("Define-Project")
     info.PreviewNuGetFeed = "https://pkgs.dev.azure.com/pleonex/Pleosoft/_packaging/Pleosoft-Preview/nuget/v3/index.json";
 });
 
+Task("Clean")
+    .Does<BuildInfo>(info =>
+{
+    var settings = new DotNetCoreCleanSettings {
+        Configuration = info.Configuration,
+    };
+    DotNetCoreClean(info.SolutionFile, settings);
+});
+
+Task("CleanBuild")
+    .IsDependentOn("Define-Project")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Build");
+
 Task("Default")
     .IsDependentOn("Stage-Artifacts");
 

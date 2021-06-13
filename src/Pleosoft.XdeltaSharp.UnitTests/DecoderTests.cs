@@ -17,11 +17,11 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System.IO;
-using NUnit.Framework;
-
-namespace Xdelta.UnitTests
+namespace Pleosoft.XdeltaSharp.UnitTests
 {
+    using System.IO;
+    using NUnit.Framework;
+
     [TestFixture]
     public class DecoderTests
     {
@@ -29,20 +29,6 @@ namespace Xdelta.UnitTests
         private Stream input;
         private Stream patch;
         private Stream output;
-
-        private void InitWithStandardHeader()
-        {
-            input = new MemoryStream();
-            patch = new MemoryStream();
-            output = new MemoryStream();
-
-            BinaryWriter patchWriter = new BinaryWriter(patch);
-            patchWriter.Write(0x00C4C3D6);
-            patchWriter.Write((byte)0x00);
-            patch.Position = 0;
-
-            decoder = new Decoder(input, patch, output);
-        }
 
         [TearDown]
         public void TearDown()
@@ -66,6 +52,19 @@ namespace Xdelta.UnitTests
             Assert.AreSame(patch, decoder.Patch);
             Assert.AreSame(output, decoder.Output);
         }
+
+        private void InitWithStandardHeader()
+        {
+            input = new MemoryStream();
+            patch = new MemoryStream();
+            output = new MemoryStream();
+
+            BinaryWriter patchWriter = new BinaryWriter(patch);
+            patchWriter.Write(0x00C4C3D6);
+            patchWriter.Write((byte)0x00);
+            patch.Position = 0;
+
+            decoder = new Decoder(input, patch, output);
+        }
     }
 }
-

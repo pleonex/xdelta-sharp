@@ -40,7 +40,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
     using System;
     using System.Buffers;
@@ -50,7 +50,7 @@ namespace Xdelta
     /// Adler-32 checksum algorithm.
     /// </summary>
     /// <remarks>
-    /// <para>For more information: https://en.wikipedia.org/wiki/Adler-32</para>
+    /// <para>For more information: https://en.wikipedia.org/wiki/Adler-32.</para>
     /// </remarks>
     public static class Adler32
     {

@@ -13,4 +13,11 @@
         "editor.formatOnType": true
     },
     "prettier.proseWrap": "always",
+    "cSpell.words": [
+        "Diagnoser",
+        "Lzma",
+        "Pleosoft",
+        "VCDIFF",
+        "Xdelta"
+    ],
 }

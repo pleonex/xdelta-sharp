@@ -17,12 +17,12 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using NUnit.Framework;
-using System;
-using System.IO;
-
-namespace Xdelta.UnitTests
+namespace Pleosoft.XdeltaSharp.UnitTests
 {
+    using System;
+    using System.IO;
+    using NUnit.Framework;
+
     [TestFixture]
     public class HeaderReaderTests
     {
@@ -35,9 +35,9 @@ namespace Xdelta.UnitTests
         [SetUp]
         public void SetUp()
         {
-            input  = new MemoryStream();
+            input = new MemoryStream();
             output = new MemoryStream();
-            patch  = new MemoryStream();
+            patch = new MemoryStream();
         }
 
         [TearDown]
@@ -46,19 +46,6 @@ namespace Xdelta.UnitTests
             patch.Dispose();
             input.Dispose();
             output.Dispose();
-        }
-
-        private void WriteBytes(params byte[] data)
-        {
-            patch.Write(data, 0, data.Length);
-            patch.Position -= data.Length;
-        }
-
-        private void TestThrows<T>(string message)
-            where T : SystemException
-        {
-            T exception = Assert.Throws<T>(() => new Decoder(input, patch, output));
-            Assert.AreEqual(message, exception.Message);
         }
 
         [Test]
@@ -122,6 +109,18 @@ namespace Xdelta.UnitTests
             Decoder decoder = new Decoder(input, patch, output);
             Assert.AreEqual("pleonex", decoder.Header.ApplicationData);
         }
+
+        private void WriteBytes(params byte[] data)
+        {
+            patch.Write(data, 0, data.Length);
+            patch.Position -= data.Length;
+        }
+
+        private void TestThrows<T>(string message)
+            where T : SystemException
+        {
+            T exception = Assert.Throws<T>(() => new Decoder(input, patch, output));
+            Assert.AreEqual(message, exception.Message);
+        }
     }
 }
-

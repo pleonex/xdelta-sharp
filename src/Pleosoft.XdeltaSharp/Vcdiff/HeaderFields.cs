@@ -17,17 +17,16 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
-    [Flags]
-    internal enum HeaderFields : byte {
-        Invalid = 0xF8,
+    using System;
 
-        SecondaryCompression = 1 << 0,     // Uses secondary compressor
-        CodeTable            = 1 << 1,     // Contains code table data
-        ApplicationData      = 1 << 2,    // Contains application data
+    [Flags]
+    internal enum HeaderFields : byte
+    {
+        SecondaryCompression = 1 << 0,  // Uses secondary compressor
+        CodeTable = 1 << 1,             // Contains code table data
+        ApplicationData = 1 << 2,       // Contains application data
+        All = SecondaryCompression | CodeTable | ApplicationData,
     }
 }
-
