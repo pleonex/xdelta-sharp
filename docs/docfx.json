@@ -4,7 +4,7 @@
         "src": [
           {
             "files": [
-              "Pleosoft.XdeltaSharp/Pleosoft.XdeltaSharp.csproj"
+              "PleOps.XdeltaSharp/PleOps.XdeltaSharp.csproj"
             ],
             "src": "../src"
           }

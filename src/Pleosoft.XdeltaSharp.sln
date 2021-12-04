@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pleosoft.XdeltaSharp", "Pleosoft.XdeltaSharp\Pleosoft.XdeltaSharp.csproj", "{AEE32555-906A-4A8D-A2B5-E0A0875B16D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleOps.XdeltaSharp", "PleOps.XdeltaSharp\PleOps.XdeltaSharp.csproj", "{AEE32555-906A-4A8D-A2B5-E0A0875B16D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pleosoft.XdeltaSharp.Cli", "Pleosoft.XdeltaSharp.Cli\Pleosoft.XdeltaSharp.Cli.csproj", "{5B5A6DC3-4FE0-43AE-8E9D-368D53164D64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleOps.XdeltaSharp.Cli", "PleOps.XdeltaSharp.Cli\PleOps.XdeltaSharp.Cli.csproj", "{5B5A6DC3-4FE0-43AE-8E9D-368D53164D64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pleosoft.XdeltaSharp.PerformanceTests", "Pleosoft.XdeltaSharp.PerformanceTests\Pleosoft.XdeltaSharp.PerformanceTests.csproj", "{8FC02422-0B28-4F4A-98FD-5092ADA051DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleOps.XdeltaSharp.PerformanceTests", "PleOps.XdeltaSharp.PerformanceTests\PleOps.XdeltaSharp.PerformanceTests.csproj", "{8FC02422-0B28-4F4A-98FD-5092ADA051DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pleosoft.XdeltaSharp.UnitTests", "Pleosoft.XdeltaSharp.UnitTests\Pleosoft.XdeltaSharp.UnitTests.csproj", "{8235AA1B-F328-44CC-B39E-D56CC40D8DF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PleOps.XdeltaSharp.UnitTests", "PleOps.XdeltaSharp.UnitTests\PleOps.XdeltaSharp.UnitTests.csproj", "{8235AA1B-F328-44CC-B39E-D56CC40D8DF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

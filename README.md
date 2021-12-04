@@ -1,9 +1,9 @@
-# Pleosoft.XdeltaSharp ![Build and release](https://github.com/pleonex/xdelta-sharp/workflows/Build%20and%20release/badge.svg) ![GitHub](https://img.shields.io/github/license/pleonex/xdelta-sharp)
+# PleOps.XdeltaSharp ![Build and release](https://github.com/pleonex/xdelta-sharp/workflows/Build%20and%20release/badge.svg) ![GitHub](https://img.shields.io/github/license/pleonex/xdelta-sharp)
 
 **NOTE: At this stage, this projects can only decompress patch files. It cannot
 generate / compress.**
 
-**Pleosoft.XdeltaSharp** offers the possibility to apply delta/patch files with
+**PleOps.XdeltaSharp** offers the possibility to apply delta/patch files with
 format `VCDIFF`, as described in the
 [RFC 3284](https://tools.ietf.org/html/rfc3284).
 
@@ -14,7 +14,7 @@ runtime that implements .NET Standard 2.0 (.NET Framework, Mono and .NET).
 <!-- prettier-ignore -->
 | Release | Package                                                           |
 | ------- | ----------------------------------------------------------------- |
-| Stable  | [![Nuget](https://img.shields.io/nuget/v/Pleosoft.XdeltaSharp?label=nuget.org&logo=nuget)](https://www.nuget.org/packages/Pleosoft.XdeltaSharp) |
+| Stable  | [![Nuget](https://img.shields.io/nuget/v/PleOps.XdeltaSharp?label=nuget.org&logo=nuget)](https://www.nuget.org/packages/PleOps.XdeltaSharp) |
 | Preview | [Azure Artifacts](https://dev.azure.com/pleonex/Pleosoft/_packaging?_a=feed&feed=Pleosoft-Preview) |
 
 The project takes the name from [xdelta](https://github.com/jmacd/xdelta).

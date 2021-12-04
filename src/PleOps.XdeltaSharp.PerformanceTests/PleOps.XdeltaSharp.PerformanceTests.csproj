@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Description>Performance tests of the library.</Description>
+    <RootNamespace>PleOps.XdeltaSharp.PerformanceTests</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PleOps.XdeltaSharp\PleOps.XdeltaSharp.csproj" />
+
+    <PackageReference Include="BenchmarkDotNet" />
+  </ItemGroup>
+
+</Project>

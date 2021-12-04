@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "Cake: Run Build",
-            "program": "${workspaceFolder}/src/Pleosoft.XdeltaSharp.Cli/bin/Debug/net5.0/linux-x64/XdeltaSharp.dll",
+            "program": "${workspaceFolder}/src/PleOps.XdeltaSharp.Cli/bin/Debug/net6.0/linux-x64/PleOps.XdeltaSharp.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
