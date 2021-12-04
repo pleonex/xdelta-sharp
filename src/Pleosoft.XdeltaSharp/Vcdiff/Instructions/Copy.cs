@@ -44,9 +44,6 @@ namespace Pleosoft.XdeltaSharp.Vcdiff.Instructions
             uint hereAddress = window.SourceSegmentLength + ((uint)output.Position - window.TargetWindowOffset);
             Address = cache.GetAddress(hereAddress, binaryMode, window.Addresses);
 
-            if (!window.Source.HasFlag(WindowFields.Source) && !window.Source.HasFlag(WindowFields.Target))
-                throw new InvalidOperationException("Trying to copy from unknown source");
-
             CopyFromSourceWindow(window, input, output);
             CopyFromTargetWindow(window, output); // Not always
         }
