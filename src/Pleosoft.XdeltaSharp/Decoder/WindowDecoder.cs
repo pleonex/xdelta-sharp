@@ -17,21 +17,22 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-using Xdelta.Instructions;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp.Decoder
 {
+    using System;
+    using System.IO;
+    using Pleosoft.XdeltaSharp.Vcdiff;
+    using Pleosoft.XdeltaSharp.Vcdiff.Instructions;
+
     public class WindowDecoder
     {
-        private Stream input;
-        private Stream output;
-        private CodeTable codeTable;
+        private readonly Stream input;
+        private readonly Stream output;
+        private readonly CodeTable codeTable;
 
         public WindowDecoder(Stream input, Stream output)
         {
-            this.input  = input;
+            this.input = input;
             this.output = output;
             this.codeTable = CodeTable.Default;
         }
@@ -56,16 +57,15 @@ namespace Xdelta
 
             // Check all data has been decoded
             if (output.Position - window.TargetWindowOffset != window.TargetWindowLength)
-                throw new Exception("Target window not fully decoded");
+                throw new InvalidOperationException("Target window not fully decoded");
 
             // Check checksum
             if (window.Source.HasFlag(WindowFields.Adler32)) {
                 output.Position = window.TargetWindowOffset;
                 uint newAdler = Adler32.Run(output, window.TargetWindowLength);
                 if (newAdler != window.Checksum)
-                    throw new Exception("Invalid checksum");
+                    throw new InvalidOperationException("Invalid checksum");
             }
         }
     }
 }
-

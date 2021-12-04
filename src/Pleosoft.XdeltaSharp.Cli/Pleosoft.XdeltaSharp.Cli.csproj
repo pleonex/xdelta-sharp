@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>XdeltaSharp</AssemblyName>
     <Description>Decompressor of VCDIFF patch files (RFC3284).</Description>
+    <RootNamespace>Pleosoft.XdeltaSharp.Cli</RootNamespace>
     <TargetFramework>net5.0</TargetFramework>
 
     <RuntimeIdentifiers>win-x64;linux-x64;osx-x64</RuntimeIdentifiers>

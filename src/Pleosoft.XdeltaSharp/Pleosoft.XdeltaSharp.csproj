@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Description>Decompressor of VCDIFF patch files (RFC3284).</Description>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <RootNamespace>Pleosoft.XdeltaSharp</RootNamespace>
   </PropertyGroup>
 
   <!-- <ItemGroup>

@@ -17,17 +17,18 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp.Decoder
 {
+    using System;
+    using System.IO;
+    using Pleosoft.XdeltaSharp.Vcdiff;
+
     internal class WindowReader
     {
         private const uint HardMaxWindowSize = 1u << 24;
 
-        private Header header;
-        private VcdReader vcdReader;
+        private readonly Header header;
+        private readonly VcdReader vcdReader;
         private uint lastWindowOffset;
         private uint lastWindowLength;
 
@@ -61,7 +62,7 @@ namespace Xdelta
 
             // Get window indicator
             window.Source = (WindowFields)vcdReader.ReadByte();
-            if (window.Source.HasInvalidFlag(WindowFields.Invalid))
+            if ((window.Source & WindowFields.All) != window.Source)
                 throw new FormatException("unrecognized window indicator bits set");
 
             if (window.Source.HasFlag(WindowFields.Source) || window.Source.HasFlag(WindowFields.Target)) {
@@ -96,7 +97,7 @@ namespace Xdelta
 
             // Get compressed / delta fields
             window.CompressedFields = (WindowCompressedFields)vcdReader.ReadByte();
-            if (window.CompressedFields.HasInvalidFlag(WindowCompressedFields.Invalid))
+            if ((window.CompressedFields & WindowCompressedFields.All) != window.CompressedFields)
                 throw new FormatException("unrecognized delta indicator bits set");
 
             // Compressed fields is only used with secondary compression
@@ -105,9 +106,9 @@ namespace Xdelta
                 throw new FormatException("invalid delta indicator bits set");
 
             // Read section lengths
-            uint dataLength         = vcdReader.ReadInteger();
+            uint dataLength = vcdReader.ReadInteger();
             uint instructionsLength = vcdReader.ReadInteger();
-            uint addressesLength    = vcdReader.ReadInteger();
+            uint addressesLength = vcdReader.ReadInteger();
 
             // Read checksum if so (it's in big-endian-non-integer)
             if (window.Source.HasFlag(WindowFields.Adler32)) {
@@ -128,4 +129,3 @@ namespace Xdelta
         }
     }
 }
-

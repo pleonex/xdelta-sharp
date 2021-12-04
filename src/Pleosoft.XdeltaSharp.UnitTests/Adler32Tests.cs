@@ -17,7 +17,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace Xdelta.UnitTests
+namespace Pleosoft.XdeltaSharp.UnitTests
 {
     using System;
     using System.IO;
@@ -26,7 +26,7 @@ namespace Xdelta.UnitTests
     [TestFixture]
     public class Adler32Tests
     {
-        const int NMax = 5552;
+        private const int NMax = 5552;
 
         [Test]
         public void Guards()
@@ -121,14 +121,14 @@ namespace Xdelta.UnitTests
         [Test]
         public void BiggerThanNMax()
         {
-            using var stream = GetTestStream(NMax * 4 + 100);
+            using var stream = GetTestStream((NMax * 4) + 100);
 
             uint result = Adler32.Run(stream, stream.Length);
 
             Assert.That(result, Is.EqualTo(2570494100));
         }
 
-        Stream GetTestStream(long length)
+        private Stream GetTestStream(long length)
         {
             var stream = new MemoryStream();
             var data = new byte[] { 0xCA, 0xFE };

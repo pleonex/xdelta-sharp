@@ -17,16 +17,15 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-
-namespace Xdelta.Instructions
+namespace Pleosoft.XdeltaSharp.Vcdiff.Instructions
 {
+    using System;
+    using System.IO;
+
     public class Copy : Instruction
     {
-        private Cache cache;
-        private byte binaryMode;
-        private uint hereAddress;
+        private readonly Cache cache;
+        private readonly byte binaryMode;
 
         public Copy(byte sizeInTable, byte mode, Cache cache)
             : base(sizeInTable, InstructionType.Copy)
@@ -42,14 +41,19 @@ namespace Xdelta.Instructions
 
         public override void DecodeInstruction(Window window, Stream input, Stream output)
         {
-            hereAddress = window.SourceSegmentLength + ((uint)output.Position - window.TargetWindowOffset);
+            uint hereAddress = window.SourceSegmentLength + ((uint)output.Position - window.TargetWindowOffset);
             Address = cache.GetAddress(hereAddress, binaryMode, window.Addresses);
 
             if (!window.Source.HasFlag(WindowFields.Source) && !window.Source.HasFlag(WindowFields.Target))
-                throw new Exception("Trying to copy from unknown source");
+                throw new InvalidOperationException("Trying to copy from unknown source");
 
             CopyFromSourceWindow(window, input, output);
             CopyFromTargetWindow(window, output); // Not always
+        }
+
+        public override string ToString()
+        {
+            return string.Format("COPY {0:X4}, {1:X4}", Size, Address);
         }
 
         private void CopyFromSourceWindow(Window window, Stream input, Stream output)
@@ -128,11 +132,5 @@ namespace Xdelta.Instructions
                 stream.Write(buffer, 0, toCopy);
             }
         }
-
-        public override string ToString()
-        {
-            return string.Format("COPY {0:X4}, {1:X4}", Size, Address);
-        }
     }
 }
-

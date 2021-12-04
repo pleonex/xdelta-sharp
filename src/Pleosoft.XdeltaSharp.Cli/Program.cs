@@ -17,25 +17,27 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-using System.Diagnostics;
-
-namespace Xdelta.Cli
+namespace Pleosoft.XdeltaSharp.Cli
 {
-    class MainClass
+    using System;
+    using System.Diagnostics;
+    using System.IO;
+    using Pleosoft.XdeltaSharp.Decoder;
+
+    public static class Program
     {
         public static void Main(string[] args)
         {
             if (args.Length != 3)
                 return;
 
-            Stopwatch watcher = Stopwatch.StartNew();
+            using FileStream source = OpenForRead(args[0]);
+            using FileStream patch = OpenForRead(args[1]);
+            using FileStream target = CreateForWriteAndRead(args[2]);
 
-            using (FileStream source = OpenForRead(args[0]))
-            using (FileStream patch  = OpenForRead(args[1]))
-            using (FileStream target = CreateForWriteAndRead(args[2]))
-                new Decoder(source, patch, target).Run();
+            Stopwatch watcher = Stopwatch.StartNew();
+            var decoder = new Decoder(source, patch, target);
+            decoder.Run();
 
             watcher.Stop();
             Console.WriteLine("Done in {0}", watcher.Elapsed);

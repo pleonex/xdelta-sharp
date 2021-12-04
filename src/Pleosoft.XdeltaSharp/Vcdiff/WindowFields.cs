@@ -17,17 +17,16 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp.Vcdiff
 {
-    [Flags]
-    public enum WindowFields : byte {
-        Invalid = 0xF8,
+    using System;
 
-        Source  = 1 << 0,   // Copy window in source file
-        Target  = 1 << 1,   // Copy window in target file
+    [Flags]
+    public enum WindowFields : byte
+    {
+        Source = 1 << 0,    // Copy window in source file
+        Target = 1 << 1,    // Copy window in target file
         Adler32 = 1 << 2,   // Has adler32 checksum
+        All = Source | Target | Adler32,
     }
 }
-

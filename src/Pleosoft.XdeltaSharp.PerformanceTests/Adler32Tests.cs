@@ -17,7 +17,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace Xdelta.PerformanceTests
+namespace Pleosoft.XdeltaSharp.PerformanceTests
 {
     using System.IO;
     using BenchmarkDotNet.Attributes;
@@ -25,7 +25,7 @@ namespace Xdelta.PerformanceTests
     [MemoryDiagnoser]
     public class Adler32Tests
     {
-        Stream stream;
+        private Stream stream;
 
         [Params(2 * 1024, 512 * 1024, 4 * 1024 * 1024)]
         public uint Length { get; set; }

@@ -17,11 +17,12 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp.Decoder
 {
+    using System;
+    using System.IO;
+    using Pleosoft.XdeltaSharp.Vcdiff;
+
     internal class HeaderReader
     {
         private const uint MagicStamp = 0xC4C3D6;
@@ -58,7 +59,7 @@ namespace Xdelta
             Header header = new Header();
 
             HeaderFields fields = (HeaderFields)vcdReader.ReadByte();
-            if (fields.HasInvalidFlag(HeaderFields.Invalid))
+            if ((fields & HeaderFields.All) != fields)
                 throw new FormatException("unrecognized header indicator bits set");
 
             header.SecondaryCompressor = SecondaryCompressor.None;

@@ -17,18 +17,17 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp.Vcdiff
 {
-    [Flags]
-    public enum WindowCompressedFields : byte {
-        Invalid = 0xF8,
+    using System;
 
-        None         = 0,
-        Data         = 1 << 0,
+    [Flags]
+    public enum WindowCompressedFields : byte
+    {
+        None = 0,
+        Data = 1 << 0,
         Instructions = 1 << 1,
-        Addresses    = 1 << 2,
+        Addresses = 1 << 2,
+        All = Data | Instructions | Addresses,
     }
 }
-

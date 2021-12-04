@@ -17,13 +17,13 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System.IO;
-
-namespace Xdelta.Instructions
+namespace Pleosoft.XdeltaSharp.Vcdiff.Instructions
 {
+    using System.IO;
+
     public abstract class Instruction
     {
-        public Instruction(byte sizeInTable, InstructionType type)
+        protected Instruction(byte sizeInTable, InstructionType type)
         {
             Type = type;
             SizeInTable = sizeInTable;
@@ -35,12 +35,12 @@ namespace Xdelta.Instructions
             private set;
         }
 
-        protected byte SizeInTable {
+        public uint Size {
             get;
             private set;
         }
 
-        public uint Size {
+        protected byte SizeInTable {
             get;
             private set;
         }
@@ -56,4 +56,3 @@ namespace Xdelta.Instructions
         }
     }
 }
-

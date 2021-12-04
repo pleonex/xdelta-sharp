@@ -17,7 +17,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp.Vcdiff
 {
     public class Window
     {
@@ -25,18 +25,24 @@ namespace Xdelta
         {
         }
 
-        public WindowFields Source      { get; set; }
+        public WindowFields Source { get; set; }
+
         public uint TargetWindowOffset { get; set; }
+
         public uint SourceSegmentOffset { get; set; }
-        public uint TargetWindowLength  { get; set; }
+
+        public uint TargetWindowLength { get; set; }
+
         public uint SourceSegmentLength { get; set; }
 
         public uint Checksum { get; set; }
 
         public WindowCompressedFields CompressedFields { get; set; }
+
         public VcdReader Data { get; set; }
+
         public VcdReader Instructions { get; set; }
+
         public VcdReader Addresses { get; set; }
     }
 }
-

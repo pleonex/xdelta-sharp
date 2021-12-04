@@ -17,11 +17,11 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using System;
-using System.IO;
-
-namespace Xdelta
+namespace Pleosoft.XdeltaSharp
 {
+    using System;
+    using System.IO;
+
     public class VcdReader
     {
         private const int BytesInInteger = 4;
@@ -60,7 +60,7 @@ namespace Xdelta
 
         public byte[] ReadBytes(uint count)
         {
-            if (count > Int32.MaxValue)
+            if (count > int.MaxValue)
                 throw new FormatException("Trying to read more than UInt32.MaxValue bytes");
 
             return ReadBytes((int)count);
@@ -102,4 +102,3 @@ namespace Xdelta
         }
     }
 }
-

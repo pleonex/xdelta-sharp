@@ -2,6 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>Unit tests of the library.</Description>
+    <RootNamespace>Pleosoft.XdeltaSharp.UnitTests</RootNamespace>
     <TargetFrameworks>netcoreapp3.1;net48;net5.0</TargetFrameworks>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
