@@ -29,6 +29,21 @@ The latest version does not support:
 - Generate patch files.
 - Patch files with external compression.
 
+## Examples
+
+- Apply a patch file
+
+```csharp
+using var input = new FileStream(inputFile, FileMode.Open);
+using var patch = new FileStream(patchFile, FileMode.Open);
+using var output = new FileStream(outputFile, FileMode.Create);
+
+using var decoder = new Decoder(input, patch, output);
+decoder.ProgressChanged += progress => Console.WriteLine($"Patching progress: {progress}";
+
+decoder.Run();
+```
+
 ## Documentation
 
 Feel free to ask any question in the
