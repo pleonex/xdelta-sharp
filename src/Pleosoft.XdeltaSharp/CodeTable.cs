@@ -20,7 +20,7 @@
 namespace Pleosoft.XdeltaSharp
 {
     using System;
-    using Pleosoft.XdeltaSharp.Instructions;
+    using Pleosoft.XdeltaSharp.Vcdiff.Instructions;
 
     public class CodeTable
     {

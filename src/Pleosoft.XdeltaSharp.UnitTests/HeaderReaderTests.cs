@@ -22,6 +22,7 @@ namespace Pleosoft.XdeltaSharp.UnitTests
     using System;
     using System.IO;
     using NUnit.Framework;
+    using Pleosoft.XdeltaSharp.Decoder;
 
     [TestFixture]
     public class HeaderReaderTests

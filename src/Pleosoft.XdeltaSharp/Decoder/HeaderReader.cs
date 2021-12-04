@@ -21,6 +21,7 @@ namespace Pleosoft.XdeltaSharp.Decoder
 {
     using System;
     using System.IO;
+    using Pleosoft.XdeltaSharp.Vcdiff;
 
     internal class HeaderReader
     {

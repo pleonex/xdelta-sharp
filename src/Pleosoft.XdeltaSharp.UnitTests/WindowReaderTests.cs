@@ -22,6 +22,8 @@ namespace Pleosoft.XdeltaSharp.UnitTests
     using System;
     using System.IO;
     using NUnit.Framework;
+    using Pleosoft.XdeltaSharp.Decoder;
+    using Pleosoft.XdeltaSharp.Vcdiff;
 
     [TestFixture]
     public class WindowReaderTests

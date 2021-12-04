@@ -21,7 +21,8 @@ namespace Pleosoft.XdeltaSharp.Decoder
 {
     using System;
     using System.IO;
-    using Pleosoft.XdeltaSharp.Instructions;
+    using Pleosoft.XdeltaSharp.Vcdiff;
+    using Pleosoft.XdeltaSharp.Vcdiff.Instructions;
 
     public class WindowDecoder
     {

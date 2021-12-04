@@ -22,6 +22,7 @@ namespace Pleosoft.XdeltaSharp.Cli
     using System;
     using System.Diagnostics;
     using System.IO;
+    using Pleosoft.XdeltaSharp.Decoder;
 
     public static class Program
     {
