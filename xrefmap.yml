@@ -4,1079 +4,1079 @@ references:
 - uid: CONTRIBUTING
   name: Contributing to the project
   href: guides/Contributing.html
-- uid: Pleosoft.XdeltaSharp
-  name: Pleosoft.XdeltaSharp
-  href: api/Pleosoft.XdeltaSharp.html
-  commentId: N:Pleosoft.XdeltaSharp
-  fullName: Pleosoft.XdeltaSharp
-  nameWithType: Pleosoft.XdeltaSharp
-- uid: Pleosoft.XdeltaSharp.AddressMode
+- uid: PleOps.XdeltaSharp
+  name: PleOps.XdeltaSharp
+  href: api/PleOps.XdeltaSharp.html
+  commentId: N:PleOps.XdeltaSharp
+  fullName: PleOps.XdeltaSharp
+  nameWithType: PleOps.XdeltaSharp
+- uid: PleOps.XdeltaSharp.AddressMode
   name: AddressMode
-  href: api/Pleosoft.XdeltaSharp.AddressMode.html
-  commentId: T:Pleosoft.XdeltaSharp.AddressMode
-  fullName: Pleosoft.XdeltaSharp.AddressMode
+  href: api/PleOps.XdeltaSharp.AddressMode.html
+  commentId: T:PleOps.XdeltaSharp.AddressMode
+  fullName: PleOps.XdeltaSharp.AddressMode
   nameWithType: AddressMode
-- uid: Pleosoft.XdeltaSharp.AddressMode.Here
+- uid: PleOps.XdeltaSharp.AddressMode.Here
   name: Here
-  href: api/Pleosoft.XdeltaSharp.AddressMode.html#Pleosoft_XdeltaSharp_AddressMode_Here
-  commentId: F:Pleosoft.XdeltaSharp.AddressMode.Here
-  fullName: Pleosoft.XdeltaSharp.AddressMode.Here
+  href: api/PleOps.XdeltaSharp.AddressMode.html#PleOps_XdeltaSharp_AddressMode_Here
+  commentId: F:PleOps.XdeltaSharp.AddressMode.Here
+  fullName: PleOps.XdeltaSharp.AddressMode.Here
   nameWithType: AddressMode.Here
-- uid: Pleosoft.XdeltaSharp.AddressMode.Invalid
+- uid: PleOps.XdeltaSharp.AddressMode.Invalid
   name: Invalid
-  href: api/Pleosoft.XdeltaSharp.AddressMode.html#Pleosoft_XdeltaSharp_AddressMode_Invalid
-  commentId: F:Pleosoft.XdeltaSharp.AddressMode.Invalid
-  fullName: Pleosoft.XdeltaSharp.AddressMode.Invalid
+  href: api/PleOps.XdeltaSharp.AddressMode.html#PleOps_XdeltaSharp_AddressMode_Invalid
+  commentId: F:PleOps.XdeltaSharp.AddressMode.Invalid
+  fullName: PleOps.XdeltaSharp.AddressMode.Invalid
   nameWithType: AddressMode.Invalid
-- uid: Pleosoft.XdeltaSharp.AddressMode.Near
+- uid: PleOps.XdeltaSharp.AddressMode.Near
   name: Near
-  href: api/Pleosoft.XdeltaSharp.AddressMode.html#Pleosoft_XdeltaSharp_AddressMode_Near
-  commentId: F:Pleosoft.XdeltaSharp.AddressMode.Near
-  fullName: Pleosoft.XdeltaSharp.AddressMode.Near
+  href: api/PleOps.XdeltaSharp.AddressMode.html#PleOps_XdeltaSharp_AddressMode_Near
+  commentId: F:PleOps.XdeltaSharp.AddressMode.Near
+  fullName: PleOps.XdeltaSharp.AddressMode.Near
   nameWithType: AddressMode.Near
-- uid: Pleosoft.XdeltaSharp.AddressMode.Same
+- uid: PleOps.XdeltaSharp.AddressMode.Same
   name: Same
-  href: api/Pleosoft.XdeltaSharp.AddressMode.html#Pleosoft_XdeltaSharp_AddressMode_Same
-  commentId: F:Pleosoft.XdeltaSharp.AddressMode.Same
-  fullName: Pleosoft.XdeltaSharp.AddressMode.Same
+  href: api/PleOps.XdeltaSharp.AddressMode.html#PleOps_XdeltaSharp_AddressMode_Same
+  commentId: F:PleOps.XdeltaSharp.AddressMode.Same
+  fullName: PleOps.XdeltaSharp.AddressMode.Same
   nameWithType: AddressMode.Same
-- uid: Pleosoft.XdeltaSharp.AddressMode.Self
+- uid: PleOps.XdeltaSharp.AddressMode.Self
   name: Self
-  href: api/Pleosoft.XdeltaSharp.AddressMode.html#Pleosoft_XdeltaSharp_AddressMode_Self
-  commentId: F:Pleosoft.XdeltaSharp.AddressMode.Self
-  fullName: Pleosoft.XdeltaSharp.AddressMode.Self
+  href: api/PleOps.XdeltaSharp.AddressMode.html#PleOps_XdeltaSharp_AddressMode_Self
+  commentId: F:PleOps.XdeltaSharp.AddressMode.Self
+  fullName: PleOps.XdeltaSharp.AddressMode.Self
   nameWithType: AddressMode.Self
-- uid: Pleosoft.XdeltaSharp.Adler32
+- uid: PleOps.XdeltaSharp.Adler32
   name: Adler32
-  href: api/Pleosoft.XdeltaSharp.Adler32.html
-  commentId: T:Pleosoft.XdeltaSharp.Adler32
-  fullName: Pleosoft.XdeltaSharp.Adler32
+  href: api/PleOps.XdeltaSharp.Adler32.html
+  commentId: T:PleOps.XdeltaSharp.Adler32
+  fullName: PleOps.XdeltaSharp.Adler32
   nameWithType: Adler32
-- uid: Pleosoft.XdeltaSharp.Adler32.Run(System.IO.Stream,System.Int64,System.UInt32)
+- uid: PleOps.XdeltaSharp.Adler32.Run(System.IO.Stream,System.Int64,System.UInt32)
   name: Run(Stream, Int64, UInt32)
-  href: api/Pleosoft.XdeltaSharp.Adler32.html#Pleosoft_XdeltaSharp_Adler32_Run_System_IO_Stream_System_Int64_System_UInt32_
-  commentId: M:Pleosoft.XdeltaSharp.Adler32.Run(System.IO.Stream,System.Int64,System.UInt32)
-  fullName: Pleosoft.XdeltaSharp.Adler32.Run(System.IO.Stream, System.Int64, System.UInt32)
+  href: api/PleOps.XdeltaSharp.Adler32.html#PleOps_XdeltaSharp_Adler32_Run_System_IO_Stream_System_Int64_System_UInt32_
+  commentId: M:PleOps.XdeltaSharp.Adler32.Run(System.IO.Stream,System.Int64,System.UInt32)
+  fullName: PleOps.XdeltaSharp.Adler32.Run(System.IO.Stream, System.Int64, System.UInt32)
   nameWithType: Adler32.Run(Stream, Int64, UInt32)
-- uid: Pleosoft.XdeltaSharp.Adler32.Run*
+- uid: PleOps.XdeltaSharp.Adler32.Run*
   name: Run
-  href: api/Pleosoft.XdeltaSharp.Adler32.html#Pleosoft_XdeltaSharp_Adler32_Run_
-  commentId: Overload:Pleosoft.XdeltaSharp.Adler32.Run
+  href: api/PleOps.XdeltaSharp.Adler32.html#PleOps_XdeltaSharp_Adler32_Run_
+  commentId: Overload:PleOps.XdeltaSharp.Adler32.Run
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Adler32.Run
+  fullName: PleOps.XdeltaSharp.Adler32.Run
   nameWithType: Adler32.Run
-- uid: Pleosoft.XdeltaSharp.Cache
+- uid: PleOps.XdeltaSharp.Cache
   name: Cache
-  href: api/Pleosoft.XdeltaSharp.Cache.html
-  commentId: T:Pleosoft.XdeltaSharp.Cache
-  fullName: Pleosoft.XdeltaSharp.Cache
+  href: api/PleOps.XdeltaSharp.Cache.html
+  commentId: T:PleOps.XdeltaSharp.Cache
+  fullName: PleOps.XdeltaSharp.Cache
   nameWithType: Cache
-- uid: Pleosoft.XdeltaSharp.Cache.#ctor(System.Byte,System.Byte)
+- uid: PleOps.XdeltaSharp.Cache.#ctor(System.Byte,System.Byte)
   name: Cache(Byte, Byte)
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache__ctor_System_Byte_System_Byte_
-  commentId: M:Pleosoft.XdeltaSharp.Cache.#ctor(System.Byte,System.Byte)
-  fullName: Pleosoft.XdeltaSharp.Cache.Cache(System.Byte, System.Byte)
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache__ctor_System_Byte_System_Byte_
+  commentId: M:PleOps.XdeltaSharp.Cache.#ctor(System.Byte,System.Byte)
+  fullName: PleOps.XdeltaSharp.Cache.Cache(System.Byte, System.Byte)
   nameWithType: Cache.Cache(Byte, Byte)
-- uid: Pleosoft.XdeltaSharp.Cache.#ctor*
+- uid: PleOps.XdeltaSharp.Cache.#ctor*
   name: Cache
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Cache.#ctor
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Cache.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Cache.Cache
+  fullName: PleOps.XdeltaSharp.Cache.Cache
   nameWithType: Cache.Cache
-- uid: Pleosoft.XdeltaSharp.Cache.GetAddress(System.UInt32,System.Byte,Pleosoft.XdeltaSharp.VcdReader)
+- uid: PleOps.XdeltaSharp.Cache.GetAddress(System.UInt32,System.Byte,PleOps.XdeltaSharp.VcdReader)
   name: GetAddress(UInt32, Byte, VcdReader)
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_GetAddress_System_UInt32_System_Byte_Pleosoft_XdeltaSharp_VcdReader_
-  commentId: M:Pleosoft.XdeltaSharp.Cache.GetAddress(System.UInt32,System.Byte,Pleosoft.XdeltaSharp.VcdReader)
-  fullName: Pleosoft.XdeltaSharp.Cache.GetAddress(System.UInt32, System.Byte, Pleosoft.XdeltaSharp.VcdReader)
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_GetAddress_System_UInt32_System_Byte_PleOps_XdeltaSharp_VcdReader_
+  commentId: M:PleOps.XdeltaSharp.Cache.GetAddress(System.UInt32,System.Byte,PleOps.XdeltaSharp.VcdReader)
+  fullName: PleOps.XdeltaSharp.Cache.GetAddress(System.UInt32, System.Byte, PleOps.XdeltaSharp.VcdReader)
   nameWithType: Cache.GetAddress(UInt32, Byte, VcdReader)
-- uid: Pleosoft.XdeltaSharp.Cache.GetAddress*
+- uid: PleOps.XdeltaSharp.Cache.GetAddress*
   name: GetAddress
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_GetAddress_
-  commentId: Overload:Pleosoft.XdeltaSharp.Cache.GetAddress
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_GetAddress_
+  commentId: Overload:PleOps.XdeltaSharp.Cache.GetAddress
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Cache.GetAddress
+  fullName: PleOps.XdeltaSharp.Cache.GetAddress
   nameWithType: Cache.GetAddress
-- uid: Pleosoft.XdeltaSharp.Cache.Initialize
+- uid: PleOps.XdeltaSharp.Cache.Initialize
   name: Initialize()
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_Initialize
-  commentId: M:Pleosoft.XdeltaSharp.Cache.Initialize
-  fullName: Pleosoft.XdeltaSharp.Cache.Initialize()
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_Initialize
+  commentId: M:PleOps.XdeltaSharp.Cache.Initialize
+  fullName: PleOps.XdeltaSharp.Cache.Initialize()
   nameWithType: Cache.Initialize()
-- uid: Pleosoft.XdeltaSharp.Cache.Initialize*
+- uid: PleOps.XdeltaSharp.Cache.Initialize*
   name: Initialize
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_Initialize_
-  commentId: Overload:Pleosoft.XdeltaSharp.Cache.Initialize
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_Initialize_
+  commentId: Overload:PleOps.XdeltaSharp.Cache.Initialize
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Cache.Initialize
+  fullName: PleOps.XdeltaSharp.Cache.Initialize
   nameWithType: Cache.Initialize
-- uid: Pleosoft.XdeltaSharp.Cache.NearSlots
+- uid: PleOps.XdeltaSharp.Cache.NearSlots
   name: NearSlots
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_NearSlots
-  commentId: P:Pleosoft.XdeltaSharp.Cache.NearSlots
-  fullName: Pleosoft.XdeltaSharp.Cache.NearSlots
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_NearSlots
+  commentId: P:PleOps.XdeltaSharp.Cache.NearSlots
+  fullName: PleOps.XdeltaSharp.Cache.NearSlots
   nameWithType: Cache.NearSlots
-- uid: Pleosoft.XdeltaSharp.Cache.NearSlots*
+- uid: PleOps.XdeltaSharp.Cache.NearSlots*
   name: NearSlots
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_NearSlots_
-  commentId: Overload:Pleosoft.XdeltaSharp.Cache.NearSlots
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_NearSlots_
+  commentId: Overload:PleOps.XdeltaSharp.Cache.NearSlots
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Cache.NearSlots
+  fullName: PleOps.XdeltaSharp.Cache.NearSlots
   nameWithType: Cache.NearSlots
-- uid: Pleosoft.XdeltaSharp.Cache.SameSlots
+- uid: PleOps.XdeltaSharp.Cache.SameSlots
   name: SameSlots
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_SameSlots
-  commentId: P:Pleosoft.XdeltaSharp.Cache.SameSlots
-  fullName: Pleosoft.XdeltaSharp.Cache.SameSlots
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_SameSlots
+  commentId: P:PleOps.XdeltaSharp.Cache.SameSlots
+  fullName: PleOps.XdeltaSharp.Cache.SameSlots
   nameWithType: Cache.SameSlots
-- uid: Pleosoft.XdeltaSharp.Cache.SameSlots*
+- uid: PleOps.XdeltaSharp.Cache.SameSlots*
   name: SameSlots
-  href: api/Pleosoft.XdeltaSharp.Cache.html#Pleosoft_XdeltaSharp_Cache_SameSlots_
-  commentId: Overload:Pleosoft.XdeltaSharp.Cache.SameSlots
+  href: api/PleOps.XdeltaSharp.Cache.html#PleOps_XdeltaSharp_Cache_SameSlots_
+  commentId: Overload:PleOps.XdeltaSharp.Cache.SameSlots
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Cache.SameSlots
+  fullName: PleOps.XdeltaSharp.Cache.SameSlots
   nameWithType: Cache.SameSlots
-- uid: Pleosoft.XdeltaSharp.CodeTable
+- uid: PleOps.XdeltaSharp.CodeTable
   name: CodeTable
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html
-  commentId: T:Pleosoft.XdeltaSharp.CodeTable
-  fullName: Pleosoft.XdeltaSharp.CodeTable
+  href: api/PleOps.XdeltaSharp.CodeTable.html
+  commentId: T:PleOps.XdeltaSharp.CodeTable
+  fullName: PleOps.XdeltaSharp.CodeTable
   nameWithType: CodeTable
-- uid: Pleosoft.XdeltaSharp.CodeTable.#ctor(System.Byte[],System.Byte,System.Byte)
+- uid: PleOps.XdeltaSharp.CodeTable.#ctor(System.Byte[],System.Byte,System.Byte)
   name: CodeTable(Byte[], Byte, Byte)
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable__ctor_System_Byte___System_Byte_System_Byte_
-  commentId: M:Pleosoft.XdeltaSharp.CodeTable.#ctor(System.Byte[],System.Byte,System.Byte)
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable__ctor_System_Byte___System_Byte_System_Byte_
+  commentId: M:PleOps.XdeltaSharp.CodeTable.#ctor(System.Byte[],System.Byte,System.Byte)
   name.vb: CodeTable(Byte(), Byte, Byte)
-  fullName: Pleosoft.XdeltaSharp.CodeTable.CodeTable(System.Byte[], System.Byte, System.Byte)
-  fullName.vb: Pleosoft.XdeltaSharp.CodeTable.CodeTable(System.Byte(), System.Byte, System.Byte)
+  fullName: PleOps.XdeltaSharp.CodeTable.CodeTable(System.Byte[], System.Byte, System.Byte)
+  fullName.vb: PleOps.XdeltaSharp.CodeTable.CodeTable(System.Byte(), System.Byte, System.Byte)
   nameWithType: CodeTable.CodeTable(Byte[], Byte, Byte)
   nameWithType.vb: CodeTable.CodeTable(Byte(), Byte, Byte)
-- uid: Pleosoft.XdeltaSharp.CodeTable.#ctor*
+- uid: PleOps.XdeltaSharp.CodeTable.#ctor*
   name: CodeTable
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.CodeTable.#ctor
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.CodeTable.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.CodeTable.CodeTable
+  fullName: PleOps.XdeltaSharp.CodeTable.CodeTable
   nameWithType: CodeTable.CodeTable
-- uid: Pleosoft.XdeltaSharp.CodeTable.Cache
+- uid: PleOps.XdeltaSharp.CodeTable.Cache
   name: Cache
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable_Cache
-  commentId: P:Pleosoft.XdeltaSharp.CodeTable.Cache
-  fullName: Pleosoft.XdeltaSharp.CodeTable.Cache
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable_Cache
+  commentId: P:PleOps.XdeltaSharp.CodeTable.Cache
+  fullName: PleOps.XdeltaSharp.CodeTable.Cache
   nameWithType: CodeTable.Cache
-- uid: Pleosoft.XdeltaSharp.CodeTable.Cache*
+- uid: PleOps.XdeltaSharp.CodeTable.Cache*
   name: Cache
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable_Cache_
-  commentId: Overload:Pleosoft.XdeltaSharp.CodeTable.Cache
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable_Cache_
+  commentId: Overload:PleOps.XdeltaSharp.CodeTable.Cache
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.CodeTable.Cache
+  fullName: PleOps.XdeltaSharp.CodeTable.Cache
   nameWithType: CodeTable.Cache
-- uid: Pleosoft.XdeltaSharp.CodeTable.Default
+- uid: PleOps.XdeltaSharp.CodeTable.Default
   name: Default
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable_Default
-  commentId: P:Pleosoft.XdeltaSharp.CodeTable.Default
-  fullName: Pleosoft.XdeltaSharp.CodeTable.Default
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable_Default
+  commentId: P:PleOps.XdeltaSharp.CodeTable.Default
+  fullName: PleOps.XdeltaSharp.CodeTable.Default
   nameWithType: CodeTable.Default
-- uid: Pleosoft.XdeltaSharp.CodeTable.Default*
+- uid: PleOps.XdeltaSharp.CodeTable.Default*
   name: Default
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable_Default_
-  commentId: Overload:Pleosoft.XdeltaSharp.CodeTable.Default
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable_Default_
+  commentId: Overload:PleOps.XdeltaSharp.CodeTable.Default
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.CodeTable.Default
+  fullName: PleOps.XdeltaSharp.CodeTable.Default
   nameWithType: CodeTable.Default
-- uid: Pleosoft.XdeltaSharp.CodeTable.GetInstructions(System.Int32,Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction@,Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction@)
+- uid: PleOps.XdeltaSharp.CodeTable.GetInstructions(System.Int32,PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction@,PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction@)
   name: GetInstructions(Int32, out Instruction, out Instruction)
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable_GetInstructions_System_Int32_Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction__Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction__
-  commentId: M:Pleosoft.XdeltaSharp.CodeTable.GetInstructions(System.Int32,Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction@,Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction@)
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable_GetInstructions_System_Int32_PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction__PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction__
+  commentId: M:PleOps.XdeltaSharp.CodeTable.GetInstructions(System.Int32,PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction@,PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction@)
   name.vb: GetInstructions(Int32, ByRef Instruction, ByRef Instruction)
-  fullName: Pleosoft.XdeltaSharp.CodeTable.GetInstructions(System.Int32, out Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction, out Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction)
-  fullName.vb: Pleosoft.XdeltaSharp.CodeTable.GetInstructions(System.Int32, ByRef Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction, ByRef Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction)
+  fullName: PleOps.XdeltaSharp.CodeTable.GetInstructions(System.Int32, out PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction, out PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction)
+  fullName.vb: PleOps.XdeltaSharp.CodeTable.GetInstructions(System.Int32, ByRef PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction, ByRef PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction)
   nameWithType: CodeTable.GetInstructions(Int32, out Instruction, out Instruction)
   nameWithType.vb: CodeTable.GetInstructions(Int32, ByRef Instruction, ByRef Instruction)
-- uid: Pleosoft.XdeltaSharp.CodeTable.GetInstructions*
+- uid: PleOps.XdeltaSharp.CodeTable.GetInstructions*
   name: GetInstructions
-  href: api/Pleosoft.XdeltaSharp.CodeTable.html#Pleosoft_XdeltaSharp_CodeTable_GetInstructions_
-  commentId: Overload:Pleosoft.XdeltaSharp.CodeTable.GetInstructions
+  href: api/PleOps.XdeltaSharp.CodeTable.html#PleOps_XdeltaSharp_CodeTable_GetInstructions_
+  commentId: Overload:PleOps.XdeltaSharp.CodeTable.GetInstructions
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.CodeTable.GetInstructions
+  fullName: PleOps.XdeltaSharp.CodeTable.GetInstructions
   nameWithType: CodeTable.GetInstructions
-- uid: Pleosoft.XdeltaSharp.Decoder
-  name: Pleosoft.XdeltaSharp.Decoder
-  href: api/Pleosoft.XdeltaSharp.Decoder.html
-  commentId: N:Pleosoft.XdeltaSharp.Decoder
-  fullName: Pleosoft.XdeltaSharp.Decoder
-  nameWithType: Pleosoft.XdeltaSharp.Decoder
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder
+- uid: PleOps.XdeltaSharp.Decoder
+  name: PleOps.XdeltaSharp.Decoder
+  href: api/PleOps.XdeltaSharp.Decoder.html
+  commentId: N:PleOps.XdeltaSharp.Decoder
+  fullName: PleOps.XdeltaSharp.Decoder
+  nameWithType: PleOps.XdeltaSharp.Decoder
+- uid: PleOps.XdeltaSharp.Decoder.Decoder
   name: Decoder
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html
-  commentId: T:Pleosoft.XdeltaSharp.Decoder.Decoder
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html
+  commentId: T:PleOps.XdeltaSharp.Decoder.Decoder
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder
   nameWithType: Decoder
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.#ctor(System.IO.Stream,System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.#ctor(System.IO.Stream,System.IO.Stream,System.IO.Stream)
   name: Decoder(Stream, Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder__ctor_System_IO_Stream_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Decoder.Decoder.#ctor(System.IO.Stream,System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Decoder(System.IO.Stream, System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder__ctor_System_IO_Stream_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Decoder.Decoder.#ctor(System.IO.Stream,System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Decoder(System.IO.Stream, System.IO.Stream, System.IO.Stream)
   nameWithType: Decoder.Decoder(Stream, Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.#ctor*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.#ctor*
   name: Decoder
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.#ctor
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Decoder
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Decoder
   nameWithType: Decoder.Decoder
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Dispose
   name: Dispose()
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Dispose
-  commentId: M:Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose()
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Dispose
+  commentId: M:PleOps.XdeltaSharp.Decoder.Decoder.Dispose
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Dispose()
   nameWithType: Decoder.Dispose()
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose(System.Boolean)
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Dispose(System.Boolean)
   name: Dispose(Boolean)
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Dispose_System_Boolean_
-  commentId: M:Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose(System.Boolean)
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose(System.Boolean)
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Dispose_System_Boolean_
+  commentId: M:PleOps.XdeltaSharp.Decoder.Decoder.Dispose(System.Boolean)
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Dispose(System.Boolean)
   nameWithType: Decoder.Dispose(Boolean)
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Dispose*
   name: Dispose
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Dispose_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Dispose_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.Dispose
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Dispose
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Dispose
   nameWithType: Decoder.Dispose
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Finished
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Finished
   name: Finished
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Finished
-  commentId: E:Pleosoft.XdeltaSharp.Decoder.Decoder.Finished
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Finished
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Finished
+  commentId: E:PleOps.XdeltaSharp.Decoder.Decoder.Finished
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Finished
   nameWithType: Decoder.Finished
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Header
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Header
   name: Header
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Header
-  commentId: P:Pleosoft.XdeltaSharp.Decoder.Decoder.Header
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Header
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Header
+  commentId: P:PleOps.XdeltaSharp.Decoder.Decoder.Header
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Header
   nameWithType: Decoder.Header
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Header*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Header*
   name: Header
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Header_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.Header
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Header_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.Header
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Header
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Header
   nameWithType: Decoder.Header
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Input
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Input
   name: Input
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Input
-  commentId: P:Pleosoft.XdeltaSharp.Decoder.Decoder.Input
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Input
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Input
+  commentId: P:PleOps.XdeltaSharp.Decoder.Decoder.Input
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Input
   nameWithType: Decoder.Input
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Input*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Input*
   name: Input
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Input_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.Input
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Input_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.Input
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Input
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Input
   nameWithType: Decoder.Input
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.LastWindow
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.LastWindow
   name: LastWindow
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_LastWindow
-  commentId: P:Pleosoft.XdeltaSharp.Decoder.Decoder.LastWindow
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.LastWindow
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_LastWindow
+  commentId: P:PleOps.XdeltaSharp.Decoder.Decoder.LastWindow
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.LastWindow
   nameWithType: Decoder.LastWindow
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.LastWindow*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.LastWindow*
   name: LastWindow
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_LastWindow_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.LastWindow
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_LastWindow_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.LastWindow
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.LastWindow
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.LastWindow
   nameWithType: Decoder.LastWindow
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Output
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Output
   name: Output
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Output
-  commentId: P:Pleosoft.XdeltaSharp.Decoder.Decoder.Output
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Output
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Output
+  commentId: P:PleOps.XdeltaSharp.Decoder.Decoder.Output
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Output
   nameWithType: Decoder.Output
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Output*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Output*
   name: Output
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Output_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.Output
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Output_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.Output
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Output
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Output
   nameWithType: Decoder.Output
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Patch
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Patch
   name: Patch
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Patch
-  commentId: P:Pleosoft.XdeltaSharp.Decoder.Decoder.Patch
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Patch
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Patch
+  commentId: P:PleOps.XdeltaSharp.Decoder.Decoder.Patch
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Patch
   nameWithType: Decoder.Patch
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Patch*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Patch*
   name: Patch
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Patch_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.Patch
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Patch_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.Patch
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Patch
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Patch
   nameWithType: Decoder.Patch
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.ProgressChanged
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.ProgressChanged
   name: ProgressChanged
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_ProgressChanged
-  commentId: E:Pleosoft.XdeltaSharp.Decoder.Decoder.ProgressChanged
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.ProgressChanged
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_ProgressChanged
+  commentId: E:PleOps.XdeltaSharp.Decoder.Decoder.ProgressChanged
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.ProgressChanged
   nameWithType: Decoder.ProgressChanged
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Run
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Run
   name: Run()
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Run
-  commentId: M:Pleosoft.XdeltaSharp.Decoder.Decoder.Run
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Run()
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Run
+  commentId: M:PleOps.XdeltaSharp.Decoder.Decoder.Run
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Run()
   nameWithType: Decoder.Run()
-- uid: Pleosoft.XdeltaSharp.Decoder.Decoder.Run*
+- uid: PleOps.XdeltaSharp.Decoder.Decoder.Run*
   name: Run
-  href: api/Pleosoft.XdeltaSharp.Decoder.Decoder.html#Pleosoft_XdeltaSharp_Decoder_Decoder_Run_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.Decoder.Run
+  href: api/PleOps.XdeltaSharp.Decoder.Decoder.html#PleOps_XdeltaSharp_Decoder_Decoder_Run_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.Decoder.Run
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.Decoder.Run
+  fullName: PleOps.XdeltaSharp.Decoder.Decoder.Run
   nameWithType: Decoder.Run
-- uid: Pleosoft.XdeltaSharp.Decoder.WindowDecoder
+- uid: PleOps.XdeltaSharp.Decoder.WindowDecoder
   name: WindowDecoder
-  href: api/Pleosoft.XdeltaSharp.Decoder.WindowDecoder.html
-  commentId: T:Pleosoft.XdeltaSharp.Decoder.WindowDecoder
-  fullName: Pleosoft.XdeltaSharp.Decoder.WindowDecoder
+  href: api/PleOps.XdeltaSharp.Decoder.WindowDecoder.html
+  commentId: T:PleOps.XdeltaSharp.Decoder.WindowDecoder
+  fullName: PleOps.XdeltaSharp.Decoder.WindowDecoder
   nameWithType: WindowDecoder
-- uid: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.#ctor(System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Decoder.WindowDecoder.#ctor(System.IO.Stream,System.IO.Stream)
   name: WindowDecoder(Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Decoder.WindowDecoder.html#Pleosoft_XdeltaSharp_Decoder_WindowDecoder__ctor_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Decoder.WindowDecoder.#ctor(System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.WindowDecoder(System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Decoder.WindowDecoder.html#PleOps_XdeltaSharp_Decoder_WindowDecoder__ctor_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Decoder.WindowDecoder.#ctor(System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Decoder.WindowDecoder.WindowDecoder(System.IO.Stream, System.IO.Stream)
   nameWithType: WindowDecoder.WindowDecoder(Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.#ctor*
+- uid: PleOps.XdeltaSharp.Decoder.WindowDecoder.#ctor*
   name: WindowDecoder
-  href: api/Pleosoft.XdeltaSharp.Decoder.WindowDecoder.html#Pleosoft_XdeltaSharp_Decoder_WindowDecoder__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.WindowDecoder.#ctor
+  href: api/PleOps.XdeltaSharp.Decoder.WindowDecoder.html#PleOps_XdeltaSharp_Decoder_WindowDecoder__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.WindowDecoder.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.WindowDecoder
+  fullName: PleOps.XdeltaSharp.Decoder.WindowDecoder.WindowDecoder
   nameWithType: WindowDecoder.WindowDecoder
-- uid: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.Decode(Pleosoft.XdeltaSharp.Vcdiff.Window)
+- uid: PleOps.XdeltaSharp.Decoder.WindowDecoder.Decode(PleOps.XdeltaSharp.Vcdiff.Window)
   name: Decode(Window)
-  href: api/Pleosoft.XdeltaSharp.Decoder.WindowDecoder.html#Pleosoft_XdeltaSharp_Decoder_WindowDecoder_Decode_Pleosoft_XdeltaSharp_Vcdiff_Window_
-  commentId: M:Pleosoft.XdeltaSharp.Decoder.WindowDecoder.Decode(Pleosoft.XdeltaSharp.Vcdiff.Window)
-  fullName: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.Decode(Pleosoft.XdeltaSharp.Vcdiff.Window)
+  href: api/PleOps.XdeltaSharp.Decoder.WindowDecoder.html#PleOps_XdeltaSharp_Decoder_WindowDecoder_Decode_PleOps_XdeltaSharp_Vcdiff_Window_
+  commentId: M:PleOps.XdeltaSharp.Decoder.WindowDecoder.Decode(PleOps.XdeltaSharp.Vcdiff.Window)
+  fullName: PleOps.XdeltaSharp.Decoder.WindowDecoder.Decode(PleOps.XdeltaSharp.Vcdiff.Window)
   nameWithType: WindowDecoder.Decode(Window)
-- uid: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.Decode*
+- uid: PleOps.XdeltaSharp.Decoder.WindowDecoder.Decode*
   name: Decode
-  href: api/Pleosoft.XdeltaSharp.Decoder.WindowDecoder.html#Pleosoft_XdeltaSharp_Decoder_WindowDecoder_Decode_
-  commentId: Overload:Pleosoft.XdeltaSharp.Decoder.WindowDecoder.Decode
+  href: api/PleOps.XdeltaSharp.Decoder.WindowDecoder.html#PleOps_XdeltaSharp_Decoder_WindowDecoder_Decode_
+  commentId: Overload:PleOps.XdeltaSharp.Decoder.WindowDecoder.Decode
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Decoder.WindowDecoder.Decode
+  fullName: PleOps.XdeltaSharp.Decoder.WindowDecoder.Decode
   nameWithType: WindowDecoder.Decode
-- uid: Pleosoft.XdeltaSharp.FinishedHandler
+- uid: PleOps.XdeltaSharp.FinishedHandler
   name: FinishedHandler
-  href: api/Pleosoft.XdeltaSharp.FinishedHandler.html
-  commentId: T:Pleosoft.XdeltaSharp.FinishedHandler
-  fullName: Pleosoft.XdeltaSharp.FinishedHandler
+  href: api/PleOps.XdeltaSharp.FinishedHandler.html
+  commentId: T:PleOps.XdeltaSharp.FinishedHandler
+  fullName: PleOps.XdeltaSharp.FinishedHandler
   nameWithType: FinishedHandler
-- uid: Pleosoft.XdeltaSharp.ProgressChangedHandler
+- uid: PleOps.XdeltaSharp.ProgressChangedHandler
   name: ProgressChangedHandler
-  href: api/Pleosoft.XdeltaSharp.ProgressChangedHandler.html
-  commentId: T:Pleosoft.XdeltaSharp.ProgressChangedHandler
-  fullName: Pleosoft.XdeltaSharp.ProgressChangedHandler
+  href: api/PleOps.XdeltaSharp.ProgressChangedHandler.html
+  commentId: T:PleOps.XdeltaSharp.ProgressChangedHandler
+  fullName: PleOps.XdeltaSharp.ProgressChangedHandler
   nameWithType: ProgressChangedHandler
-- uid: Pleosoft.XdeltaSharp.Vcdiff
-  name: Pleosoft.XdeltaSharp.Vcdiff
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.html
-  commentId: N:Pleosoft.XdeltaSharp.Vcdiff
-  fullName: Pleosoft.XdeltaSharp.Vcdiff
-  nameWithType: Pleosoft.XdeltaSharp.Vcdiff
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Header
+- uid: PleOps.XdeltaSharp.Vcdiff
+  name: PleOps.XdeltaSharp.Vcdiff
+  href: api/PleOps.XdeltaSharp.Vcdiff.html
+  commentId: N:PleOps.XdeltaSharp.Vcdiff
+  fullName: PleOps.XdeltaSharp.Vcdiff
+  nameWithType: PleOps.XdeltaSharp.Vcdiff
+- uid: PleOps.XdeltaSharp.Vcdiff.Header
   name: Header
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Header.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Header
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Header
+  href: api/PleOps.XdeltaSharp.Vcdiff.Header.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Header
+  fullName: PleOps.XdeltaSharp.Vcdiff.Header
   nameWithType: Header
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Header.ApplicationData
+- uid: PleOps.XdeltaSharp.Vcdiff.Header.ApplicationData
   name: ApplicationData
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Header.html#Pleosoft_XdeltaSharp_Vcdiff_Header_ApplicationData
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Header.ApplicationData
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Header.ApplicationData
+  href: api/PleOps.XdeltaSharp.Vcdiff.Header.html#PleOps_XdeltaSharp_Vcdiff_Header_ApplicationData
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Header.ApplicationData
+  fullName: PleOps.XdeltaSharp.Vcdiff.Header.ApplicationData
   nameWithType: Header.ApplicationData
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Header.ApplicationData*
+- uid: PleOps.XdeltaSharp.Vcdiff.Header.ApplicationData*
   name: ApplicationData
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Header.html#Pleosoft_XdeltaSharp_Vcdiff_Header_ApplicationData_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Header.ApplicationData
+  href: api/PleOps.XdeltaSharp.Vcdiff.Header.html#PleOps_XdeltaSharp_Vcdiff_Header_ApplicationData_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Header.ApplicationData
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Header.ApplicationData
+  fullName: PleOps.XdeltaSharp.Vcdiff.Header.ApplicationData
   nameWithType: Header.ApplicationData
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
+- uid: PleOps.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
   name: SecondaryCompressor
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Header.html#Pleosoft_XdeltaSharp_Vcdiff_Header_SecondaryCompressor
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
+  href: api/PleOps.XdeltaSharp.Vcdiff.Header.html#PleOps_XdeltaSharp_Vcdiff_Header_SecondaryCompressor
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
+  fullName: PleOps.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
   nameWithType: Header.SecondaryCompressor
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Header.SecondaryCompressor*
+- uid: PleOps.XdeltaSharp.Vcdiff.Header.SecondaryCompressor*
   name: SecondaryCompressor
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Header.html#Pleosoft_XdeltaSharp_Vcdiff_Header_SecondaryCompressor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
+  href: api/PleOps.XdeltaSharp.Vcdiff.Header.html#PleOps_XdeltaSharp_Vcdiff_Header_SecondaryCompressor_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
+  fullName: PleOps.XdeltaSharp.Vcdiff.Header.SecondaryCompressor
   nameWithType: Header.SecondaryCompressor
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions
-  name: Pleosoft.XdeltaSharp.Vcdiff.Instructions
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.html
-  commentId: N:Pleosoft.XdeltaSharp.Vcdiff.Instructions
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions
-  nameWithType: Pleosoft.XdeltaSharp.Vcdiff.Instructions
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions
+  name: PleOps.XdeltaSharp.Vcdiff.Instructions
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.html
+  commentId: N:PleOps.XdeltaSharp.Vcdiff.Instructions
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions
+  nameWithType: PleOps.XdeltaSharp.Vcdiff.Instructions
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add
   name: Add
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Instructions.Add
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add
   nameWithType: Add
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.#ctor(System.Byte)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.#ctor(System.Byte)
   name: Add(Byte)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add__ctor_System_Byte_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.#ctor(System.Byte)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Add(System.Byte)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add__ctor_System_Byte_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.#ctor(System.Byte)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Add(System.Byte)
   nameWithType: Add.Add(Byte)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.#ctor*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.#ctor*
   name: Add
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.#ctor
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Add
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Add
   nameWithType: Add.Add
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Data
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Data
   name: Data
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add_Data
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Data
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Data
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add_Data
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Data
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Data
   nameWithType: Add.Data
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Data*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Data*
   name: Data
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add_Data_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Data
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add_Data_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Data
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.Data
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.Data
   nameWithType: Add.Data
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
   name: DecodeInstruction(Window, Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add_DecodeInstruction_Pleosoft_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add_DecodeInstruction_PleOps_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
   nameWithType: Add.DecodeInstruction(Window, Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction*
   name: DecodeInstruction
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add_DecodeInstruction_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add_DecodeInstruction_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.DecodeInstruction
   nameWithType: Add.DecodeInstruction
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.ToString
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.ToString
   name: ToString()
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add_ToString
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.ToString
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.ToString()
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add_ToString
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.ToString()
   nameWithType: Add.ToString()
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.ToString*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.ToString*
   name: ToString
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Add_ToString_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.ToString
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Add_ToString_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Add.ToString
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Add.ToString
   nameWithType: Add.ToString
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy
   name: Copy
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy
   nameWithType: Copy
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor(System.Byte,System.Byte,Pleosoft.XdeltaSharp.Cache)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor(System.Byte,System.Byte,PleOps.XdeltaSharp.Cache)
   name: Copy(Byte, Byte, Cache)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy__ctor_System_Byte_System_Byte_Pleosoft_XdeltaSharp_Cache_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor(System.Byte,System.Byte,Pleosoft.XdeltaSharp.Cache)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Copy(System.Byte, System.Byte, Pleosoft.XdeltaSharp.Cache)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy__ctor_System_Byte_System_Byte_PleOps_XdeltaSharp_Cache_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor(System.Byte,System.Byte,PleOps.XdeltaSharp.Cache)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Copy(System.Byte, System.Byte, PleOps.XdeltaSharp.Cache)
   nameWithType: Copy.Copy(Byte, Byte, Cache)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor*
   name: Copy
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Copy
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Copy
   nameWithType: Copy.Copy
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Address
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Address
   name: Address
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy_Address
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Address
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Address
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy_Address
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Address
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Address
   nameWithType: Copy.Address
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Address*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Address*
   name: Address
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy_Address_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Address
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy_Address_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Address
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.Address
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.Address
   nameWithType: Copy.Address
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
   name: DecodeInstruction(Window, Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy_DecodeInstruction_Pleosoft_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy_DecodeInstruction_PleOps_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
   nameWithType: Copy.DecodeInstruction(Window, Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction*
   name: DecodeInstruction
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy_DecodeInstruction_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy_DecodeInstruction_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.DecodeInstruction
   nameWithType: Copy.DecodeInstruction
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
   name: ToString()
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy_ToString
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.ToString()
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy_ToString
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.ToString()
   nameWithType: Copy.ToString()
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.ToString*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.ToString*
   name: ToString
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Copy_ToString_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Copy_ToString_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.ToString
   nameWithType: Copy.ToString
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction
   name: Instruction
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction
   nameWithType: Instruction
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor(System.Byte,Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor(System.Byte,PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType)
   name: Instruction(Byte, InstructionType)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction__ctor_System_Byte_Pleosoft_XdeltaSharp_Vcdiff_Instructions_InstructionType_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor(System.Byte,Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Instruction(System.Byte, Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction__ctor_System_Byte_PleOps_XdeltaSharp_Vcdiff_Instructions_InstructionType_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor(System.Byte,PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Instruction(System.Byte, PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType)
   nameWithType: Instruction.Instruction(Byte, InstructionType)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor*
   name: Instruction
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Instruction
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Instruction
   nameWithType: Instruction.Instruction
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
   name: Decode(Window, Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_Decode_Pleosoft_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode(Pleosoft.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_Decode_PleOps_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode(PleOps.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
   nameWithType: Instruction.Decode(Window, Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode*
   name: Decode
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_Decode_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_Decode_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Decode
   nameWithType: Instruction.Decode
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
   name: DecodeInstruction(Window, Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_DecodeInstruction_Pleosoft_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_DecodeInstruction_PleOps_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
   nameWithType: Instruction.DecodeInstruction(Window, Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction*
   name: DecodeInstruction
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_DecodeInstruction_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_DecodeInstruction_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.DecodeInstruction
   nameWithType: Instruction.DecodeInstruction
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
   name: Size
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_Size
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_Size
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
   nameWithType: Instruction.Size
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Size*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Size*
   name: Size
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_Size_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_Size_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Size
   nameWithType: Instruction.Size
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
   name: SizeInTable
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_SizeInTable
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_SizeInTable
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
   nameWithType: Instruction.SizeInTable
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable*
   name: SizeInTable
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_SizeInTable_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_SizeInTable_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.SizeInTable
   nameWithType: Instruction.SizeInTable
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
   name: Type
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_Type
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_Type
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
   nameWithType: Instruction.Type
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Type*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Type*
   name: Type
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Instruction_Type_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Instruction_Type_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.Type
   nameWithType: Instruction.Type
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType
   name: InstructionType
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType
   nameWithType: InstructionType
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Add
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Add
   name: Add
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_InstructionType_Add
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Add
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Add
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#PleOps_XdeltaSharp_Vcdiff_Instructions_InstructionType_Add
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Add
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Add
   nameWithType: InstructionType.Add
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Copy
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Copy
   name: Copy
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_InstructionType_Copy
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Copy
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Copy
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#PleOps_XdeltaSharp_Vcdiff_Instructions_InstructionType_Copy
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Copy
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Copy
   nameWithType: InstructionType.Copy
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Noop
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Noop
   name: Noop
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_InstructionType_Noop
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Noop
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Noop
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#PleOps_XdeltaSharp_Vcdiff_Instructions_InstructionType_Noop
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Noop
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Noop
   nameWithType: InstructionType.Noop
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Run
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Run
   name: Run
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_InstructionType_Run
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Run
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.Run
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.html#PleOps_XdeltaSharp_Vcdiff_Instructions_InstructionType_Run
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Run
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.Run
   nameWithType: InstructionType.Run
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop
   name: Noop
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Instructions.Noop
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop
   nameWithType: Noop
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor
   name: Noop()
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Noop__ctor
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.Noop()
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Noop__ctor
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.Noop()
   nameWithType: Noop.Noop()
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor*
   name: Noop
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Noop__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Noop__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.Noop
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.Noop
   nameWithType: Noop.Noop
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
   name: DecodeInstruction(Window, Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Noop_DecodeInstruction_Pleosoft_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Noop_DecodeInstruction_PleOps_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
   nameWithType: Noop.DecodeInstruction(Window, Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction*
   name: DecodeInstruction
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Noop_DecodeInstruction_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Noop_DecodeInstruction_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.DecodeInstruction
   nameWithType: Noop.DecodeInstruction
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
   name: ToString()
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Noop_ToString
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.ToString()
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Noop_ToString
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.ToString()
   nameWithType: Noop.ToString()
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.ToString*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.ToString*
   name: ToString
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Noop_ToString_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Noop_ToString_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.ToString
   nameWithType: Noop.ToString
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run
   name: Run
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Instructions.Run
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run
   nameWithType: Run
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.#ctor(System.Byte)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.#ctor(System.Byte)
   name: Run(Byte)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run__ctor_System_Byte_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.#ctor(System.Byte)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Run(System.Byte)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run__ctor_System_Byte_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.#ctor(System.Byte)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Run(System.Byte)
   nameWithType: Run.Run(Byte)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.#ctor*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.#ctor*
   name: Run
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.#ctor
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Run
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Run
   nameWithType: Run.Run
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Data
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Data
   name: Data
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run_Data
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Data
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Data
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run_Data
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Data
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Data
   nameWithType: Run.Data
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Data*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Data*
   name: Data
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run_Data_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Data
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run_Data_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Data
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.Data
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.Data
   nameWithType: Run.Data
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
   name: DecodeInstruction(Window, Stream, Stream)
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run_DecodeInstruction_Pleosoft_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction(Pleosoft.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run_DecodeInstruction_PleOps_XdeltaSharp_Vcdiff_Window_System_IO_Stream_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window,System.IO.Stream,System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction(PleOps.XdeltaSharp.Vcdiff.Window, System.IO.Stream, System.IO.Stream)
   nameWithType: Run.DecodeInstruction(Window, Stream, Stream)
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction*
   name: DecodeInstruction
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run_DecodeInstruction_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run_DecodeInstruction_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.DecodeInstruction
   nameWithType: Run.DecodeInstruction
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.ToString
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.ToString
   name: ToString()
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run_ToString
-  commentId: M:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.ToString
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.ToString()
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run_ToString
+  commentId: M:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.ToString()
   nameWithType: Run.ToString()
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.ToString*
+- uid: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.ToString*
   name: ToString
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html#Pleosoft_XdeltaSharp_Vcdiff_Instructions_Run_ToString_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.ToString
+  href: api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html#PleOps_XdeltaSharp_Vcdiff_Instructions_Run_ToString_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Instructions.Run.ToString
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.ToString
+  fullName: PleOps.XdeltaSharp.Vcdiff.Instructions.Run.ToString
   nameWithType: Run.ToString
-- uid: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor
+- uid: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor
   name: SecondaryCompressor
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor
+  href: api/PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor
+  fullName: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor
   nameWithType: SecondaryCompressor
-- uid: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Djw
+- uid: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Djw
   name: Djw
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.html#Pleosoft_XdeltaSharp_Vcdiff_SecondaryCompressor_Djw
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Djw
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Djw
+  href: api/PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.html#PleOps_XdeltaSharp_Vcdiff_SecondaryCompressor_Djw
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Djw
+  fullName: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Djw
   nameWithType: SecondaryCompressor.Djw
-- uid: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Fgk
+- uid: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Fgk
   name: Fgk
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.html#Pleosoft_XdeltaSharp_Vcdiff_SecondaryCompressor_Fgk
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Fgk
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Fgk
+  href: api/PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.html#PleOps_XdeltaSharp_Vcdiff_SecondaryCompressor_Fgk
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Fgk
+  fullName: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Fgk
   nameWithType: SecondaryCompressor.Fgk
-- uid: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Lzma
+- uid: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Lzma
   name: Lzma
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.html#Pleosoft_XdeltaSharp_Vcdiff_SecondaryCompressor_Lzma
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Lzma
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.Lzma
+  href: api/PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.html#PleOps_XdeltaSharp_Vcdiff_SecondaryCompressor_Lzma
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Lzma
+  fullName: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.Lzma
   nameWithType: SecondaryCompressor.Lzma
-- uid: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.None
+- uid: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.None
   name: None
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.html#Pleosoft_XdeltaSharp_Vcdiff_SecondaryCompressor_None
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.None
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.None
+  href: api/PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.html#PleOps_XdeltaSharp_Vcdiff_SecondaryCompressor_None
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.None
+  fullName: PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.None
   nameWithType: SecondaryCompressor.None
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window
+- uid: PleOps.XdeltaSharp.Vcdiff.Window
   name: Window
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.Window
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.Window
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window
   nameWithType: Window
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Addresses
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Addresses
   name: Addresses
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Addresses
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.Addresses
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Addresses
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Addresses
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.Addresses
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Addresses
   nameWithType: Window.Addresses
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Addresses*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Addresses*
   name: Addresses
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Addresses_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.Addresses
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Addresses_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.Addresses
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Addresses
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Addresses
   nameWithType: Window.Addresses
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Checksum
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Checksum
   name: Checksum
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Checksum
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.Checksum
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Checksum
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Checksum
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.Checksum
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Checksum
   nameWithType: Window.Checksum
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Checksum*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Checksum*
   name: Checksum
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Checksum_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.Checksum
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Checksum_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.Checksum
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Checksum
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Checksum
   nameWithType: Window.Checksum
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.CompressedFields
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.CompressedFields
   name: CompressedFields
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_CompressedFields
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.CompressedFields
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.CompressedFields
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_CompressedFields
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.CompressedFields
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.CompressedFields
   nameWithType: Window.CompressedFields
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.CompressedFields*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.CompressedFields*
   name: CompressedFields
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_CompressedFields_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.CompressedFields
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_CompressedFields_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.CompressedFields
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.CompressedFields
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.CompressedFields
   nameWithType: Window.CompressedFields
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Data
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Data
   name: Data
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Data
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.Data
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Data
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Data
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.Data
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Data
   nameWithType: Window.Data
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Data*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Data*
   name: Data
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Data_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.Data
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Data_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.Data
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Data
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Data
   nameWithType: Window.Data
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Instructions
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Instructions
   name: Instructions
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Instructions
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.Instructions
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Instructions
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Instructions
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.Instructions
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Instructions
   nameWithType: Window.Instructions
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Instructions*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Instructions*
   name: Instructions
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Instructions_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.Instructions
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Instructions_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.Instructions
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Instructions
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Instructions
   nameWithType: Window.Instructions
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Source
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Source
   name: Source
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Source
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.Source
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Source
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Source
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.Source
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Source
   nameWithType: Window.Source
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.Source*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.Source*
   name: Source
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_Source_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.Source
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_Source_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.Source
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.Source
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.Source
   nameWithType: Window.Source
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
   name: SourceSegmentLength
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_SourceSegmentLength
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_SourceSegmentLength
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
   nameWithType: Window.SourceSegmentLength
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentLength*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentLength*
   name: SourceSegmentLength
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_SourceSegmentLength_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_SourceSegmentLength_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentLength
   nameWithType: Window.SourceSegmentLength
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
   name: SourceSegmentOffset
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_SourceSegmentOffset
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_SourceSegmentOffset
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
   nameWithType: Window.SourceSegmentOffset
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset*
   name: SourceSegmentOffset
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_SourceSegmentOffset_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_SourceSegmentOffset_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.SourceSegmentOffset
   nameWithType: Window.SourceSegmentOffset
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowLength
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowLength
   name: TargetWindowLength
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_TargetWindowLength
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowLength
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowLength
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_TargetWindowLength
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowLength
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowLength
   nameWithType: Window.TargetWindowLength
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowLength*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowLength*
   name: TargetWindowLength
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_TargetWindowLength_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowLength
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_TargetWindowLength_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowLength
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowLength
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowLength
   nameWithType: Window.TargetWindowLength
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
   name: TargetWindowOffset
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_TargetWindowOffset
-  commentId: P:Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_TargetWindowOffset
+  commentId: P:PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
   nameWithType: Window.TargetWindowOffset
-- uid: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowOffset*
+- uid: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowOffset*
   name: TargetWindowOffset
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.Window.html#Pleosoft_XdeltaSharp_Vcdiff_Window_TargetWindowOffset_
-  commentId: Overload:Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
+  href: api/PleOps.XdeltaSharp.Vcdiff.Window.html#PleOps_XdeltaSharp_Vcdiff_Window_TargetWindowOffset_
+  commentId: Overload:PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
+  fullName: PleOps.XdeltaSharp.Vcdiff.Window.TargetWindowOffset
   nameWithType: Window.TargetWindowOffset
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields
   name: WindowCompressedFields
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields
   nameWithType: WindowCompressedFields
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Addresses
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Addresses
   name: Addresses
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowCompressedFields_Addresses
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Addresses
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Addresses
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.html#PleOps_XdeltaSharp_Vcdiff_WindowCompressedFields_Addresses
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Addresses
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Addresses
   nameWithType: WindowCompressedFields.Addresses
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.All
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.All
   name: All
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowCompressedFields_All
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.All
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.All
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.html#PleOps_XdeltaSharp_Vcdiff_WindowCompressedFields_All
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.All
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.All
   nameWithType: WindowCompressedFields.All
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Data
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Data
   name: Data
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowCompressedFields_Data
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Data
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Data
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.html#PleOps_XdeltaSharp_Vcdiff_WindowCompressedFields_Data
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Data
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Data
   nameWithType: WindowCompressedFields.Data
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Instructions
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Instructions
   name: Instructions
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowCompressedFields_Instructions
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Instructions
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.Instructions
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.html#PleOps_XdeltaSharp_Vcdiff_WindowCompressedFields_Instructions
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Instructions
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.Instructions
   nameWithType: WindowCompressedFields.Instructions
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.None
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.None
   name: None
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowCompressedFields_None
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.None
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.None
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.html#PleOps_XdeltaSharp_Vcdiff_WindowCompressedFields_None
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.None
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.None
   nameWithType: WindowCompressedFields.None
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowFields
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowFields
   name: WindowFields
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowFields.html
-  commentId: T:Pleosoft.XdeltaSharp.Vcdiff.WindowFields
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowFields
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowFields.html
+  commentId: T:PleOps.XdeltaSharp.Vcdiff.WindowFields
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowFields
   nameWithType: WindowFields
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Adler32
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowFields.Adler32
   name: Adler32
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowFields_Adler32
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Adler32
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Adler32
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowFields.html#PleOps_XdeltaSharp_Vcdiff_WindowFields_Adler32
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowFields.Adler32
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowFields.Adler32
   nameWithType: WindowFields.Adler32
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.All
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowFields.All
   name: All
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowFields_All
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowFields.All
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.All
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowFields.html#PleOps_XdeltaSharp_Vcdiff_WindowFields_All
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowFields.All
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowFields.All
   nameWithType: WindowFields.All
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Source
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowFields.Source
   name: Source
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowFields_Source
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Source
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Source
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowFields.html#PleOps_XdeltaSharp_Vcdiff_WindowFields_Source
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowFields.Source
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowFields.Source
   nameWithType: WindowFields.Source
-- uid: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Target
+- uid: PleOps.XdeltaSharp.Vcdiff.WindowFields.Target
   name: Target
-  href: api/Pleosoft.XdeltaSharp.Vcdiff.WindowFields.html#Pleosoft_XdeltaSharp_Vcdiff_WindowFields_Target
-  commentId: F:Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Target
-  fullName: Pleosoft.XdeltaSharp.Vcdiff.WindowFields.Target
+  href: api/PleOps.XdeltaSharp.Vcdiff.WindowFields.html#PleOps_XdeltaSharp_Vcdiff_WindowFields_Target
+  commentId: F:PleOps.XdeltaSharp.Vcdiff.WindowFields.Target
+  fullName: PleOps.XdeltaSharp.Vcdiff.WindowFields.Target
   nameWithType: WindowFields.Target
-- uid: Pleosoft.XdeltaSharp.VcdReader
+- uid: PleOps.XdeltaSharp.VcdReader
   name: VcdReader
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html
-  commentId: T:Pleosoft.XdeltaSharp.VcdReader
-  fullName: Pleosoft.XdeltaSharp.VcdReader
+  href: api/PleOps.XdeltaSharp.VcdReader.html
+  commentId: T:PleOps.XdeltaSharp.VcdReader
+  fullName: PleOps.XdeltaSharp.VcdReader
   nameWithType: VcdReader
-- uid: Pleosoft.XdeltaSharp.VcdReader.#ctor(System.IO.Stream)
+- uid: PleOps.XdeltaSharp.VcdReader.#ctor(System.IO.Stream)
   name: VcdReader(Stream)
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader__ctor_System_IO_Stream_
-  commentId: M:Pleosoft.XdeltaSharp.VcdReader.#ctor(System.IO.Stream)
-  fullName: Pleosoft.XdeltaSharp.VcdReader.VcdReader(System.IO.Stream)
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader__ctor_System_IO_Stream_
+  commentId: M:PleOps.XdeltaSharp.VcdReader.#ctor(System.IO.Stream)
+  fullName: PleOps.XdeltaSharp.VcdReader.VcdReader(System.IO.Stream)
   nameWithType: VcdReader.VcdReader(Stream)
-- uid: Pleosoft.XdeltaSharp.VcdReader.#ctor*
+- uid: PleOps.XdeltaSharp.VcdReader.#ctor*
   name: VcdReader
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader__ctor_
-  commentId: Overload:Pleosoft.XdeltaSharp.VcdReader.#ctor
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader__ctor_
+  commentId: Overload:PleOps.XdeltaSharp.VcdReader.#ctor
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.VcdReader.VcdReader
+  fullName: PleOps.XdeltaSharp.VcdReader.VcdReader
   nameWithType: VcdReader.VcdReader
-- uid: Pleosoft.XdeltaSharp.VcdReader.BaseStream
+- uid: PleOps.XdeltaSharp.VcdReader.BaseStream
   name: BaseStream
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_BaseStream
-  commentId: P:Pleosoft.XdeltaSharp.VcdReader.BaseStream
-  fullName: Pleosoft.XdeltaSharp.VcdReader.BaseStream
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_BaseStream
+  commentId: P:PleOps.XdeltaSharp.VcdReader.BaseStream
+  fullName: PleOps.XdeltaSharp.VcdReader.BaseStream
   nameWithType: VcdReader.BaseStream
-- uid: Pleosoft.XdeltaSharp.VcdReader.BaseStream*
+- uid: PleOps.XdeltaSharp.VcdReader.BaseStream*
   name: BaseStream
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_BaseStream_
-  commentId: Overload:Pleosoft.XdeltaSharp.VcdReader.BaseStream
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_BaseStream_
+  commentId: Overload:PleOps.XdeltaSharp.VcdReader.BaseStream
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.VcdReader.BaseStream
+  fullName: PleOps.XdeltaSharp.VcdReader.BaseStream
   nameWithType: VcdReader.BaseStream
-- uid: Pleosoft.XdeltaSharp.VcdReader.Eof
+- uid: PleOps.XdeltaSharp.VcdReader.Eof
   name: Eof
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_Eof
-  commentId: P:Pleosoft.XdeltaSharp.VcdReader.Eof
-  fullName: Pleosoft.XdeltaSharp.VcdReader.Eof
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_Eof
+  commentId: P:PleOps.XdeltaSharp.VcdReader.Eof
+  fullName: PleOps.XdeltaSharp.VcdReader.Eof
   nameWithType: VcdReader.Eof
-- uid: Pleosoft.XdeltaSharp.VcdReader.Eof*
+- uid: PleOps.XdeltaSharp.VcdReader.Eof*
   name: Eof
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_Eof_
-  commentId: Overload:Pleosoft.XdeltaSharp.VcdReader.Eof
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_Eof_
+  commentId: Overload:PleOps.XdeltaSharp.VcdReader.Eof
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.VcdReader.Eof
+  fullName: PleOps.XdeltaSharp.VcdReader.Eof
   nameWithType: VcdReader.Eof
-- uid: Pleosoft.XdeltaSharp.VcdReader.ReadByte
+- uid: PleOps.XdeltaSharp.VcdReader.ReadByte
   name: ReadByte()
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_ReadByte
-  commentId: M:Pleosoft.XdeltaSharp.VcdReader.ReadByte
-  fullName: Pleosoft.XdeltaSharp.VcdReader.ReadByte()
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_ReadByte
+  commentId: M:PleOps.XdeltaSharp.VcdReader.ReadByte
+  fullName: PleOps.XdeltaSharp.VcdReader.ReadByte()
   nameWithType: VcdReader.ReadByte()
-- uid: Pleosoft.XdeltaSharp.VcdReader.ReadByte*
+- uid: PleOps.XdeltaSharp.VcdReader.ReadByte*
   name: ReadByte
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_ReadByte_
-  commentId: Overload:Pleosoft.XdeltaSharp.VcdReader.ReadByte
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_ReadByte_
+  commentId: Overload:PleOps.XdeltaSharp.VcdReader.ReadByte
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.VcdReader.ReadByte
+  fullName: PleOps.XdeltaSharp.VcdReader.ReadByte
   nameWithType: VcdReader.ReadByte
-- uid: Pleosoft.XdeltaSharp.VcdReader.ReadBytes(System.Int32)
+- uid: PleOps.XdeltaSharp.VcdReader.ReadBytes(System.Int32)
   name: ReadBytes(Int32)
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_ReadBytes_System_Int32_
-  commentId: M:Pleosoft.XdeltaSharp.VcdReader.ReadBytes(System.Int32)
-  fullName: Pleosoft.XdeltaSharp.VcdReader.ReadBytes(System.Int32)
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_ReadBytes_System_Int32_
+  commentId: M:PleOps.XdeltaSharp.VcdReader.ReadBytes(System.Int32)
+  fullName: PleOps.XdeltaSharp.VcdReader.ReadBytes(System.Int32)
   nameWithType: VcdReader.ReadBytes(Int32)
-- uid: Pleosoft.XdeltaSharp.VcdReader.ReadBytes(System.UInt32)
+- uid: PleOps.XdeltaSharp.VcdReader.ReadBytes(System.UInt32)
   name: ReadBytes(UInt32)
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_ReadBytes_System_UInt32_
-  commentId: M:Pleosoft.XdeltaSharp.VcdReader.ReadBytes(System.UInt32)
-  fullName: Pleosoft.XdeltaSharp.VcdReader.ReadBytes(System.UInt32)
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_ReadBytes_System_UInt32_
+  commentId: M:PleOps.XdeltaSharp.VcdReader.ReadBytes(System.UInt32)
+  fullName: PleOps.XdeltaSharp.VcdReader.ReadBytes(System.UInt32)
   nameWithType: VcdReader.ReadBytes(UInt32)
-- uid: Pleosoft.XdeltaSharp.VcdReader.ReadBytes*
+- uid: PleOps.XdeltaSharp.VcdReader.ReadBytes*
   name: ReadBytes
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_ReadBytes_
-  commentId: Overload:Pleosoft.XdeltaSharp.VcdReader.ReadBytes
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_ReadBytes_
+  commentId: Overload:PleOps.XdeltaSharp.VcdReader.ReadBytes
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.VcdReader.ReadBytes
+  fullName: PleOps.XdeltaSharp.VcdReader.ReadBytes
   nameWithType: VcdReader.ReadBytes
-- uid: Pleosoft.XdeltaSharp.VcdReader.ReadInteger
+- uid: PleOps.XdeltaSharp.VcdReader.ReadInteger
   name: ReadInteger()
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_ReadInteger
-  commentId: M:Pleosoft.XdeltaSharp.VcdReader.ReadInteger
-  fullName: Pleosoft.XdeltaSharp.VcdReader.ReadInteger()
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_ReadInteger
+  commentId: M:PleOps.XdeltaSharp.VcdReader.ReadInteger
+  fullName: PleOps.XdeltaSharp.VcdReader.ReadInteger()
   nameWithType: VcdReader.ReadInteger()
-- uid: Pleosoft.XdeltaSharp.VcdReader.ReadInteger*
+- uid: PleOps.XdeltaSharp.VcdReader.ReadInteger*
   name: ReadInteger
-  href: api/Pleosoft.XdeltaSharp.VcdReader.html#Pleosoft_XdeltaSharp_VcdReader_ReadInteger_
-  commentId: Overload:Pleosoft.XdeltaSharp.VcdReader.ReadInteger
+  href: api/PleOps.XdeltaSharp.VcdReader.html#PleOps_XdeltaSharp_VcdReader_ReadInteger_
+  commentId: Overload:PleOps.XdeltaSharp.VcdReader.ReadInteger
   isSpec: "True"
-  fullName: Pleosoft.XdeltaSharp.VcdReader.ReadInteger
+  fullName: PleOps.XdeltaSharp.VcdReader.ReadInteger
   nameWithType: VcdReader.ReadInteger
 - uid: README
-  name: 'Pleosoft.XdeltaSharp  '
+  name: 'PleOps.XdeltaSharp  '
   href: index.html
