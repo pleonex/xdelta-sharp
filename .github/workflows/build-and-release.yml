@@ -14,7 +14,7 @@ on:
       - published
 
 env:
-  NET_SDK: '5.0.101'
+  NET_SDK: '6.0.100'
 
 jobs:
   build_main:
@@ -30,10 +30,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.NET_SDK }}
-      - name: "Setup .NET Core 3.1 for Cake dependencies"
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '3.1.404'
 
       - name: "Install build tools"
         run: dotnet tool restore
@@ -79,10 +75,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.NET_SDK }}
-      - name: "Setup .NET Core 3.1 for Cake dependencies"
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '3.1.404'
 
       - name: "Install build tools"
         run: dotnet tool restore
@@ -117,10 +109,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.NET_SDK }}
-      - name: "Setup .NET Core 3.1 for Cake dependencies"
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '3.1.404'
 
       - name: "Install build tools"
         run: dotnet tool restore

@@ -3,13 +3,13 @@
 **NOTE: At this stage, this projects can only decompress patch files. It cannot
 generate / compress.**
 
-**xdelta-sharp** is a compression tool to create delta/patch files from binary
-files using the algorithm `VCDIFF` described in the
+**Pleosoft.XdeltaSharp** offers the possibility to apply delta/patch files with
+format `VCDIFF`, as described in the
 [RFC 3284](https://tools.ietf.org/html/rfc3284).
 
-This projects offers a library and a console application written in pure C# (no
+This project offers a library and a console application written in pure C# (no
 calls to C libraries). Making it compatible in every OS that can run a .NET
-runtime that implements .NET Standard 2.0.
+runtime that implements .NET Standard 2.0 (.NET Framework, Mono and .NET).
 
 <!-- prettier-ignore -->
 | Release | Package                                                           |
@@ -38,9 +38,8 @@ Check our on-line [API documentation](https://pleonex.dev/xdelta-sharp/).
 
 ## Build
 
-The project requires to build .NET 5.0 SDK, .NET Core 3.1 runtime and .NET
-Framework 4.8 or latest Mono. If you open the project with VS Code and you did
-install the
+The project requires to build .NET 6.0 SDK and .NET Framework 4.8 or latest
+Mono. If you open the project with VS Code and you did install the
 [VS Code Remote Containers](https://code.visualstudio.com/docs/remote/containers)
 extension, you can have an already pre-configured development environment with
 Docker or Podman.
