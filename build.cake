@@ -7,9 +7,9 @@ Task("Define-Project")
     info.WarningsAsErrors = false;
     info.CoverageTarget = 75;
 
-    info.AddLibraryProjects("Pleosoft.XdeltaSharp");
-    info.AddApplicationProjects("Pleosoft.XdeltaSharp.Cli");
-    info.AddTestProjects("Pleosoft.XdeltaSharp.UnitTests");
+    info.AddLibraryProjects("PleOps.XdeltaSharp");
+    info.AddApplicationProjects("PleOps.XdeltaSharp.Cli");
+    info.AddTestProjects("PleOps.XdeltaSharp.UnitTests");
 
     info.PreviewNuGetFeed = "https://pkgs.dev.azure.com/pleonex/Pleosoft/_packaging/Pleosoft-Preview/nuget/v3/index.json";
 });

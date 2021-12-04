@@ -1,11 +1,11 @@
 {
-    "_appTitle": "Pleosoft.XdeltaSharp - VCDIFF for .NET",
+    "_appTitle": "PleOps.XdeltaSharp - VCDIFF for .NET",
     "_appFooter": "Copyright (c) 2015 Benito Palacios Sánchez",
     "_enableSearch": true,
     "_enableNewTab": true,
     "_gitContribute": {
         "apiSpecFolder": "docs/apidoc",
-        "repo": "https://github.com/pleonex/xdelta-csharp",
+        "repo": "https://github.com/pleonex/xdelta-sharp",
         "branch": "main"
     }
 }

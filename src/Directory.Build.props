@@ -1,6 +1,6 @@
 <Project>
     <PropertyGroup>
-        <Product>Pleosoft.XdeltaSharp</Product>
+        <Product>PleOps.XdeltaSharp</Product>
         <Authors>pleonex</Authors>
         <Copyright>Copyright (C) 2015 Benito Palacios Sánchez</Copyright>
 
@@ -14,8 +14,8 @@
 
     <PropertyGroup>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://pleonex.dev/xdelta-csharp</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/pleonex/xdelta-csharp</RepositoryUrl>
+        <PackageProjectUrl>https://pleonex.dev/xdelta-sharp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/pleonex/xdelta-sharp</RepositoryUrl>
         <!-- <PackageIcon>icon.png</PackageIcon> -->
         <PackageTags>decompress;vcdiff;rfc3284;xdelta</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>

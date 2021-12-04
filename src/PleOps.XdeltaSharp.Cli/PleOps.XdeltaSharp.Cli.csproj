@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>XdeltaSharp</AssemblyName>
+    <Description>Decompressor of VCDIFF patch files (RFC3284).</Description>
+    <RootNamespace>PleOps.XdeltaSharp.Cli</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <RuntimeIdentifiers>win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../PleOps.XdeltaSharp/PleOps.XdeltaSharp.csproj" />
+  </ItemGroup>
+</Project>
