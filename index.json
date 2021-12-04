@@ -126,8 +126,8 @@
   },
   "dev/Changelog.html": {
     "href": "dev/Changelog.html",
-    "title": "vNext (December 04, 2021) | PleOps.XdeltaSharp - VCDIFF for .NET",
-    "keywords": "vNext (December 04, 2021) As part of this release we had 5 issues closed. breaking #7 Change namespaces to Pleosoft.XdeltaSharp and warning cleaning bug #9 Fix throwing exception when win_indicator is zero enhancements #3 Implement PleOps.Cake build system and rename project #8 Validate API with .NET 6 and update build system #10 Change namespace because prefix \"Pleosoft\" was already reserved in nuget.org"
+    "title": "v1.3.0 (December 04, 2021) | PleOps.XdeltaSharp - VCDIFF for .NET",
+    "keywords": "v1.3.0 (December 04, 2021) As part of this release we had 5 issues closed. breaking #7 Change namespaces to Pleosoft.XdeltaSharp and warning cleaning bug #9 Fix throwing exception when win_indicator is zero enhancements #3 Implement PleOps.Cake build system and rename project #8 Validate API with .NET 6 and update build system #10 Change namespace because prefix \"Pleosoft\" was already reserved in nuget.org"
   },
   "guides/Contributing.html": {
     "href": "guides/Contributing.html",

@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.AddressMode.html",
-          "hash": "+E8y0MXMuIM4Z8Uc5sKUiIZpCpsTrON1Hmiv4bbQIj0="
+          "hash": "ZPmP8/+T9X1i6UgnJaVcDv3bDM6PTibPF2Fh716Q49Q="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Adler32.html",
-          "hash": "fUwH9DzUwPoi5DpQZIYpFfNkCsitcl/dUSbtNNBb/vQ="
+          "hash": "K5EDy5qa4Pc1FvtgtdJo1b1w0qF4lEU4Cgdwr7As5HY="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Cache.html",
-          "hash": "mAtNlbezfkCzJxyCU2cHxF1EVHUb51XIq34EwuF9cJ0="
+          "hash": "KJU93S6rVNouOs3N9O0avTK/ytXCvl2vVI8k9Qk97aw="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.CodeTable.html",
-          "hash": "m6UrqKCxdeJf5HMnD/qdEtCwc7Th0y4Jl11S2HlPVQk="
+          "hash": "/Cb3nJY2LYGFirZMMvVPboGiwbJvyEuxdT6sBjZUS90="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Decoder.Decoder.html",
-          "hash": "V6cL+JOch5O8YRu7ip6uSgV6n/lyCmTqiTLDdmh1oOE="
+          "hash": "q6luLvBzlEgllk4ua8RBD3SiHKTWR7kaxKcHHlHzGC8="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Decoder.WindowDecoder.html",
-          "hash": "SLuITwxEf+bgFY5GZD1IGWgtDjQRl/gdHMY5gjb1tis="
+          "hash": "rxh2sRqrFz2tElzoyUH0QGu00SSneVoxWtYXoJq37Kw="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.FinishedHandler.html",
-          "hash": "YFgZRFKrIJKdVzP99uq7vTMZUPXuc22dEbHGiGnAK/Q="
+          "hash": "Gv3UsvbV7ozl+CJFwL6xuL8qEJlusQeHZ6Rzo113t+c="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.ProgressChangedHandler.html",
-          "hash": "JE0jYh15nl1IitJHnT2KWlIGjtRbir58a8S9yCh7gmM="
+          "hash": "oMlqCm4Thm+skQUgRdHUz7bw83OA2TxzgVq7/aOOq2s="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.VcdReader.html",
-          "hash": "uOkfO2N3EqGJ6s2ZNxnLFck1sYa0WEM/3AegUf5663E="
+          "hash": "N1K3Td9QfibcCVbPdLWZhGL2z9EHDF5qF4I5U3ROIOQ="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Header.html",
-          "hash": "all01KlaElI3Umg3Gdm/sPFzdKj+5GOlB5XCcEHFyT0="
+          "hash": "eJK6okJ1SPcPVPYyDm7MCdNkMl7hbcLVeEZXdNB2Wyg="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Instructions.Add.html",
-          "hash": "2vJAWt9uA+uqKTXBocRX67asw7Ist74JKiiioCrJ29o="
+          "hash": "PEmnC/SQ+EmPbP6IDCzwprLOoODWRoELwD/XNzVkzXg="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Instructions.Copy.html",
-          "hash": "0qOLzkRvrunmy60vG1IaLzR3l4Q4QO1N6LRfX+N9ENY="
+          "hash": "X+mrhxjYdPLga2LWlOBNOqhJhoL2ssq7fS0Y7bqas1Y="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Instructions.Instruction.html",
-          "hash": "WWC0ny0YIXvMiqTkXHSh4bWeNuWqMZs0r3y3dZM58kA="
+          "hash": "wGMEaxdtGXOGuLsFuIPe9mHFmks7YalO09xIR9R1HUo="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Instructions.InstructionType.html",
-          "hash": "AkP8qQZLmC/bXH9vFTSRYJQbUFZAq9YjUHenCU/S5Yo="
+          "hash": "QUI/+wQNzPJeLUWOMrrOsALzo/QEhQvoqAJDnBGAYIY="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Instructions.Noop.html",
-          "hash": "f8r0cJ6ahDFQSHmh6I2YjLk8PtmpyHxV/BeT7sCHYNc="
+          "hash": "qoDxfEmV87cd8AmMz4rjlyWQ1/GmqfF0IvUpmdJ+4FY="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Instructions.Run.html",
-          "hash": "bg9AwVjsEPYxzSOsc6F98/Gd9qBCyFLMFjXux0e/Bvo="
+          "hash": "+tAoCvaoqD6TOUwHgLxK3Uid7bLqtBcJhXjqkTiy07U="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.SecondaryCompressor.html",
-          "hash": "dCXqkNCfZs+qB4GuLsfkpNBj+Q7vyE2WXj38t1tF15o="
+          "hash": "ptXYNZxERU2ux/1EAUUYrFC44Pp4gfBf/n7k21192f0="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.Window.html",
-          "hash": "6pPFdcqtpllwtoFrRPohSA4OX9I3b+4mmH+Iixd54tw="
+          "hash": "NKVCzCIFDCwA4JydnzYBqLBpym3hV9Bny1QUrubL1S8="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.WindowCompressedFields.html",
-          "hash": "hNGxx8G8V4dhuToNtHXlERy18ukHGiQn45Hwp3QYWF8="
+          "hash": "LxOOMh331YBNBtVP+GE6TTab56vc8WF14MRdGMux/x4="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PleOps.XdeltaSharp.Vcdiff.WindowFields.html",
-          "hash": "xz+EPI9l93L4z9vSM7FgUredaVERCS5gB8izNKIsrWE="
+          "hash": "R+34g5EnE0Uytkz2YxNPZI1JWjDeDb9JBqito+Wv2DM="
         }
       },
       "is_incremental": false,
@@ -330,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/Changelog.html",
-          "hash": "vkIMrbiEzbyB436+VV0NBmoXcYuH246ZZqz1tqYBb70="
+          "hash": "0zyi67M6CnBXFemOAhlWs3lFHiScFweAJ7qhieNe9hY="
         }
       },
       "is_incremental": false,
