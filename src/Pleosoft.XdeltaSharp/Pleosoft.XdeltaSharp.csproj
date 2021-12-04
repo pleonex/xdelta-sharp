@@ -6,9 +6,10 @@
     <RootNamespace>Pleosoft.XdeltaSharp</RootNamespace>
   </PropertyGroup>
 
-  <!-- <ItemGroup>
-    <None Include="../../docs/images/logo_128.png" Pack="true" PackagePath="$(PackageIcon)" Visible="false" />
-  </ItemGroup> -->
+  <ItemGroup>
+    <!-- <None Include="../../docs/images/logo_128.png" Pack="true" PackagePath="$(PackageIcon)" Visible="false" /> -->
+    <None Include="../../README.md" Pack="true" PackagePath="$(PackageReadmeFile)"/>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Buffers" />
