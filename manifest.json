@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "CONTRIBUTING.html",
-          "hash": "yQiU9d5GkSoB3akK580HWA=="
+          "hash": "PN487ZlQ9tbvdbJCE72T9dYsGl+kdlIlvpW9uys/ot4="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "u2Ra4foJLjrGRI9Ri2rSOw=="
+          "hash": "mhyKGhakfo0wKvhddlxJgBDaUxRIMQPICgupOVqi/f4="
         }
       },
       "is_incremental": false,
@@ -38,11 +38,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.AddressMode.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.AddressMode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.AddressMode.html",
-          "hash": "1l9n2/Xg84kn1kQnEX+zrQ=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.AddressMode.html",
+          "hash": "cwmPuY+wJ/YDLykqY8jiNVdiRikEJQzYyZz21wYUIMc="
         }
       },
       "is_incremental": false,
@@ -50,11 +50,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Adler32.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Adler32.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Adler32.html",
-          "hash": "2MZCLIRcJCVdMBXURDFXUQ=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Adler32.html",
+          "hash": "M0/ZfgNhd5fQ58TpztjN37s+zSP9tHHtRps9luxwcaw="
         }
       },
       "is_incremental": false,
@@ -62,11 +62,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Cache.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Cache.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Cache.html",
-          "hash": "iSazVQqmmj+kxDB8jn/Q5Q=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Cache.html",
+          "hash": "nd8rCHEsiCOOBqgfrWMBa83s+L+RuhpI83UOu7f7bqQ="
         }
       },
       "is_incremental": false,
@@ -74,11 +74,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.CodeTable.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.CodeTable.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.CodeTable.html",
-          "hash": "YKsDDW1UVWAjBsFD93J0zw=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.CodeTable.html",
+          "hash": "0L93N40g7WcIgdojNNVaHLErBYSLJKkhO6pBWgKSyEY="
         }
       },
       "is_incremental": false,
@@ -86,11 +86,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Decoder.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Decoder.Decoder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Decoder.html",
-          "hash": "S7QB6LaKNBtyzB9ZmD2xnw=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Decoder.Decoder.html",
+          "hash": "CEGFGln4rfK8fmsv5Jw0pOcNHMw+7cAb7MWuwbRr5g4="
         }
       },
       "is_incremental": false,
@@ -98,11 +98,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.FinishedHandler.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Decoder.WindowDecoder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.FinishedHandler.html",
-          "hash": "LmeCyKlWtHb6v3/aoRbV2A=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Decoder.WindowDecoder.html",
+          "hash": "nbgQ3I3+PnNZw4/cOV2sWkgOMiLH22jlFtX9wFMhaGI="
         }
       },
       "is_incremental": false,
@@ -110,11 +110,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Header.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Decoder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Header.html",
-          "hash": "5i3/hFjaCDw0TzQGoOJ8Qw=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Decoder.html",
+          "hash": "pwyuRnjKcbRduZwymmpkMpevu6e2nGlLRiBjwMZieIQ="
         }
       },
       "is_incremental": false,
@@ -122,11 +122,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Instructions.Add.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.FinishedHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Instructions.Add.html",
-          "hash": "0x1YBvdXupwvHZ1r5zrYmQ=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.FinishedHandler.html",
+          "hash": "2c2INEgWNJqYHp/eAGPnNVbbDbbkTov96KwOlmwtOpQ="
         }
       },
       "is_incremental": false,
@@ -134,11 +134,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Instructions.Copy.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.ProgressChangedHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Instructions.Copy.html",
-          "hash": "Xcuk5kdtrWdj3IUzV5h8cw=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.ProgressChangedHandler.html",
+          "hash": "vrsqoGd1dkdXjGejJqRwuz4n/jBTCVtpOfAchvYrgpg="
         }
       },
       "is_incremental": false,
@@ -146,11 +146,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Instructions.Instruction.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.VcdReader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Instructions.Instruction.html",
-          "hash": "8E64rQCE07ya2frIhyEiKw=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.VcdReader.html",
+          "hash": "oUZQGGdZekF50JHybAJ1sr2jkyBmQoK5AYZhQS5FGMw="
         }
       },
       "is_incremental": false,
@@ -158,11 +158,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Instructions.InstructionType.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Header.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Instructions.InstructionType.html",
-          "hash": "lsolUapY8QvCmurjS098/g=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Header.html",
+          "hash": "rhY0ENq9OwsXum2BnlkyxrjxUywjZIR4w6COIr6Ypr4="
         }
       },
       "is_incremental": false,
@@ -170,11 +170,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Instructions.Noop.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Instructions.Noop.html",
-          "hash": "tQBWP5cN+KB9yDApFSnrTA=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Add.html",
+          "hash": "jR10YH7r4rP+i2maIK00Kx/o1iKYZ7Y5Ldsvuac2lyM="
         }
       },
       "is_incremental": false,
@@ -182,11 +182,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Instructions.Run.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Instructions.Run.html",
-          "hash": "mQUUhiaaHJlO/9qhMppfzQ=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Copy.html",
+          "hash": "3m19Nm4/3+SOIr9a6Vixpc5AZG6yBGgtDtgFrILzRow="
         }
       },
       "is_incremental": false,
@@ -194,11 +194,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Instructions.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Instructions.html",
-          "hash": "Q6IN1KAGY6F/Zoe3ZIhXFA=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Instruction.html",
+          "hash": "sxIAt7A/5amnmzmytjcHB4/aOYjdNHqGXP8SggERXZM="
         }
       },
       "is_incremental": false,
@@ -206,11 +206,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.ProgressChangedHandler.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.ProgressChangedHandler.html",
-          "hash": "pdgf4aSGq+yOkIbxUEv6Wg=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.InstructionType.html",
+          "hash": "zQNDmsHC5MOt8rELYBI32hrlFdQ0EdPWN3bsXGmufVc="
         }
       },
       "is_incremental": false,
@@ -218,11 +218,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.SecondaryCompressor.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.SecondaryCompressor.html",
-          "hash": "65Bdk8Cq/VDQRuzCpl25Tg=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Noop.html",
+          "hash": "V2TP9i9rl5DmrXKn59yhJyaLM3aLNCcpEwHl/QkpWyk="
         }
       },
       "is_incremental": false,
@@ -230,11 +230,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.VcdReader.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.VcdReader.html",
-          "hash": "x8DPRd8Fn0iAIRVJKlYbeA=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.Run.html",
+          "hash": "Djo32vxDXT0gDDwJXnMO4zjO3NU/VhNUynN2jMxJd8Y="
         }
       },
       "is_incremental": false,
@@ -242,11 +242,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.Window.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.Window.html",
-          "hash": "cw68ykIdzCXAHwyYPtrF5A=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Instructions.html",
+          "hash": "l17mBZgQj2Zo0X4PdClIUbao4khPCzXrwZbXw0l9BlI="
         }
       },
       "is_incremental": false,
@@ -254,11 +254,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.WindowCompressedFields.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.WindowCompressedFields.html",
-          "hash": "KBOvN8o3unJp8UCpOzsOLg=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.SecondaryCompressor.html",
+          "hash": "MywaLTGL9+vEW65lXW8pZXZq1o0lwcBAoChhcCqbMcU="
         }
       },
       "is_incremental": false,
@@ -266,11 +266,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.WindowDecoder.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Window.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.WindowDecoder.html",
-          "hash": "73QjRagXwGOZU1ISXXF2IQ=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.Window.html",
+          "hash": "2433RB+ms8oXtgaxSZLHMck0UFv5Rz+9EJJz55HePro="
         }
       },
       "is_incremental": false,
@@ -278,11 +278,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.WindowFields.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.WindowFields.html",
-          "hash": "vfmNNO76E7Ggj8ARksEN6g=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.WindowCompressedFields.html",
+          "hash": "D5mpQoEqf2l9gJEA8t6GdD43HPxrXZ1bKqvfu92OUvU="
         }
       },
       "is_incremental": false,
@@ -290,11 +290,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Xdelta.yml",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.WindowFields.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Xdelta.html",
-          "hash": "8a1iZJARjPYdpZoQ9LH44w=="
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.WindowFields.html",
+          "hash": "5THjVoporJ4BAWrLHW+Ue+1qOlt4CqzSd81R695cB34="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Pleosoft.XdeltaSharp.Vcdiff.html",
+          "hash": "NLGb6pLGhwoOJVxXqPCOhsmL9eFv/pyaZJ0W7BMESEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Pleosoft.XdeltaSharp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Pleosoft.XdeltaSharp.html",
+          "hash": "pEAj88TpbM1219LgXWcFBpx4ejOCWCvCCyo0s4gO7/s="
         }
       },
       "is_incremental": false,
@@ -306,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/Changelog.html",
-          "hash": "MjDbIX2h0mzmBJ3BqipSJg=="
+          "hash": "b8Q+SCqgNxClcgx8LwqJW3sn63Bl93RBdIDlCgHwAiM="
         }
       },
       "is_incremental": false,
@@ -318,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "dev/toc.html",
-          "hash": "V4DHkKiGqKcHNPC6fJ+dcA=="
+          "hash": "VcvLuNOERku/1Y9Ka7khhbFKiAygwBLthuoBg+q9hFs="
         }
       },
       "is_incremental": false,
@@ -330,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/Contributing.html",
-          "hash": "T5P0kllSy+ZXVJPaGsfMyw=="
+          "hash": "au6xnywrUQGNjy588cnamn0okJklUBZyioUUthg9ug4="
         }
       },
       "is_incremental": false,
@@ -342,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/toc.html",
-          "hash": "Gz03qLKyhGDwcGqENx1d0w=="
+          "hash": "I1zDnw1jSY048Ge0Ibu39tSdlyb4HbCV3JvV58gZeNc="
         }
       },
       "is_incremental": false,
@@ -354,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "DVopK5CFH10ww4fZLg7fRw=="
+          "hash": "0ERB5iwJcMQxMX+ouqo9N4D417dCiW7N7gOWSiV10FU="
         }
       },
       "is_incremental": false,
@@ -366,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "jjrMVpvTa0Fn3hT2pvfRFg=="
+          "hash": "6paeN7OiCqpT6XC4mJK83U1SOUg75Zz9tDzl0XEPrDA="
         }
       },
       "is_incremental": false,
@@ -393,7 +417,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 22,
+          "total_file_count": 24,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
