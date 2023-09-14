@@ -27,7 +27,8 @@ dropped and restarted the development just by reading the specification.
 The latest version does not support:
 
 - Generate patch files.
-- Patch files with external compression.
+- Patch files with secondary compression. Use the `-S` argument in _xdelta3_.
+- Patch files for files bigger or equal to 4 GB.
 
 ## Examples
 
